@@ -2,6 +2,7 @@ import scala.io.Source
 import scala.util.matching.Regex
 import scala.collection.mutable.ListBuffer
 import scala.collection.mutable.ArrayBuffer
+import scala.runtime.Nothing$
 
 
 object Reader extends App {
@@ -110,8 +111,8 @@ object Reader extends App {
 
     //getting decklists and final scores
     val p0p1ScoreFill = ListBuffer(0,0)
-    val p0ActionsList = ListBuffer()
-    val p1ActionsList = ListBuffer()
+    val p0ActionsList : ListBuffer[(String, Int)] = ListBuffer()
+    val p1ActionsList : ListBuffer[(String, Int)] = ListBuffer()
 
     for ( i <- 1 to tailsInt.length) {
       val slotName = finalState(i-1)._1 : String
@@ -127,29 +128,35 @@ object Reader extends App {
           val p0DeckPat : Regex = "p0([a-zA-Z]+)".r
           val p1DeckPat : Regex = "p1([a-zA-Z]+)".r
           val nonActionCards : List[String] = List("Copper", "Silver", "Gold", "Curse", "Estate", "Duchy", "Province")
+          val addMaybe = (slotName.substring(2): String, slotVal : Int)
 
           if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
-
-
-            //println(slotName.substring(2))
+            p0ActionsList += addMaybe
+            //println( addMaybe._1 + ", " + addMaybe._2)
+          } else {
+            if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
+              p1ActionsList += addMaybe
+              //println( addMaybe._1 + ", " + addMaybe._2)
+            }
 
           }
-
-
-
         }
       }
     }
 
     //turning lists into things we like
     val p0p1Scores = p0p1ScoreFill.toArray
+    val p0Actions = p0ActionsList.toArray
+    val p1Actions = p1ActionsList.toArray
 
-//    println("card, copies")
-//    for (i <- 1 to tailsInt.length) {
-//      println(finalState(i-1)._1 + " , " + finalState(i-1)._2)
+//    println("FINAL SCORE:\nPlayer 0: " + p0p1Scores(0) + "\nPlayer 1: " + p0p1Scores(1) + "\n\nPlayer 0 DECKLIST:")
+//    for (i <- 0 to (p0Actions.length - 1) ) {
+//      println(p0Actions(i))
 //    }
-//    println(p0p1Scores(0) + " , " + p0p1Scores(1))
-
+//    println("\n\nPlayer 1 DECKLIST:")
+//    for (i <- 0 to (p1Actions.length - 1) ) {
+//      println(p1Actions(i))
+//    }
 
 
 
