@@ -2,7 +2,6 @@ import scala.io.Source
 import scala.util.matching.Regex
 import scala.collection.mutable.ListBuffer
 import scala.collection.mutable.ArrayBuffer
-import scala.runtime.Nothing$
 
 
 object Reader extends App {
@@ -30,6 +29,7 @@ object Reader extends App {
     list1.groupBy(el => el).map(e => (e._1, e._2.length))
   }
 
+  //**PARSE MOVE HISTORY**
   //Parses move history for each deck
   //outputs (p0FreqArray, p1FreqArray), both Array[(card, numplays)] sorted alphabetically
   def parse_moveHistory(lognum : Int) : Unit = {
@@ -89,8 +89,9 @@ object Reader extends App {
 
   }
 
+  //**PARSE GAME LOG**
   //Parses game log
-  //outputs p0p1Score, final scores of each player and alphabetically sorted decklists of actions
+  //edits global variables gameScore, final scores of each player and alphabetically sorted decklists of actions, deck0 deck1
   def parse_log(lognum : Int) : Unit = {
     val filename = "log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
@@ -111,13 +112,9 @@ object Reader extends App {
 
 
     //getting decklists and final scores
-    val p0p1ScoreFill = ListBuffer(0,0)
-    val p0ActionsList : ListBuffer[(String, Int)] = ListBuffer()
-    val p1ActionsList : ListBuffer[(String, Int)] = ListBuffer()
-
-    for ( i <- 1 to tailsInt.length) {
-      val slotName = finalState(i-1)._1 : String
-      val slotVal = finalState(i-1)._2 : Int
+    for ( i <- 0 until tailsInt.length) {
+      val slotName = finalState(i)._1 : String
+      val slotVal = finalState(i)._2 : Int
 
       if (slotName == "p0Score") {
         gameScore(0) = slotVal: Int        //getting p0 final score
@@ -132,37 +129,31 @@ object Reader extends App {
           val addMaybe = (slotName.substring(2): String, slotVal : Int)
 
           if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
-            deck0 += addMaybe
+            deck0 += addMaybe                     //if card is action and from deck 0, add to deck 0
             //println( addMaybe._1 + ", " + addMaybe._2)
           } else {
             if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
-              deck1 += addMaybe
+              deck1 += addMaybe                   //if card is action and from deck 1, add to deck 1
               //println( addMaybe._1 + ", " + addMaybe._2)
             }
-
           }
         }
       }
     }
 
-    //turning lists into things we like
-    val p0p1Scores = p0p1ScoreFill.toArray
-//    deck0 += p0ActionsList.toArray
-//    deck1 += p1ActionsList.toArray
-
-    println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
-    for (i <- 0 to (deck0.length - 1) ) {
-      println(deck0(i))
-    }
-    println("\n\nPlayer 1 DECKLIST:")
-    for (i <- 0 to (deck1.length - 1) ) {
-      println(deck1(i))
-    }
-
-
+    //GAME SUMMARY/sanity check
+//    println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
+//    for (i <- 0 until (deck0.length) ) {
+//      println(deck0(i))
+//    }
+//    println("\n\nPlayer 1 DECKLIST:")
+//    for (i <- 0 until (deck1.length) ) {
+//      println(deck1(i))
+//    }
 
   }
 
+  //**CALCULATE SCORES**
 
 
 
