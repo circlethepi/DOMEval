@@ -25,7 +25,8 @@ object Reader extends App {
     list1.groupBy(el => el).map(e => (e._1, e._2.length))
   }
 
-  //Parses move history into (card, #times played) pairs for each deck
+  //Parses move history for each deck
+  //outputs p0FreqArray and p1FreqArray, both Array[(card, numplays)] sorted alphabetically
   def parse_moveHistory(lognum : Int) : Unit = {
     val filename = "moveHistory" + lognum + ".txt"
 
@@ -81,6 +82,8 @@ object Reader extends App {
 
   }
 
+  //Parses game log
+  //outputs p0p1Score, final scores of each player and alphabetically sorted decklists of actions
   def parse_log(lognum : Int) : Unit = {
     val filename = "log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
@@ -99,7 +102,12 @@ object Reader extends App {
     val tailsInt = tails.map(_.toInt)                           //making into ints vs strng
     val finalState = (heads zip tailsInt).toMap.toArray.sorted  //sorted pairs sim mvhist
 
+
+    //getting decklists and final scores
     val p0p1score = ListBuffer(0,0)
+    val p0ActionsList = ListBuffer()
+    val p1ActionsList = ListBuffer()
+
     for ( i <- 1 to tailsInt.length) {
       if (finalState(i-1)._1 == "p0Score") {
         p0p1score(0) = finalState(i-1)._2: Int //getting p0 final score
@@ -110,10 +118,10 @@ object Reader extends App {
       }
     }
 
-    println("card, copies")
-    for (i <- 1 to tailsInt.length) {
-      println(finalState(i-1)._1 + " , " + finalState(i-1)._2)
-    }
+//    println("card, copies")
+//    for (i <- 1 to tailsInt.length) {
+//      println(finalState(i-1)._1 + " , " + finalState(i-1)._2)
+//    }
     println(p0p1score)
 
 
