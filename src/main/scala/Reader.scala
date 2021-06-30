@@ -55,10 +55,9 @@ object Reader extends App {
       p0FreqSort += card
     }
     p0FreqSort = p0FreqSort.sorted
-    val p0FreqList = p0FreqSort.toList  //list of sorted frequencies for PLAYER 0
+    val p0FreqArray = p0FreqSort.toArray  //Array of sorted frequencies for PLAYER 0
 
-    //print(p0FreqList)
-
+    //println(p0FreqArray)
 
       //player1
     val p1ListBuff = new ListBuffer[String]()
@@ -76,9 +75,9 @@ object Reader extends App {
       p1FreqSort += card
     }
     p1FreqSort = p1FreqSort.sorted
-    val p1FreqList = p1FreqSort.toList  //list of sorted frequencies FOR PLAYER 1
+    val p1FreqArray = p1FreqSort.toArray  //list of sorted frequencies FOR PLAYER 1
 
-    //print(p1FreqList)
+    //print(p1FreqArray)
 
   }
 
@@ -95,11 +94,27 @@ object Reader extends App {
     gamelog.close()
 
     //get field names and values for decks
-    val heads = logArray(0).toList
-    // val tails : Int = logArray.length
-    val tails = logArray(logArray.length - 1).toList
-    println(heads)
-    println(tails)
+    val heads = logArray(0)                            //getting first row
+    val tails = logArray(logArray.length - 1)           //getting last row
+    val tailsInt = tails.map(_.toInt)                           //making into ints vs strng
+    val finalState = (heads zip tailsInt).toMap.toArray.sorted  //sorted pairs sim mvhist
+
+    val p0p1score = ListBuffer(0,0)
+    for ( i <- 1 to tailsInt.length) {
+      if (finalState(i-1)._1 == "p0Score") {
+        p0p1score(0) = finalState(i-1)._2: Int //getting p0 final score
+      } else {
+        if (finalState(i-1)._1 == "p1Score") {
+          p0p1score(1) = finalState(i-1)._2 : Int   //getting p1 final score
+        }
+      }
+    }
+
+    println("card, copies")
+    for (i <- 1 to tailsInt.length) {
+      println(finalState(i-1)._1 + " , " + finalState(i-1)._2)
+    }
+    println(p0p1score)
 
 
 
