@@ -19,6 +19,9 @@ object Reader extends App {
     "Witch",
     "Woodcutter")
 
+  val deck0 = ArrayBuffer()
+  val deck1 = ArrayBuffer()
+
 
   //Maps each element of a list to integer count of occurences
   def  list_Play_Freq[A](list1:List[A]):Map[A, Int] = {
@@ -26,7 +29,7 @@ object Reader extends App {
   }
 
   //Parses move history for each deck
-  //outputs p0FreqArray and p1FreqArray, both Array[(card, numplays)] sorted alphabetically
+  //outputs (p0FreqArray, p1FreqArray), both Array[(card, numplays)] sorted alphabetically
   def parse_moveHistory(lognum : Int) : Unit = {
     val filename = "moveHistory" + lognum + ".txt"
 
@@ -80,6 +83,8 @@ object Reader extends App {
 
     //print(p1FreqArray)
 
+    return (p0FreqArray, p1FreqArray)
+
   }
 
   //Parses game log
@@ -104,25 +109,46 @@ object Reader extends App {
 
 
     //getting decklists and final scores
-    val p0p1score = ListBuffer(0,0)
+    val p0p1ScoreFill = ListBuffer(0,0)
     val p0ActionsList = ListBuffer()
     val p1ActionsList = ListBuffer()
 
     for ( i <- 1 to tailsInt.length) {
-      if (finalState(i-1)._1 == "p0Score") {
-        p0p1score(0) = finalState(i-1)._2: Int //getting p0 final score
+      val slotName = finalState(i-1)._1 : String
+      val slotVal = finalState(i-1)._2 : Int
+
+      if (slotName == "p0Score") {
+        p0p1ScoreFill(0) = slotVal: Int        //getting p0 final score
       } else {
-        if (finalState(i-1)._1 == "p1Score") {
-          p0p1score(1) = finalState(i-1)._2 : Int   //getting p1 final score
+        if (slotName == "p1Score") {
+          p0p1ScoreFill(1) = slotVal : Int     //getting p1 final score
+        } else {     //generating deck lists otherwise
+
+          val p0DeckPat : Regex = "p0([a-zA-Z]+)".r
+          val p1DeckPat : Regex = "p1([a-zA-Z]+)".r
+          val nonActionCards : List[String] = List("Copper", "Silver", "Gold", "Curse", "Estate", "Duchy", "Province")
+
+          if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
+
+
+            //println(slotName.substring(2))
+
+          }
+
+
+
         }
       }
     }
+
+    //turning lists into things we like
+    val p0p1Scores = p0p1ScoreFill.toArray
 
 //    println("card, copies")
 //    for (i <- 1 to tailsInt.length) {
 //      println(finalState(i-1)._1 + " , " + finalState(i-1)._2)
 //    }
-    println(p0p1score)
+//    println(p0p1Scores(0) + " , " + p0p1Scores(1))
 
 
 
@@ -144,4 +170,5 @@ object Reader extends App {
 
   parse_moveHistory(100)
   parse_log(100)
+
 }
