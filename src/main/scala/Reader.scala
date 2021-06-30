@@ -1,9 +1,24 @@
 import scala.io.Source
 import scala.util.matching.Regex
 import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 
 
 object Reader extends App {
+
+  val cards : List[String] = List("Bureaucrat",
+    "Festival",
+    "Gardens",
+    "Laboratory",
+    "Market",
+    "Moneylender",
+    "Remodel",
+    "Smithy",
+    "Thief",
+    "Village",
+    "Witch",
+    "Woodcutter")
+
 
   //Maps each element of a list to integer count of occurences
   def  list_Play_Freq[A](list1:List[A]):Map[A, Int] = {
@@ -19,6 +34,7 @@ object Reader extends App {
     val mvHistStr = mvHist.getLines.mkString //turn file into string
     //val mvLines: List[String] = mvHist.getLines.toList
     //val numlines = mvLines.length
+    mvHist.close()
 
 
     //tokenizers - getting plays for each player
@@ -38,7 +54,6 @@ object Reader extends App {
     for (card <- p0Freq) {
       p0FreqSort += card
     }
-
     p0FreqSort = p0FreqSort.sorted
     val p0FreqList = p0FreqSort.toList  //list of sorted frequencies for PLAYER 0
 
@@ -60,13 +75,40 @@ object Reader extends App {
     for (card <- p1Freq) {
       p1FreqSort += card
     }
-
     p1FreqSort = p1FreqSort.sorted
     val p1FreqList = p1FreqSort.toList  //list of sorted frequencies FOR PLAYER 1
 
     //print(p1FreqList)
 
   }
+
+  def parse_log(lognum : Int) : Unit = {
+    val filename = "log" + lognum + ".csv"
+    val gamelog = Source.fromFile(filename)
+
+
+    //make into an array
+    val logArray = new ArrayBuffer[Array[String]]()
+    for (line <- gamelog.getLines) {
+      logArray += line.split(",").map(_.trim)
+    }
+    gamelog.close()
+
+    //get field names and values for decks
+    val heads = logArray(0).toList
+    // val tails : Int = logArray.length
+    val tails = logArray(logArray.length - 1).toList
+    println(heads)
+    println(tails)
+
+
+
+
+  }
+
+
+
+
 
     def main() : Unit = {
       val mvHist = Source.fromFile("moveHistory100.txt")
@@ -78,4 +120,5 @@ object Reader extends App {
     }
 
   parse_moveHistory(100)
+  parse_log(100)
 }
