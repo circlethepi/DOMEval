@@ -2,6 +2,7 @@ import scala.io.Source
 import scala.util.matching.Regex
 import scala.collection.mutable.ListBuffer
 import scala.collection.mutable.ArrayBuffer
+import scala.runtime.Nothing$
 
 
 object Reader extends App {
@@ -19,8 +20,9 @@ object Reader extends App {
     "Witch",
     "Woodcutter")
 
-  val deck0 = ArrayBuffer()
-  val deck1 = ArrayBuffer()
+  val deck0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
+  val deck1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
+  val gameScore : ArrayBuffer[Int] = ArrayBuffer(0,0)
 
 
   //Maps each element of a list to integer count of occurences
@@ -110,46 +112,52 @@ object Reader extends App {
 
     //getting decklists and final scores
     val p0p1ScoreFill = ListBuffer(0,0)
-    val p0ActionsList = ListBuffer()
-    val p1ActionsList = ListBuffer()
+    val p0ActionsList : ListBuffer[(String, Int)] = ListBuffer()
+    val p1ActionsList : ListBuffer[(String, Int)] = ListBuffer()
 
     for ( i <- 1 to tailsInt.length) {
       val slotName = finalState(i-1)._1 : String
       val slotVal = finalState(i-1)._2 : Int
 
       if (slotName == "p0Score") {
-        p0p1ScoreFill(0) = slotVal: Int        //getting p0 final score
+        gameScore(0) = slotVal: Int        //getting p0 final score
       } else {
         if (slotName == "p1Score") {
-          p0p1ScoreFill(1) = slotVal : Int     //getting p1 final score
+          gameScore(1) = slotVal : Int     //getting p1 final score
         } else {     //generating deck lists otherwise
 
           val p0DeckPat : Regex = "p0([a-zA-Z]+)".r
           val p1DeckPat : Regex = "p1([a-zA-Z]+)".r
           val nonActionCards : List[String] = List("Copper", "Silver", "Gold", "Curse", "Estate", "Duchy", "Province")
+          val addMaybe = (slotName.substring(2): String, slotVal : Int)
 
           if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
-
-
-            //println(slotName.substring(2))
+            deck0 += addMaybe
+            //println( addMaybe._1 + ", " + addMaybe._2)
+          } else {
+            if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
+              deck1 += addMaybe
+              //println( addMaybe._1 + ", " + addMaybe._2)
+            }
 
           }
-
-
-
         }
       }
     }
 
     //turning lists into things we like
     val p0p1Scores = p0p1ScoreFill.toArray
+//    deck0 += p0ActionsList.toArray
+//    deck1 += p1ActionsList.toArray
 
-//    println("card, copies")
-//    for (i <- 1 to tailsInt.length) {
-//      println(finalState(i-1)._1 + " , " + finalState(i-1)._2)
-//    }
-//    println(p0p1Scores(0) + " , " + p0p1Scores(1))
-
+    println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
+    for (i <- 0 to (deck0.length - 1) ) {
+      println(deck0(i))
+    }
+    println("\n\nPlayer 1 DECKLIST:")
+    for (i <- 0 to (deck1.length - 1) ) {
+      println(deck1(i))
+    }
 
 
 
