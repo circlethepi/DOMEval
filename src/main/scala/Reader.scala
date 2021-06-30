@@ -19,6 +19,9 @@ object Reader extends App {
     "Witch",
     "Woodcutter")
 
+  val plays0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
+  val plays1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
+
   val deck0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
   val deck1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
   val gameScore : ArrayBuffer[Int] = ArrayBuffer(0,0)
@@ -56,14 +59,11 @@ object Reader extends App {
     val p0FreqMap = list_Play_Freq(p0List)       //getting frequencies
     val p0Freq = p0FreqMap.toArray              //getting pairs
 
-    var p0FreqSort = new ListBuffer[(String, Int)]() //sorting alphabetically
-    for (card <- p0Freq) {
-      p0FreqSort += card
+    for (i <- 0 until p0Freq.length) {
+      plays0 += p0Freq(i)                         //Array buffer of  frequencies for PLAYER 0
     }
-    p0FreqSort = p0FreqSort.sorted
-    val p0FreqArray = p0FreqSort.toArray  //Array of sorted frequencies for PLAYER 0
 
-    //println(p0FreqArray)
+    //println(plays0)
 
       //player1
     val p1ListBuff = new ListBuffer[String]()
@@ -76,16 +76,13 @@ object Reader extends App {
     val p1FreqMap = list_Play_Freq(p1List)       //getting frequencies
     val p1Freq = p1FreqMap.toArray              //getting pairs
 
-    var p1FreqSort = new ListBuffer[(String, Int)]() //sorting alphabetically
-    for (card <- p1Freq) {
-      p1FreqSort += card
+    for (i <- 0 until p1Freq.length) {
+      plays0 += p1Freq(i)                         //array buffer of frequencies FOR PLAYER 1
     }
-    p1FreqSort = p1FreqSort.sorted
-    val p1FreqArray = p1FreqSort.toArray  //list of sorted frequencies FOR PLAYER 1
 
-    //print(p1FreqArray)
+    //print(plays1)
 
-    return (p0FreqArray, p1FreqArray)
+    //return (p0FreqArray, p1FreqArray)
 
   }
 
@@ -169,5 +166,8 @@ object Reader extends App {
 
   parse_moveHistory(100)
   parse_log(100)
+
+
+
 
 }
