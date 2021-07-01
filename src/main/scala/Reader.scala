@@ -43,14 +43,12 @@ object Reader {
     //getting plays from move history file
     val mvHist = Source.fromFile(filename)
     val mvHistStr = mvHist.getLines.mkString //turn file into string
-    //val mvLines: List[String] = mvHist.getLines.toList
-    //val numlines = mvLines.length
-    mvHist.close()
 
+    mvHist.close()
 
     //tokenizers - getting plays for each player
       //player0
-    val p0ListBuff = new ListBuffer[String]()
+    val p0ListBuff : ListBuffer[String] = ListBuffer()
     val p0Pattern: Regex = "Player0-Played ([a-zA-Z-]+)".r
 
     for (play <- p0Pattern.findAllMatchIn(mvHistStr)) {  //adding plays to ListBuffer
@@ -65,10 +63,9 @@ object Reader {
       plays0 += p0Freq(i)                         //Array buffer of  frequencies for PLAYER 0
     }
 
-    //println(plays0)
 
       //player1
-    val p1ListBuff = new ListBuffer[String]()
+    val p1ListBuff : ListBuffer[String] = ListBuffer()
     val p1Pattern: Regex = "Player1-Played ([a-zA-Z-]+)".r
 
     for (play <- p1Pattern.findAllMatchIn(mvHistStr)) {  //adding plays to ListBuffer
@@ -81,10 +78,6 @@ object Reader {
     for (i <- 0 until p1Freq.length) {
       plays1 += p1Freq(i)                         //array buffer of frequencies FOR PLAYER 1
     }
-
-    //print(plays1)
-
-    //return (p0FreqArray, p1FreqArray)
 
   }
 
@@ -149,7 +142,6 @@ object Reader {
     }
   }
 
-
   //**CALCULATE SCORES**
   //uses calculated values and parsing to calculate the evaluation scores of each card
   //for each card: for each deck: %VP()
@@ -157,23 +149,61 @@ object Reader {
     val vpMultiplier0 = gameScore(0).toFloat/(gameScore(0)+gameScore(1))
     val vpMultiplier1 = gameScore(1).toFloat/(gameScore(0)+gameScore(1))
 
-    val vpTotal = gameScore(0)+gameScore(1)  //totalVP (for dividing weighting
+    //                        cardname, plays0num, deck0num, plays1num, deck1num
+    val calcArray : ArrayBuffer[(String, Int, Int, Int, Int)] = ArrayBuffer()
+
+    val vpTotal = gameScore(0)+gameScore(1)  //totalVP (for dividing weighting)
     //gameTurns = number of turns
 
-//    println(vpMultiplier0 + ", " + vpMultiplier1)
-//    println("Number of Turns: " + gameTurns)
+    //making array of values
+    for (i <- 0 until cards.length) {
+      val cardCurrent = cards(i)
+      val cardVals : ArrayBuffer[Any] = ArrayBuffer(cardCurrent, 0, 0, 0, 0)  //setting up each card row
+
+        for (i <- 0 until plays0.length) {        //getting plays0num
+        if (plays0(i)._1 == cardCurrent) {
+          cardVals(1) = plays0(i)._2
+        }
+      }
+
+        for (i <- 0 until deck0.length) {         //getting deck0num
+          if (deck0(i)._1 == cardCurrent) {
+            cardVals(2) = deck0(i)._2
+          }
+        }
+
+        for (i <- 0 until plays1.length) {             //getting plays1num
+          if (plays1(i)._1 == cardCurrent) {
+            cardVals(3) = plays1(i)._2
+          }
+        }
+
+        for (i <- 0 until deck1.length) {            //getting deck1num
+          if (deck1(i)._1 == cardCurrent) {
+          cardVals(4) = deck1(i)._2
+          }
+        }
+
+      for (i <- 0 to 4) {
+        print(cardVals(i) + ", ")
+      }
+      print("\n")
+    }
 
 
   }
 
 
-    def main(args : Array[String]) : Unit = {
-      val mvHist = Source.fromFile("moveHistory100.txt")
-      val line = mvHist.getLines.take(1).toList
-      mvHist.close()
-      println(line)
+    def main(inputs : Array[String]) : Unit = {
 
-      //write to a file
+      for (i <- 0 until inputs.length) {
+        val logNumber = inputs(i).toInt
+        parse_moveHistory(logNumber)
+        parse_log(logNumber)
+        calculate_values()
+
+        //write to csv file
+      }
     }
 
   parse_moveHistory(100)
