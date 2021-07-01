@@ -4,7 +4,7 @@ import scala.collection.mutable.ListBuffer
 import scala.collection.mutable.ArrayBuffer
 
 
-object Reader extends App {
+object Reader {
 
   val cards : List[String] = List("Bureaucrat",
     "Festival",
@@ -19,13 +19,15 @@ object Reader extends App {
     "Witch",
     "Woodcutter")
 
+  val evaluation : ArrayBuffer[(String, Int)] = ArrayBuffer()
+
   val plays0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
   val plays1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
-
   val deck0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
   val deck1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
-  val gameScore : ArrayBuffer[Int] = ArrayBuffer(0,0)
 
+  val gameScore : ArrayBuffer[Int] = ArrayBuffer(0,0)
+  var gameTurns : Int = 0
 
   //Maps each element of a list to integer count of occurences
   def  list_Play_Freq[A](list1:List[A]):Map[A, Int] = {
@@ -77,7 +79,7 @@ object Reader extends App {
     val p1Freq = p1FreqMap.toArray              //getting pairs
 
     for (i <- 0 until p1Freq.length) {
-      plays0 += p1Freq(i)                         //array buffer of frequencies FOR PLAYER 1
+      plays1 += p1Freq(i)                         //array buffer of frequencies FOR PLAYER 1
     }
 
     //print(plays1)
@@ -88,7 +90,8 @@ object Reader extends App {
 
   //**PARSE GAME LOG**
   //Parses game log
-  //edits global variables gameScore, final scores of each player and alphabetically sorted decklists of actions, deck0 deck1
+  //edits global variables gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
+  //deck0 and deck1 give us # of copies of each card
   def parse_log(lognum : Int) : Unit = {
     val filename = "log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
@@ -115,47 +118,56 @@ object Reader extends App {
 
       if (slotName == "p0Score") {
         gameScore(0) = slotVal: Int        //getting p0 final score
+
       } else {
         if (slotName == "p1Score") {
           gameScore(1) = slotVal : Int     //getting p1 final score
-        } else {     //generating deck lists otherwise
 
-          val p0DeckPat : Regex = "p0([a-zA-Z]+)".r
-          val p1DeckPat : Regex = "p1([a-zA-Z]+)".r
-          val nonActionCards : List[String] = List("Copper", "Silver", "Gold", "Curse", "Estate", "Duchy", "Province")
-          val addMaybe = (slotName.substring(2): String, slotVal : Int)
+        } else {
+          if (slotName == "turn") {
+            gameTurns = slotVal : Int
 
-          if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
-            deck0 += addMaybe                     //if card is action and from deck 0, add to deck 0
-            //println( addMaybe._1 + ", " + addMaybe._2)
-          } else {
-            if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
-              deck1 += addMaybe                   //if card is action and from deck 1, add to deck 1
+          } else { //generating deck lists otherwise
+
+            val p0DeckPat : Regex = "p0([a-zA-Z]+)".r
+            val p1DeckPat : Regex = "p1([a-zA-Z]+)".r
+            val nonActionCards : List[String] = List("Copper", "Silver", "Gold", "Curse", "Estate", "Duchy", "Province")
+            val addMaybe = (slotName.substring(2): String, slotVal : Int)
+
+            if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
+              deck0 += addMaybe                     //if card is action and from deck 0, add to deck 0
               //println( addMaybe._1 + ", " + addMaybe._2)
+            } else {
+              if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
+                deck1 += addMaybe //if card is action and from deck 1, add to deck 1
+                //println( addMaybe._1 + ", " + addMaybe._2)
+              }
             }
           }
         }
       }
     }
+  }
 
-    //GAME SUMMARY/sanity check
-//    println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
-//    for (i <- 0 until (deck0.length) ) {
-//      println(deck0(i))
-//    }
-//    println("\n\nPlayer 1 DECKLIST:")
-//    for (i <- 0 until (deck1.length) ) {
-//      println(deck1(i))
-//    }
+
+  //**CALCULATE SCORES**
+  //uses calculated values and parsing to calculate the evaluation scores of each card
+  //for each card: for each deck: %VP()
+  def calculate_values() : Unit = {
+    val vpMultiplier0 = gameScore(0).toFloat/(gameScore(0)+gameScore(1))
+    val vpMultiplier1 = gameScore(1).toFloat/(gameScore(0)+gameScore(1))
+
+    val vpTotal = gameScore(0)+gameScore(1)  //totalVP (for dividing weighting
+    //gameTurns = number of turns
+
+//    println(vpMultiplier0 + ", " + vpMultiplier1)
+//    println("Number of Turns: " + gameTurns)
+
 
   }
 
-  //**CALCULATE SCORES**
 
-
-
-
-    def main() : Unit = {
+    def main(args : Array[String]) : Unit = {
       val mvHist = Source.fromFile("moveHistory100.txt")
       val line = mvHist.getLines.take(1).toList
       mvHist.close()
@@ -166,8 +178,27 @@ object Reader extends App {
 
   parse_moveHistory(100)
   parse_log(100)
+  calculate_values()
 
 
+  //GAME SUMMARY/sanity check
+//  println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
+//  for (i <- 0 until (deck0.length) ) {
+//    println(deck0(i))
+//  }
+//  println("\nPlayer 0 PLAYCOUNTS:")
+//  for (i <- 0 until (plays0.length) ) {
+//    print(plays0(i))
+//  }
+//
+//  println("\n\nPlayer 1 DECKLIST:")
+//  for (i <- 0 until (deck1.length) ) {
+//    println(deck1(i))
+//  }
+//  println("\nPlayer 1 PLAYCOUNTS:")
+//  for (i <- 0 until (plays1.length) ) {
+//    print(plays1(i))
+//  }
 
 
 }
