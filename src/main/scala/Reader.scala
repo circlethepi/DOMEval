@@ -150,46 +150,68 @@ object Reader {
     val vpMultiplier1 = gameScore(1).toFloat/(gameScore(0)+gameScore(1))
 
     //                        cardname, plays0num, deck0num, plays1num, deck1num
-    val calcArray : ArrayBuffer[(String, Int, Int, Int, Int)] = ArrayBuffer()
-
-    val vpTotal = gameScore(0)+gameScore(1)  //totalVP (for dividing weighting)
-    //gameTurns = number of turns
+    val cardEvals : ArrayBuffer[(String, Float)] = ArrayBuffer()
 
     //making array of values
     for (i <- 0 until cards.length) {
       val cardCurrent = cards(i)
-      val cardVals : ArrayBuffer[Any] = ArrayBuffer(cardCurrent, 0, 0, 0, 0)  //setting up each card row
 
-        for (i <- 0 until plays0.length) {        //getting plays0num
-        if (plays0(i)._1 == cardCurrent) {
-          cardVals(1) = plays0(i)._2
+      //                              plays0num, deck0num, plays1num, deck1num
+      val cardVals : ArrayBuffer[Int] = ArrayBuffer(0, 0, 0, 0)        //setting up card calculation
+      var cardCalc : Float = 0
+
+          for (i <- 0 until plays0.length) {        //getting plays0num
+            if (plays0(i)._1 == cardCurrent) {
+              cardVals(0) = plays0(i)._2
         }
       }
 
         for (i <- 0 until deck0.length) {         //getting deck0num
           if (deck0(i)._1 == cardCurrent) {
-            cardVals(2) = deck0(i)._2
+            cardVals(1) = deck0(i)._2
           }
         }
 
         for (i <- 0 until plays1.length) {             //getting plays1num
           if (plays1(i)._1 == cardCurrent) {
-            cardVals(3) = plays1(i)._2
+            cardVals(2) = plays1(i)._2
           }
         }
 
         for (i <- 0 until deck1.length) {            //getting deck1num
           if (deck1(i)._1 == cardCurrent) {
-          cardVals(4) = deck1(i)._2
+          cardVals(3) = deck1(i)._2
           }
         }
 
-      for (i <- 0 to 4) {
-        print(cardVals(i) + ", ")
+      //calculation
+      var deck0Eval : Float = 0
+      var deck1Eval : Float = 0
+
+      //deck0
+      val deck0EvalNum = vpMultiplier0 * cardVals(0)
+      val deck0EvalDenom = gameTurns * cardVals(1)
+
+      if (deck0EvalDenom != 0)  {
+        deck0Eval = deck0EvalNum/deck0EvalDenom       //if not undefined, calculate deck eval
       }
-      print("\n")
+
+      //deck1
+      val deck1EvalNum = vpMultiplier1 * cardVals(2)
+      val deck1EvalDenom = gameTurns * cardVals(3)
+
+      if (deck1EvalDenom != 0) {
+        deck1Eval = deck1EvalNum/deck1EvalDenom     //if not undefined, calculate deck eval
+      }
+
+      cardCalc = deck0Eval + deck1Eval        //get score
+      val cardCurrentEval = (cardCurrent : String ,cardCalc : Float)   //get card, score pair
+      cardEvals += cardCurrentEval   //add to list
     }
 
+    for (i <- 0 until cardEvals.length) {
+      println(cardEvals(i)._1 + ", SCORE: " + cardEvals(i)._2)
+    }
 
   }
 
