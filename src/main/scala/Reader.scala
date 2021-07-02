@@ -1,11 +1,14 @@
+import java.io._
 import scala.io.Source
 import scala.util.matching.Regex
-import scala.collection.mutable.ListBuffer
-import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.{ListBuffer, ArrayBuffer}
+
 
 
 object Reader {
 
+  //**GLOBAL VAL DECLARATION**
+  //Cards used in the game
   val cards : List[String] = List("Bureaucrat",
     "Festival",
     "Gardens",
@@ -19,20 +22,30 @@ object Reader {
     "Witch",
     "Woodcutter")
 
-  val evaluation : ArrayBuffer[(String, Int)] = ArrayBuffer()
-
+  //info from move history
   val plays0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
   val plays1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
+
+  //info from game log
   val deck0 : ArrayBuffer[(String, Int)] = ArrayBuffer()
   val deck1 : ArrayBuffer[(String, Int)] = ArrayBuffer()
 
   val gameScore : ArrayBuffer[Int] = ArrayBuffer(0,0)
   var gameTurns : Int = 0
 
+  //card evaluation holder
+  val cardEvals : ArrayBuffer[(String, Any)] = ArrayBuffer()
+
+
+
+
+  //**LIST PLAY FREQUENCY**
   //Maps each element of a list to integer count of occurences
   def  list_Play_Freq[A](list1:List[A]):Map[A, Int] = {
     list1.groupBy(el => el).map(e => (e._1, e._2.length))
   }
+
+
 
   //**PARSE MOVE HISTORY**
   //Parses move history for each deck
@@ -80,6 +93,8 @@ object Reader {
     }
 
   }
+
+
 
   //**PARSE GAME LOG**
   //Parses game log
@@ -142,15 +157,14 @@ object Reader {
     }
   }
 
+
+
   //**CALCULATE SCORES**
   //uses calculated values and parsing to calculate the evaluation scores of each card
   //for each card: for each deck: %VP()
-  def calculate_values() : Unit = {
+  def calculate_values(lognum : Int) : Unit = {
     val vpMultiplier0 = gameScore(0).toFloat/(gameScore(0)+gameScore(1))
     val vpMultiplier1 = gameScore(1).toFloat/(gameScore(0)+gameScore(1))
-
-    //                        cardname, plays0num, deck0num, plays1num, deck1num
-    val cardEvals : ArrayBuffer[(String, Float)] = ArrayBuffer()
 
     //making array of values
     for (i <- 0 until cards.length) {
@@ -158,7 +172,7 @@ object Reader {
 
       //                              plays0num, deck0num, plays1num, deck1num
       val cardVals : ArrayBuffer[Int] = ArrayBuffer(0, 0, 0, 0)        //setting up card calculation
-      var cardCalc : Float = 0
+      var cardCalc : Any = 0
 
           for (i <- 0 until plays0.length) {        //getting plays0num
             if (plays0(i)._1 == cardCurrent) {
@@ -204,15 +218,18 @@ object Reader {
         deck1Eval = deck1EvalNum/deck1EvalDenom     //if not undefined, calculate deck eval
       }
 
-      cardCalc = deck0Eval + deck1Eval        //get score
-      val cardCurrentEval = (cardCurrent : String ,cardCalc : Float)   //get card, score pair
+      //* check here to see whether or not the card was in the pool*
+      //if not in the pool, return "n/a" for evaluation of that card
+
+      cardCalc = 100 * (deck0Eval + deck1Eval) : Float  //else, get score
+
+      val cardCurrentEval = (cardCurrent : String , cardCalc)   //get card, score pair
       cardEvals += cardCurrentEval   //add to list
     }
 
-    for (i <- 0 until cardEvals.length) {
-      println(cardEvals(i)._1 + ", SCORE: " + cardEvals(i)._2)
-    }
-
+//    for(i <- 0 until cardEvals.length) {
+//      println("SCORE FOR " + cardEvals(i)._1 + ": " + cardEvals(i)._2)
+//    }
   }
 
 
@@ -222,15 +239,26 @@ object Reader {
         val logNumber = inputs(i).toInt
         parse_moveHistory(logNumber)
         parse_log(logNumber)
-        calculate_values()
+        calculate_values(logNumber)
 
         //write to csv file
+        //        val filename = "./cardEvaluations" + logNumber
+        //        val evalFile = new File(filename)
+        //        val writer = new BufferedWriter(new FileWriter(evalFile))
+        //
+        //        writer.write("Card, Score")
+        //
+        //        for (i <- 0 until cardEvals.length) {
+        //          writer.write(cardEvals(i)._1 + ", " + cardEvals(i)._2)
+        //        }
+        //        writer.close()
+
       }
     }
 
   parse_moveHistory(100)
   parse_log(100)
-  calculate_values()
+  calculate_values(100)
 
 
   //GAME SUMMARY/sanity check
