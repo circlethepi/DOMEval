@@ -48,13 +48,15 @@ object Reader {
   //Parses move history for each deck
   //outputs (p0FreqArray, p1FreqArray), both Array[(card, numplays)] sorted alphabetically
   def parse_moveHistory(lognum: Int): Unit = {
-    val filename = "moveHistory" + lognum + ".txt"
+    val filename = "moveHistories/moveHistory" + lognum + ".txt"
 
     //getting plays from move history file
     val mvHist = Source.fromFile(filename)
     val mvHistStr = mvHist.getLines.mkString //turn file into string
-
     mvHist.close()
+
+    //val mvHistLinesList : List[String] = mvHistStr.split("-").map(_.trim).toList
+    //val kingdomListLine : List[String] = mvHistLinesList(2).split(" ").map(_.trim).toList
 
     //tokenizers - getting plays for each player
     //player0
@@ -97,7 +99,7 @@ object Reader {
   //edits global variables gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
   //deck0 and deck1 give us # of copies of each card
   def parse_log(lognum: Int): Unit = {
-    val filename = "log" + lognum + ".csv"
+    val filename = "gameLogs/log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
 
 
@@ -120,16 +122,19 @@ object Reader {
       val slotName = finalState(i)._1: String
       val slotVal = finalState(i)._2: Int
 
-      if (slotName == "p0Score") {
+      if (slotName == "p0Score") {                        //changed to p1 score for log
         gameScore(0) = slotVal: Int //getting p0 final score
+      //  println("p0Score = " + gameScore(0))
 
       } else {
-        if (slotName == "p1Score") {
+        if (slotName == "p1Score") {                       //changed to p2 score for log
           gameScore(1) = slotVal: Int //getting p1 final score
+       //   println("p1Score = " + gameScore(1))
 
         } else {
           if (slotName == "turn") {
             gameTurns = slotVal: Int
+          //  println("numTurns = " + gameTurns)
 
           } else { //generating deck lists otherwise
 
@@ -140,11 +145,11 @@ object Reader {
 
             if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
               deck0 += addMaybe //if card is action and from deck 0, add to deck 0
-              //println( addMaybe._1 + ", " + addMaybe._2)
+            // println( addMaybe._1 + ", " + addMaybe._2)
             } else {
               if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
                 deck1 += addMaybe //if card is action and from deck 1, add to deck 1
-                //println( addMaybe._1 + ", " + addMaybe._2)
+              //  println( addMaybe._1 + ", " + addMaybe._2)
               }
             }
           }
@@ -172,24 +177,28 @@ object Reader {
       for (i <- 0 until plays0.length) { //getting plays0num
         if (plays0(i)._1 == cardCurrent) {
           cardVals(0) = plays0(i)._2
+          //println(cardCurrent + " plays0: " + cardVals(0))
         }
       }
 
       for (i <- 0 until deck0.length) { //getting deck0num
         if (deck0(i)._1 == cardCurrent) {
           cardVals(1) = deck0(i)._2
+          //println(cardCurrent + " deck0: " + cardVals(1))
         }
       }
 
       for (i <- 0 until plays1.length) { //getting plays1num
         if (plays1(i)._1 == cardCurrent) {
           cardVals(2) = plays1(i)._2
+         // println(cardCurrent + " plays1: " + cardVals(2))
         }
       }
 
       for (i <- 0 until deck1.length) { //getting deck1num
         if (deck1(i)._1 == cardCurrent) {
           cardVals(3) = deck1(i)._2
+          //println(cardCurrent + " deck1: " + cardVals(3))
         }
       }
 
@@ -214,27 +223,47 @@ object Reader {
       }
 
       //* check here to see whether or not the card was in the pool*
+
+     // val kingdomList: List[String] = str.split("\\n").map(_.trim).toList
+
       //if not in the pool, return "n/a" for evaluation of that card
 
       cardCalc = 100 * (deck0Eval + deck1Eval): Float //else, get score
 
       val cardCurrentEval = (cardCurrent: String, cardCalc) //get card, score pair
       cardEvals += cardCurrentEval //add to list
+
     }
+//    for (i <- 0 until cardEvals.length) {
+//      println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
+//    }
   }
 
 
-  def main(inputs: Array[String]): Unit = {
+  def main(inputs: Array[String]) : Unit = {
 
-    for (i <- 0 until inputs.length) {
-      val logNumber = inputs(i).toInt
+    val startingNum : Int = inputs(0).toInt
+    val numGames : Int = inputs(1).toInt
+
+    for (i <- 0 until numGames) {       //starting at a given number, go for a number of games
+      val logNumber = startingNum + i
+      //clear global variables
+      plays0.clear()
+      plays1.clear()
+      deck0.clear()
+      deck1.clear()
+      gameScore(0) = 0
+      gameScore(1) = 0
+      gameTurns = 0
+      cardEvals.clear()
+
       parse_moveHistory(logNumber)
       parse_log(logNumber)
       calculate_values(logNumber)
 
       //WRITE TO CSV FILE
       //creating the file
-      val fileName = "./cardEvaluations" + logNumber
+      val fileName = "/cardEvaluations" + logNumber
       val fileObject = new File("evaluations/" + fileName + ".csv")
       fileObject.createNewFile()                              // Creating a file
       val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
@@ -245,6 +274,11 @@ object Reader {
       for (i <- 0 until cardEvals.length) {
         writer.write("\n" + cardEvals(i)._1 + ", " + cardEvals(i)._2)
       }
+
+//      writer.write("\nCARD, NUMPLAYS")
+//      for (i <- 0 until plays1.length) {
+//        writer.write("\n"+plays1(i)._1 + ", " + plays1(i)._2)
+//      }
 
       writer.close() // Closing printwriter
 
