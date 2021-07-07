@@ -1,0 +1,5 @@
+package DistroManager
+
+object DistributionManager {
+
+}

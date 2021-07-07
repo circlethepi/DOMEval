@@ -1,0 +1,5 @@
+package Critic
+
+object Critic {
+
+}
