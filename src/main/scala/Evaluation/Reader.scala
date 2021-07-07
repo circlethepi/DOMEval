@@ -21,6 +21,7 @@ object Reader {
   //Cards used in the game
   val cards: List[String] = List("Bureaucrat", "Festival", "Gardens", "Laboratory", "Market", "Moneylender", "Remodel", "Smithy", "Thief", "Village", "Witch",
     "Woodcutter")
+  val gameCards : ListBuffer[String] = ListBuffer()
 
   //info from move history - number of plays per card for each deck
   val plays0: ArrayBuffer[(String, Int)] = ArrayBuffer()
@@ -50,8 +51,6 @@ object Reader {
   //Parses move history for each deck
   //outputs values for play frequency for each card for each player
   //***************************************************************
-  //>>edit here to get kingdom list<<!!!!!
-
   /**
    * PARSE MOVE HISTORY
    * Parses move history for each deck
@@ -60,15 +59,19 @@ object Reader {
    * @return
    */
   def parse_moveHistory(lognum: Int): Unit = {
-    val filename = "moveHistories/moveHistory" + lognum + ".txt"
+    val filename = "Data/moveHistory" + lognum + ".txt"
 
     //getting plays from move history file
-    val mvHist = Source.fromFile(filename)
+    val mvHist = io.Source.fromFile(filename)
     val mvHistStr = mvHist.getLines.mkString //turn file into string
+    val mvHistList = Source.fromFile(filename).getLines.toList
     mvHist.close()
 
-    //val mvHistLinesList : List[String] = mvHistStr.split("-").map(_.trim).toList
-    //val kingdomListLine : List[String] = mvHistLinesList(2).split(" ").map(_.trim).toList
+    //getting list of cards in game
+    val cardsList = mvHistList(1).split(" ").map(_.trim).toList
+    for (i <- 0 until cardsList.length) {
+      gameCards += cardsList(i).toLowerCase.capitalize
+    }
 
     //tokenizers - getting plays for each player
     //player0
@@ -112,7 +115,7 @@ object Reader {
   //outputs values for gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
   //***************************************************************************
   def parse_log(lognum: Int): Unit = {
-    val filename = "gameLogs/log" + lognum + ".csv"
+    val filename = "Data/log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
 
 
@@ -238,20 +241,19 @@ object Reader {
       }
 
       //* check here to see whether or not the card was in the pool*
-
-      // val kingdomList: List[String] = str.split("\\n").map(_.trim).toList
-
-      //if not in the pool, return "n/a" for evaluation of that card
-
-      cardCalc = 100 * (deck0Eval + deck1Eval): Float //else, get score
+      if (gameCards.contains(cardCurrent) == true) {
+        cardCalc = 100 * (deck0Eval + deck1Eval): Float
+      } else {
+        cardCalc = "NA"
+      }
 
       val cardCurrentEval = (cardCurrent: String, cardCalc) //get card, score pair
       cardEvals += cardCurrentEval //add to list
 
     }
-    //    for (i <- 0 until cardEvals.length) {
-    //      println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
-    //    }
+        for (i <- 0 until cardEvals.length) {
+          println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
+        }
   }
 
 
@@ -278,7 +280,7 @@ object Reader {
 
       //WRITE TO CSV FILE
       //creating the file
-      val fileName = "/cardEvaluations" + logNumber
+      val fileName = "cardEvaluations" + logNumber
       val fileObject = new File("evaluations/" + fileName + ".csv")
       fileObject.createNewFile() // Creating a file
       val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
