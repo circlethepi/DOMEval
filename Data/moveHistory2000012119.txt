@@ -1,0 +1,87 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET LABORATORY BUREAUCRAT REMODEL THIEF 
+Game Started: Tue Jul  6 20:18:54 2021
+----------
+Player0-Bought Silver Secs: 167.355218
+----Player0-Ended-turn1------------------ Secs: 0.000262
+----Player1-Ended-turn1------------------ Secs: 0.000008
+Player0-Bought Bureaucrat Secs: 141.183488
+----Player0-Ended-turn2------------------ Secs: 0.000303
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Bought Silver Secs: 126.119661
+----Player0-Ended-turn3------------------ Secs: 0.000231
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn3------------------ Secs: 0.000006
+Player0-Played Bureaucrat Secs: 100.781584
+----Player0-Ended-turn4------------------ Secs: 91.786174
+Player1-Bought Silver Secs: 0.000011
+----Player1-Ended-turn4------------------ Secs: 0.000006
+Player0-Bought Silver Secs: 79.093656
+----Player0-Ended-turn5------------------ Secs: 0.000267
+Player1-Bought Silver Secs: 0.000014
+----Player1-Ended-turn5------------------ Secs: 0.000009
+Player0-Bought Silver Secs: 74.059306
+----Player0-Ended-turn6------------------ Secs: 0.000258
+Player1-Bought Gold Secs: 0.000015
+----Player1-Ended-turn6------------------ Secs: 0.000008
+Player0-Bought Smithy Secs: 60.685335
+----Player0-Ended-turn7------------------ Secs: 0.000267
+Player1-Bought Silver Secs: 0.000015
+----Player1-Ended-turn7------------------ Secs: 0.000008
+Player0-Bought Gold Secs: 49.894766
+----Player0-Ended-turn8------------------ Secs: 0.000297
+Player1-Bought Gold Secs: 0.000014
+----Player1-Ended-turn8------------------ Secs: 0.000009
+Player0-Played Bureaucrat Secs: 42.633366
+Player0-Bought Gold Secs: 41.698429
+----Player0-Ended-turn9------------------ Secs: 0.000273
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn9------------------ Secs: 0.000009
+Player0-Bought Gardens Secs: 37.021165
+----Player0-Ended-turn10------------------ Secs: 0.000326
+Player1-Bought Silver Secs: 0.000021
+----Player1-Ended-turn10------------------ Secs: 0.000011
+Player0-Played Bureaucrat Secs: 35.250635
+Player0-Bought Gold Secs: 34.120430
+----Player0-Ended-turn11------------------ Secs: 0.000285
+Player1-Bought Gold Secs: 0.000025
+----Player1-Ended-turn11------------------ Secs: 0.000016
+Player0-Bought Smithy Secs: 30.693427
+----Player0-Ended-turn12------------------ Secs: 0.000357
+Player1-Bought Gold Secs: 0.000025
+----Player1-Ended-turn12------------------ Secs: 0.000016
+Player0-Bought Province Secs: 29.074060
+----Player0-Ended-turn13------------------ Secs: 0.000389
+Player1-Bought Gold Secs: 0.000024
+----Player1-Ended-turn13------------------ Secs: 0.000017
+Player0-Bought Province Secs: 24.687895
+----Player0-Ended-turn14------------------ Secs: 0.000358
+Player1-Bought Gold Secs: 0.000027
+----Player1-Ended-turn14------------------ Secs: 0.000018
+Player0-Played Bureaucrat Secs: 21.417492
+Player0-Bought Silver Secs: 21.560362
+----Player0-Ended-turn15------------------ Secs: 0.000324
+Player1-Bought Gold Secs: 0.000021
+----Player1-Ended-turn15------------------ Secs: 0.000014
+Player0-Played Smithy Secs: 18.023104
+Player0-Bought Province Secs: 18.320165
+----Player0-Ended-turn16------------------ Secs: 0.000354
+Player1-Bought Province Secs: 0.000028
+----Player1-Ended-turn16------------------ Secs: 0.000021
+Player0-Bought Gardens Secs: 12.761967
+----Player0-Ended-turn17------------------ Secs: 0.000207
+Player1-Bought Province Secs: 0.000021
+----Player1-Ended-turn17------------------ Secs: 0.000015
+Player0-Bought Province Secs: 10.337027
+----Player0-Ended-turn18------------------ Secs: 0.000306
+Player1-Bought Province Secs: 0.000033
+----Player1-Ended-turn18------------------ Secs: 0.000023
+Player0-Played Smithy Secs: 3.772847
+Player0-Bought Gardens Secs: 3.672752
+----Player0-Ended-turn19------------------ Secs: 0.000377
+Player1-Bought Province Secs: 0.000025
+----Player1-Ended-turn19------------------ Secs: 0.000016
+Player 0 VP: 36
+Player 1 VP: 27
+Game Ended: Tue Jul  6 20:18:54 2021

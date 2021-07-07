@@ -1,0 +1,87 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET LABORATORY BUREAUCRAT REMODEL THIEF 
+Game Started: Tue Jul  6 17:36:13 2021
+----------
+Player0-Bought Silver Secs: 0.000007
+----Player0-Ended-turn1------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 142.916457
+----Player1-Ended-turn1------------------ Secs: 0.000298
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn2------------------ Secs: 0.000006
+Player1-Bought Bureaucrat Secs: 102.726323
+----Player1-Ended-turn2------------------ Secs: 0.000331
+Player0-Bought Gold Secs: 0.000010
+----Player0-Ended-turn3------------------ Secs: 0.000006
+Player1-Bought Silver Secs: 89.559316
+----Player1-Ended-turn3------------------ Secs: 0.000381
+Player0-Bought Silver Secs: 0.000013
+----Player0-Ended-turn4------------------ Secs: 0.000007
+Player1-Bought Silver Secs: 77.637371
+----Player1-Ended-turn4------------------ Secs: 0.000239
+Player0-Bought Silver Secs: 0.000013
+----Player0-Ended-turn5------------------ Secs: 0.000010
+Player1-Bought Silver Secs: 62.162578
+----Player1-Ended-turn5------------------ Secs: 0.000310
+Player0-Bought Gold Secs: 0.000011
+----Player0-Ended-turn6------------------ Secs: 0.000007
+Player1-Played Bureaucrat Secs: 57.723689
+Player1-Bought Smithy Secs: 53.536660
+----Player1-Ended-turn6------------------ Secs: 0.000446
+Player0-Bought Silver Secs: 0.000023
+----Player0-Ended-turn7------------------ Secs: 0.000012
+Player1-Bought Gold Secs: 47.338766
+----Player1-Ended-turn7------------------ Secs: 0.000338
+Player0-Bought Gold Secs: 0.000022
+----Player0-Ended-turn8------------------ Secs: 0.000011
+Player1-Played Bureaucrat Secs: 39.967196
+Player1-Bought Gardens Secs: 38.221069
+----Player1-Ended-turn8------------------ Secs: 0.000298
+Player0-Bought Gold Secs: 0.000024
+----Player0-Ended-turn9------------------ Secs: 0.000013
+Player1-Bought Province Secs: 38.845535
+----Player1-Ended-turn9------------------ Secs: 0.000354
+Player0-Bought Silver Secs: 0.000032
+----Player0-Ended-turn10------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 31.631064
+----Player1-Ended-turn10------------------ Secs: 0.000354
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn11------------------ Secs: 0.000010
+Player1-Played Smithy Secs: 29.355149
+Player1-Bought Province Secs: 28.550083
+----Player1-Ended-turn11------------------ Secs: 0.000277
+Player0-Bought Gold Secs: 0.000028
+----Player0-Ended-turn12------------------ Secs: 0.000012
+Player1-Bought Province Secs: 23.020098
+----Player1-Ended-turn12------------------ Secs: 0.000224
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn13------------------ Secs: 0.000013
+Player1-Played Bureaucrat Secs: 21.492528
+Player1-Bought Gardens Secs: 20.859402
+----Player1-Ended-turn13------------------ Secs: 0.000497
+Player0-Bought Silver Secs: 0.000036
+----Player0-Ended-turn14------------------ Secs: 0.000019
+Player1-Bought Gold Secs: 20.387016
+----Player1-Ended-turn14------------------ Secs: 0.000272
+Player0-Bought Gold Secs: 0.000041
+----Player0-Ended-turn15------------------ Secs: 0.000020
+Player1-Bought Gardens Secs: 17.504354
+----Player1-Ended-turn15------------------ Secs: 0.000331
+Player0-Bought Province Secs: 0.000029
+----Player0-Ended-turn16------------------ Secs: 0.000014
+Player1-Bought Gardens Secs: 15.111023
+----Player1-Ended-turn16------------------ Secs: 0.000338
+Player0-Bought Province Secs: 0.000024
+----Player0-Ended-turn17------------------ Secs: 0.000015
+Player1-Bought Estate Secs: 10.434940
+----Player1-Ended-turn17------------------ Secs: 0.000279
+Player0-Bought Province Secs: 0.000026
+----Player0-Ended-turn18------------------ Secs: 0.000023
+Player1-Bought Gardens Secs: 6.379178
+----Player1-Ended-turn18------------------ Secs: 0.000309
+Player0-Bought Province Secs: 0.000033
+----Player0-Ended-turn19------------------ Secs: 0.000024
+Player1-Bought Province Secs: 5.987718
+----Player1-Ended-turn19------------------ Secs: 0.000384
+Player 0 VP: 27
+Player 1 VP: 43
+Game Ended: Tue Jul  6 17:36:13 2021
