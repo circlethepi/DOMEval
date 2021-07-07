@@ -12,7 +12,7 @@ import scala.util.matching.Regex
  * READER for DOMINION
  * Parses game data to generate evaluations of card influence
  * takes lognumber and number of games played to generate evaluations for each game
- *
+ *lol idk how to use scala
  */
 
 object Reader {
@@ -181,8 +181,8 @@ object Reader {
   //for each card: for each deck: %VP(plays/copies/turn)
   //************************************************************************
   def calculate_values(lognum: Int): Unit = {
-    val vpMultiplier0 = gameScore(0).toFloat / (gameScore(0) + gameScore(1))
-    val vpMultiplier1 = gameScore(1).toFloat / (gameScore(0) + gameScore(1))
+    val vpMultiplier0 = gameScore(0).toDouble / (gameScore(0) + gameScore(1))
+    val vpMultiplier1 = gameScore(1).toDouble / (gameScore(0) + gameScore(1))
 
     //making array of values
     for (i <- 0 until cards.length) {
@@ -221,8 +221,8 @@ object Reader {
       }
 
       //calculation
-      var deck0Eval: Float = 0
-      var deck1Eval: Float = 0
+      var deck0Eval: Double = 0
+      var deck1Eval: Double = 0
 
       //deck0
       val deck0EvalNum = vpMultiplier0 * cardVals(0)
@@ -240,9 +240,18 @@ object Reader {
         deck1Eval = deck1EvalNum / deck1EvalDenom //if not undefined, calculate deck eval
       }
 
+      var vpAdd : Double = 0;
+      //winning deck addition
+      if (gameScore(0) > gameScore(1)) {
+        vpAdd = vpMultiplier0 * deck0(i)._2
+      } else {
+        vpAdd = vpMultiplier1 * deck1(i)._2
+      }
+
+
       //* check here to see whether or not the card was in the pool*
       if (gameCards.contains(cardCurrent) == true) {
-        cardCalc = 100 * (deck0Eval + deck1Eval): Float
+        cardCalc = 100 * (deck0Eval + deck1Eval) + vpAdd : Double
       } else {
         cardCalc = "NA"
       }
@@ -251,6 +260,8 @@ object Reader {
       cardEvals += cardCurrentEval //add to list
 
     }
+    //sanity check terminal
+      println("\nLOG: " + lognum)
         for (i <- 0 until cardEvals.length) {
           println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
         }
@@ -262,7 +273,7 @@ object Reader {
     val startingNum: Int = inputs(0).toInt
     val numGames: Int = inputs(1).toInt
 
-    for (i <- 0 until numGames) { //starting at a given number, go for a number of games
+    for (i <- 0 until numGames) {             //starting at a given number, go for a number of games
       val logNumber = startingNum + i
       //clear global variables
       plays0.clear()
@@ -301,8 +312,6 @@ object Reader {
 
     }
   }
-
-
 
   //GAME SUMMARY/sanity check
   //  println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
