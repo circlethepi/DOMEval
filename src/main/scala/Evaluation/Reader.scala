@@ -1,13 +1,15 @@
-import java.io._
+package Evaluation
+
+import java.io.{File, PrintWriter}
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.io.Source
 import scala.util.matching.Regex
-import scala.collection.mutable.{ListBuffer, ArrayBuffer}
 
 /**
  * Author: Merrick Ohata
  * Date: July 2021
  *
- *          READER for DOMINION
+ * READER for DOMINION
  * Parses game data to generate evaluations of card influence
  * takes lognumber and number of games played to generate evaluations for each game
  *
@@ -15,7 +17,7 @@ import scala.collection.mutable.{ListBuffer, ArrayBuffer}
 
 object Reader {
 
-/*   SETUP    */
+  /*   SETUP    */
   //Cards used in the game
   val cards: List[String] = List("Bureaucrat", "Festival", "Gardens", "Laboratory", "Market", "Moneylender", "Remodel", "Smithy", "Thief", "Village", "Witch",
     "Woodcutter")
@@ -53,6 +55,7 @@ object Reader {
   /**
    * PARSE MOVE HISTORY
    * Parses move history for each deck
+   *
    * @param lognum number of file to read from
    * @return
    */
@@ -76,12 +79,12 @@ object Reader {
       p0ListBuff += s"${play.group(1)}"
     }
 
-    val p0List = p0ListBuff.toList               //turn buffer into list
-    val p0FreqMap = list_Play_Freq(p0List)       //getting frequencies
-    val p0Freq = p0FreqMap.toArray              //getting pairs
+    val p0List = p0ListBuff.toList //turn buffer into list
+    val p0FreqMap = list_Play_Freq(p0List) //getting frequencies
+    val p0Freq = p0FreqMap.toArray //getting pairs
 
     for (i <- 0 until p0Freq.length) {
-      plays0 += p0Freq(i)                //Array buffer of  frequencies for PLAYER 0
+      plays0 += p0Freq(i) //Array buffer of  frequencies for PLAYER 0
     }
 
 
@@ -92,12 +95,12 @@ object Reader {
     for (play <- p1Pattern.findAllMatchIn(mvHistStr)) { //adding plays to ListBuffer
       p1ListBuff += s"${play.group(1)}"
     }
-    val p1List = p1ListBuff.toList                      //turn buffer into list
-    val p1FreqMap = list_Play_Freq(p1List)                  //getting frequencies
-    val p1Freq = p1FreqMap.toArray                         //getting pairs
+    val p1List = p1ListBuff.toList //turn buffer into list
+    val p1FreqMap = list_Play_Freq(p1List) //getting frequencies
+    val p1Freq = p1FreqMap.toArray //getting pairs
 
     for (i <- 0 until p1Freq.length) {
-      plays1 += p1Freq(i)                        //array buffer of frequencies FOR PLAYER 1
+      plays1 += p1Freq(i) //array buffer of frequencies FOR PLAYER 1
     }
 
   }
@@ -133,18 +136,18 @@ object Reader {
       val slotVal = finalState(i)._2: Int
 
       if (slotName == "p0Score") {
-        gameScore(0) = slotVal: Int                                     //getting p0 final score
-      //  println("p0Score = " + gameScore(0))
+        gameScore(0) = slotVal: Int //getting p0 final score
+        //  println("p0Score = " + gameScore(0))
 
-        } else {
-            if (slotName == "p1Score") {
-              gameScore(1) = slotVal: Int                             //getting p1 final score
-       //   println("p1Score = " + gameScore(1))
+      } else {
+        if (slotName == "p1Score") {
+          gameScore(1) = slotVal: Int //getting p1 final score
+          //   println("p1Score = " + gameScore(1))
 
         } else {
           if (slotName == "turn") {
             gameTurns = slotVal: Int
-          //  println("numTurns = " + gameTurns)
+            //  println("numTurns = " + gameTurns)
 
           } else { //generating deck lists otherwise
 
@@ -155,11 +158,11 @@ object Reader {
 
             if ((p0DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
               deck0 += addMaybe //if card is action and from deck 0, add to deck 0
-            // println( addMaybe._1 + ", " + addMaybe._2)
+              // println( addMaybe._1 + ", " + addMaybe._2)
             } else {
               if ((p1DeckPat.pattern.matcher(slotName).matches == true) && (nonActionCards.contains(slotName.substring(2)) == false)) {
                 deck1 += addMaybe //if card is action and from deck 1, add to deck 1
-              //  println( addMaybe._1 + ", " + addMaybe._2)
+                //  println( addMaybe._1 + ", " + addMaybe._2)
               }
             }
           }
@@ -203,7 +206,7 @@ object Reader {
       for (i <- 0 until plays1.length) { //getting plays1num
         if (plays1(i)._1 == cardCurrent) {
           cardVals(2) = plays1(i)._2
-         // println(cardCurrent + " plays1: " + cardVals(2))
+          // println(cardCurrent + " plays1: " + cardVals(2))
         }
       }
 
@@ -236,7 +239,7 @@ object Reader {
 
       //* check here to see whether or not the card was in the pool*
 
-     // val kingdomList: List[String] = str.split("\\n").map(_.trim).toList
+      // val kingdomList: List[String] = str.split("\\n").map(_.trim).toList
 
       //if not in the pool, return "n/a" for evaluation of that card
 
@@ -246,18 +249,18 @@ object Reader {
       cardEvals += cardCurrentEval //add to list
 
     }
-//    for (i <- 0 until cardEvals.length) {
-//      println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
-//    }
+    //    for (i <- 0 until cardEvals.length) {
+    //      println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
+    //    }
   }
 
 
-  def main(inputs: Array[String]) : Unit = {
+  def main(inputs: Array[String]): Unit = {
 
-    val startingNum : Int = inputs(0).toInt
-    val numGames : Int = inputs(1).toInt
+    val startingNum: Int = inputs(0).toInt
+    val numGames: Int = inputs(1).toInt
 
-    for (i <- 0 until numGames) {       //starting at a given number, go for a number of games
+    for (i <- 0 until numGames) { //starting at a given number, go for a number of games
       val logNumber = startingNum + i
       //clear global variables
       plays0.clear()
@@ -277,7 +280,7 @@ object Reader {
       //creating the file
       val fileName = "/cardEvaluations" + logNumber
       val fileObject = new File("evaluations/" + fileName + ".csv")
-      fileObject.createNewFile()                              // Creating a file
+      fileObject.createNewFile() // Creating a file
       val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
 
       //writing the data
@@ -287,10 +290,10 @@ object Reader {
         writer.write("\n" + cardEvals(i)._1 + ", " + cardEvals(i)._2)
       }
 
-//      writer.write("\nCARD, NUMPLAYS")
-//      for (i <- 0 until plays1.length) {
-//        writer.write("\n"+plays1(i)._1 + ", " + plays1(i)._2)
-//      }
+      //      writer.write("\nCARD, NUMPLAYS")
+      //      for (i <- 0 until plays1.length) {
+      //        writer.write("\n"+plays1(i)._1 + ", " + plays1(i)._2)
+      //      }
 
       writer.close() // Closing printwriter
 
