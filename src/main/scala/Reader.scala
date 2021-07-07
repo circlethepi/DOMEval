@@ -3,30 +3,28 @@ import scala.io.Source
 import scala.util.matching.Regex
 import scala.collection.mutable.{ListBuffer, ArrayBuffer}
 
-
+/**
+ * Author: Merrick Ohata
+ * Date: July 2021
+ *
+ *          READER for DOMINION
+ * Parses game data to generate evaluations of card influence
+ * takes lognumber and number of games played to generate evaluations for each game
+ *
+ */
 
 object Reader {
 
-  //**GLOBAL VAL DECLARATION**
+/*   SETUP    */
   //Cards used in the game
-  val cards: List[String] = List("Bureaucrat",
-    "Festival",
-    "Gardens",
-    "Laboratory",
-    "Market",
-    "Moneylender",
-    "Remodel",
-    "Smithy",
-    "Thief",
-    "Village",
-    "Witch",
+  val cards: List[String] = List("Bureaucrat", "Festival", "Gardens", "Laboratory", "Market", "Moneylender", "Remodel", "Smithy", "Thief", "Village", "Witch",
     "Woodcutter")
 
-  //info from move history
+  //info from move history - number of plays per card for each deck
   val plays0: ArrayBuffer[(String, Int)] = ArrayBuffer()
   val plays1: ArrayBuffer[(String, Int)] = ArrayBuffer()
 
-  //info from game log
+  //info from game log - number of copies of each card in each deck
   val deck0: ArrayBuffer[(String, Int)] = ArrayBuffer()
   val deck1: ArrayBuffer[(String, Int)] = ArrayBuffer()
 
@@ -36,17 +34,28 @@ object Reader {
   //card evaluation holder
   val cardEvals: ArrayBuffer[(String, Any)] = ArrayBuffer()
 
-
+  //************************************************
   //**LIST PLAY FREQUENCY**
   //Maps each element of a list to integer count of occurences
+  //************************************************
   def list_Play_Freq[A](list1: List[A]): Map[A, Int] = {
     list1.groupBy(el => el).map(e => (e._1, e._2.length))
   }
 
 
+  //********************************************************
   //**PARSE MOVE HISTORY**
   //Parses move history for each deck
-  //outputs (p0FreqArray, p1FreqArray), both Array[(card, numplays)] sorted alphabetically
+  //outputs values for play frequency for each card for each player
+  //***************************************************************
+  //>>edit here to get kingdom list<<!!!!!
+
+  /**
+   * PARSE MOVE HISTORY
+   * Parses move history for each deck
+   * @param lognum number of file to read from
+   * @return
+   */
   def parse_moveHistory(lognum: Int): Unit = {
     val filename = "moveHistories/moveHistory" + lognum + ".txt"
 
@@ -67,12 +76,12 @@ object Reader {
       p0ListBuff += s"${play.group(1)}"
     }
 
-    val p0List = p0ListBuff.toList //turn buffer into list
-    val p0FreqMap = list_Play_Freq(p0List) //getting frequencies
-    val p0Freq = p0FreqMap.toArray //getting pairs
+    val p0List = p0ListBuff.toList               //turn buffer into list
+    val p0FreqMap = list_Play_Freq(p0List)       //getting frequencies
+    val p0Freq = p0FreqMap.toArray              //getting pairs
 
     for (i <- 0 until p0Freq.length) {
-      plays0 += p0Freq(i) //Array buffer of  frequencies for PLAYER 0
+      plays0 += p0Freq(i)                //Array buffer of  frequencies for PLAYER 0
     }
 
 
@@ -83,21 +92,22 @@ object Reader {
     for (play <- p1Pattern.findAllMatchIn(mvHistStr)) { //adding plays to ListBuffer
       p1ListBuff += s"${play.group(1)}"
     }
-    val p1List = p1ListBuff.toList //turn buffer into list
-    val p1FreqMap = list_Play_Freq(p1List) //getting frequencies
-    val p1Freq = p1FreqMap.toArray //getting pairs
+    val p1List = p1ListBuff.toList                      //turn buffer into list
+    val p1FreqMap = list_Play_Freq(p1List)                  //getting frequencies
+    val p1Freq = p1FreqMap.toArray                         //getting pairs
 
     for (i <- 0 until p1Freq.length) {
-      plays1 += p1Freq(i) //array buffer of frequencies FOR PLAYER 1
+      plays1 += p1Freq(i)                        //array buffer of frequencies FOR PLAYER 1
     }
 
   }
 
 
+  //*********************************************************
   //**PARSE GAME LOG**
   //Parses game log
-  //edits global variables gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
-  //deck0 and deck1 give us # of copies of each card
+  //outputs values for gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
+  //***************************************************************************
   def parse_log(lognum: Int): Unit = {
     val filename = "gameLogs/log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
@@ -122,13 +132,13 @@ object Reader {
       val slotName = finalState(i)._1: String
       val slotVal = finalState(i)._2: Int
 
-      if (slotName == "p0Score") {                        //changed to p1 score for log
-        gameScore(0) = slotVal: Int //getting p0 final score
+      if (slotName == "p0Score") {
+        gameScore(0) = slotVal: Int                                     //getting p0 final score
       //  println("p0Score = " + gameScore(0))
 
-      } else {
-        if (slotName == "p1Score") {                       //changed to p2 score for log
-          gameScore(1) = slotVal: Int //getting p1 final score
+        } else {
+            if (slotName == "p1Score") {
+              gameScore(1) = slotVal: Int                             //getting p1 final score
        //   println("p1Score = " + gameScore(1))
 
         } else {
@@ -159,9 +169,11 @@ object Reader {
   }
 
 
+  //**********************************************************************
   //**CALCULATE SCORES**
   //uses calculated values and parsing to calculate the evaluation scores of each card
-  //for each card: for each deck: %VP()
+  //for each card: for each deck: %VP(plays/copies/turn)
+  //************************************************************************
   def calculate_values(lognum: Int): Unit = {
     val vpMultiplier0 = gameScore(0).toFloat / (gameScore(0) + gameScore(1))
     val vpMultiplier1 = gameScore(1).toFloat / (gameScore(0) + gameScore(1))
