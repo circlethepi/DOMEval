@@ -1,13 +1,21 @@
 package DistroManager
 
-case class Hypothesis(card : Card) {
+/**
+ * Author: Casey Ford
+ * July 2021
+ *
+ * @param card
+ * @param outlier
+ */
+case class Hypothesis(card : Card, outlier : Option[Double]) {
+
+  val mu  : Double = card.get_distro()._1
+  val sig : Double = card.get_distro()._2
 
   override def toString : String = {
-    val distro = card.get_distro()
-
     "\nCard:" + card.cardname +
-    "\nMu:" + distro._1 +
-    "\nSig:" + distro._2
+    "\nMu:" + mu +
+    "\nSig:" + sig
   }
 
 }

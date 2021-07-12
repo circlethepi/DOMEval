@@ -4,6 +4,10 @@ import java.io.{BufferedWriter, File, FileWriter}
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
+/**
+ * Author: Casey Ford
+ * July 2021
+ */
 case class Card(cardname : String) {
 
   def get_distro() : (Double,Double) = {

@@ -4,6 +4,10 @@ import java.io.{File, FileWriter}
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
+/**
+ * Author: Casey Ford
+ * July 2021
+ */
 object DistributionManager {
 
   val distrocols : Array[String] = Array("kingdomsize","cardvalue")
@@ -28,11 +32,15 @@ object DistributionManager {
     card + "_distro.csv"
   }
 
+  def get_baseset_filename() : String = {
+    "cardset.txt"
+  }
+
   /**
    *
    * @param datafile
    */
-  def TELL(datafile : String) : Unit = {
+  def add_data(datafile : String) : Unit = {
     val lines = Source.fromFile(datafile).getLines()
     lines.drop(1) //header
 
@@ -48,18 +56,35 @@ object DistributionManager {
     for(b<-buff) {
       b._1.tell_distrofile(buff.size,b._2)
     }
+  }
 
+  /**
+   * adds data from all files listed in config file to relevant distributions
+   *
+   * @param configfile file with list of datafiles
+   */
+  def TELL(configfile : String) : Unit = {
+    val files = Source.fromFile(configfile).getLines()
+    for(f<-files) {
+      add_data(f)
+    }
   }
 
   def ASK() : List[Hypothesis] = {
+    val cardset = Cardset(get_baseset_filename())
 
+    for(c<-cardset.cards) {
+      Hypothesis(c, )
+    }
 
     List()
   }
 
+
+
   /**
    * @param args args(0) INIT TELL or ASK
-   *             INIT args(10 is configfile (list of elements for distributions)
+   *             INIT args(1) is configfile (list of elements for distributions)
    *             TELL args(1) is datafile
    *             ASK takes no arguments
    */
