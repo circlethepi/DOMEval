@@ -15,7 +15,7 @@ object DistributionManager {
       //if file exists we need not do anything, and SHOULD not do anything
       if(file.createNewFile()) {
         val filewrite = new FileWriter(file)
-        filewrite write "kingdomsize,cardvalue,played,bought\n" // <INT>
+        filewrite write "kingdomsize,cardvalue,played,bought\n" // <INT,DOUBLE,INT,INT>
         filewrite.close()
       }
     }
