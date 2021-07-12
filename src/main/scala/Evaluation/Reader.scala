@@ -12,7 +12,7 @@ import scala.util.matching.Regex
  * READER for DOMINION
  * Parses game data to generate evaluations of card influence
  * takes lognumber and number of games played to generate evaluations for each game
- *lol idk how to use scala
+ *lol idk how to use scala so bear with my stupid valbuffer usages
  */
 
 object Reader {
@@ -253,7 +253,7 @@ object Reader {
       if (gameCards.contains(cardCurrent) == true) {
         cardCalc = 100 * (deck0Eval + deck1Eval) + vpAdd : Double
       } else {
-        cardCalc = "NA"
+        cardCalc = ""
       }
 
       val cardCurrentEval = (cardCurrent: String, cardCalc) //get card, score pair
