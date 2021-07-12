@@ -1,14 +1,15 @@
 package DistroManager
 
+import java.io.{BufferedWriter, File, FileWriter}
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
-case class Card(cardname : String, filename : String) {
+case class Card(cardname : String) {
 
   def get_distro() : (Double,Double) = {
     val vals = parse_distrofile()
 
-     val mu = mean(vals)
+    val mu = mean(vals)
     val sig = variance(vals)
     (mu,sig)
   }
@@ -24,8 +25,12 @@ case class Card(cardname : String, filename : String) {
     ret.toList
   }
 
-  def tell_distrofile() : Unit = {
+  def tell_distrofile(kingdomsize : Int, power : Double) : Unit = {
+    val distrofile = DistributionManager.get_distro_filename(cardname)
 
+    val bw = new BufferedWriter(new FileWriter(new File(distrofile), true))
+    bw.write(kingdomsize + "," + power + "\n") // <INT,DOUBLE>
+    bw.close()
   }
 
   def mean(values : List[Double]) : Double = {
@@ -36,4 +41,7 @@ case class Card(cardname : String, filename : String) {
     0.0
   }
 
+  override def toString: String = {
+    cardname
+  }
 }

@@ -1,11 +1,12 @@
 package DistroManager
 
 import java.io.{File, FileWriter}
+import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
 object DistributionManager {
 
-  val distrocols : Array[String] = Array("kingdomsize","cardvalue","played","bought")
+  val distrocols : Array[String] = Array("kingdomsize","cardvalue")
 
   def initialize_distributions(configfile : String) : Boolean = {
     val lines = Source.fromFile(configfile).getLines()
@@ -15,7 +16,7 @@ object DistributionManager {
       //if file exists we need not do anything, and SHOULD not do anything
       if(file.createNewFile()) {
         val filewrite = new FileWriter(file)
-        filewrite write "kingdomsize,cardvalue,played,bought\n" // <INT,DOUBLE,INT,INT>
+        filewrite write "kingdomsize,cardvalue\n" // <INT,DOUBLE,INT,INT>
         filewrite.close()
       }
     }
@@ -27,12 +28,33 @@ object DistributionManager {
     card + "_distro.csv"
   }
 
+  /**
+   *
+   * @param datafile
+   */
   def TELL(datafile : String) : Unit = {
+    val lines = Source.fromFile(datafile).getLines()
+    lines.drop(1) //header
+
+    val buff = ListBuffer[(Card,Double)]()
+    for(l<-lines) {
+      val splt = l.split(",")
+      val card = Card(splt(0))
+      val power = splt(1).toDouble
+
+      buff.addOne((card,power))
+    }
+
+    for(b<-buff) {
+      b._1.tell_distrofile(buff.size,b._2)
+    }
 
   }
 
-  def ASK() : Unit = {
+  def ASK() : List[Hypothesis] = {
 
+
+    List()
   }
 
   /**
