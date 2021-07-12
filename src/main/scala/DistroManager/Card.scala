@@ -14,7 +14,7 @@ case class Card(cardname : String) {
     val vals = parse_distrofile()
 
     val mu = mean(vals)
-    val sig = variance(vals)
+    val sig = stdev(vals)
     (mu,sig)
   }
 
@@ -41,8 +41,20 @@ case class Card(cardname : String) {
     values.sum/values.length
   }
 
-  def variance(values : List[Double]) : Double = {
-    0.0
+  def stdev(values : List[Double]) : Double = {
+    val mu : Double = mean(values)
+    val n : Int = values.length
+
+    val sumdiffsq : Double = {
+      var inside : Double = 0.0
+      for (i <- values) {
+        inside += math.pow((i - mu),2)
+      }
+      inside
+    }
+
+    math.sqrt((sumdiffsq)/(n - 1))
+
   }
 
   override def toString: String = {
