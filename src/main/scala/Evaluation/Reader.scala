@@ -19,8 +19,9 @@ object Reader {
 
   /*   SETUP    */
   //Cards used in the game
-  val cards: List[String] = List("Bureaucrat", "Festival", "Gardens", "Laboratory", "Market", "Moneylender", "Remodel", "Smithy", "Thief", "Village", "Witch",
-    "Woodcutter")
+  val cards: List[String] = {
+    Source.fromFile("cardList.txt").getLines.toList
+  }
   val gameCards : ListBuffer[String] = ListBuffer()
 
   //info from move history - number of plays per card for each deck
@@ -267,70 +268,58 @@ object Reader {
         }
   }
 
+  /**
+   *
+   * @param input filename to read
+   *
+   */
 
-  def main(inputs: Array[String]): Unit = {
+  def main(input: Array[String]): Unit = {
 
-    val startingNum: Int = inputs(0).toInt
-    val numGames: Int = inputs(1).toInt
+    val filename = "evaluations/" + input(0) + ".txt"
 
-    for (i <- 0 until numGames) {             //starting at a given number, go for a number of games
-      val logNumber = startingNum + i
-      //clear global variables
-      plays0.clear()
-      plays1.clear()
-      deck0.clear()
-      deck1.clear()
-      gameScore(0) = 0
-      gameScore(1) = 0
-      gameTurns = 0
-      cardEvals.clear()
+    //getting list of starting numbers from text file of episode starts
+    val epNumsFile = io.Source.fromFile(filename)
+    for (startLog <- epNumsFile.getLines()) {
+      val startLogString = startLog + "100"
+      val startingNum: Int = startLogString.toInt
+      val numGames: Int = 30 //inputs(1).toInt
 
-      parse_moveHistory(logNumber)
-      parse_log(logNumber)
-      calculate_values(logNumber)
+      for (i <- 0 until numGames) { //starting at a given number, go for a number of games
+        val logNumber = startingNum + i
+        //clear global variables
+        plays0.clear()
+        plays1.clear()
+        deck0.clear()
+        deck1.clear()
+        gameScore(0) = 0
+        gameScore(1) = 0
+        gameTurns = 0
+        cardEvals.clear()
 
-      //WRITE TO CSV FILE
-      //creating the file
-      val fileName = "cardEvaluations" + logNumber
-      val fileObject = new File("evaluations/" + fileName + ".csv")
-      fileObject.createNewFile() // Creating a file
-      val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
+        parse_moveHistory(logNumber)
+        parse_log(logNumber)
+        calculate_values(logNumber)
 
-      //writing the data
-      writer.write("CARD, EVALUE")
+        //WRITE TO CSV FILE
+        //creating the file
+        val fileName = "cardEvaluations" + logNumber
+        val fileObject = new File("evaluations/" + fileName + ".csv")
+        fileObject.createNewFile() // Creating a file
+        val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
 
-      for (i <- 0 until cardEvals.length) {
-        writer.write("\n" + cardEvals(i)._1 + ", " + cardEvals(i)._2)
+        //writing the data
+        writer.write("CARD, EVALUE")
+
+        for (i <- 0 until cardEvals.length) {
+          writer.write("\n" + cardEvals(i)._1 + ", " + cardEvals(i)._2)
+        }
+
+        writer.close() // Closing printwriter
+
       }
-
-      //      writer.write("\nCARD, NUMPLAYS")
-      //      for (i <- 0 until plays1.length) {
-      //        writer.write("\n"+plays1(i)._1 + ", " + plays1(i)._2)
-      //      }
-
-      writer.close() // Closing printwriter
-
     }
+
+    epNumsFile.close()
   }
-
-  //GAME SUMMARY/sanity check
-  //  println("FINAL SCORE:\nPlayer 0: " + gameScore(0) + "\nPlayer 1: " + gameScore(1) + "\n\nPlayer 0 DECKLIST:")
-  //  for (i <- 0 until (deck0.length) ) {
-  //    println(deck0(i))
-  //  }
-  //  println("\nPlayer 0 PLAYCOUNTS:")
-  //  for (i <- 0 until (plays0.length) ) {
-  //    print(plays0(i))
-  //  }
-  //
-  //  println("\n\nPlayer 1 DECKLIST:")
-  //  for (i <- 0 until (deck1.length) ) {
-  //    println(deck1(i))
-  //  }
-  //  println("\nPlayer 1 PLAYCOUNTS:")
-  //  for (i <- 0 until (plays1.length) ) {
-  //    print(plays1(i))
-  //  }
-
-
 }
