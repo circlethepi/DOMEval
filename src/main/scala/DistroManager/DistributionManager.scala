@@ -71,13 +71,13 @@ object DistributionManager {
   }
 
   def ASK() : List[Hypothesis] = {
-    val cardset = Cardset(get_baseset_filename())
-
-    for(c<-cardset.cards) {
-      Hypothesis(c, )
+    val cardset = Cardset(get_baseset_filename()).get_outliers()
+    val H = ListBuffer[Hypothesis]()
+    for(c<-cardset) {
+      H.addOne(Hypothesis(c._1,c._2))
     }
 
-    List()
+    H.toList
   }
 
 
