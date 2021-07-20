@@ -2,7 +2,7 @@ package Critic
 
 import DistroManager._
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.io.Source
 
 object Critic {
@@ -61,6 +61,7 @@ object Critic {
     distroBuff.toList
   }
 
+  //card, mu, sig
   def get_episode_params(distributions : List[(String, List[Double])]) : List[(String, Double, Double)] = {
     val paramsBuff = new ListBuffer[(String, Double, Double)]
 
@@ -82,7 +83,6 @@ object Critic {
             math.sqrt((sumdiffsq) / 29)
           }
 
-
           val addition = (cardname, mu, sig)
           paramsBuff += addition
 
@@ -92,21 +92,48 @@ object Critic {
     paramsBuff.toList
   }
 
+  def parse_hypotheses(file : String) : List[(String, Double, Double, Boolean)] = {
+    //get hypothesis list from csv (CARD, mu, sig, flag)
+    val filename = file
+    val hypotheses = Source.fromFile(filename)
+
+    //make into an array
+    val hypoListBuff = new ListBuffer[(String, Double, Double, Boolean)]()
+    for (line <- hypotheses.getLines) {
+      val hypoSingle = line.split(",").map(_.trim)
+
+      val hypo0 = hypoSingle(0)
+      val hypo1 = hypoSingle(1).toDouble
+      val hypo2 = hypoSingle(2).toDouble
+      val hypo3 = hypoSingle(3).toBoolean
+
+      val hypoFormatted = (hypo0, hypo1, hypo2, hypo3)
+
+      hypoListBuff += hypoFormatted
+    }
+
+    hypoListBuff.toList
+
+  }
+
 
 
 
   /**
    *
-   * @param arg is a starting log number
+   * @param arg is a starting episode number
    *
    */
   def main(arg : Array[String]) : Unit = {
-    val startlog : Int = arg(0).toInt
 
-    val distroparams = get_episode_params(get_episode_points(startlog))
+    val startLog = (arg(0) + "100").toInt
 
-    for (i <- 0 until distroparams.length) {
-      println(distroparams(i)._1 + "(mu= " + distroparams(i)._2 + ", SD= " + distroparams(i)._3 + ")")
+    //card distributions from single episode
+    val distroParams : List[(String, Double, Double)] = get_episode_params(get_episode_points(startLog))
+
+
+    for (i <- 0 until distroParams.length) {
+      println(distroParams(i)._1 + "(mu= " + distroParams(i)._2 + ", SD= " + distroParams(i)._3 + ")")
     }
   }
 

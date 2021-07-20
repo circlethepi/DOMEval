@@ -268,15 +268,19 @@ object Reader {
         }
   }
 
+  def get_inputfiles() : String = {
+    "episodeNumberList.txt"
+  }
+
   /**
    *
-   * @param input filename to read
+   * takes no input, just reads the file
    *
    */
 
-  def main(input: Array[String]): Unit = {
+  def main(): Unit = {
 
-    val filename = "evaluations/" + input(0) + ".txt"
+    val filename = get_inputfiles()
 
     //getting list of starting numbers from text file of episode starts
     val epNumsFile = io.Source.fromFile(filename)
