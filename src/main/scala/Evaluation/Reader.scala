@@ -253,12 +253,9 @@ object Reader {
       //* check here to see whether or not the card was in the pool*
       if (gameCards.contains(cardCurrent) == true) {
         cardCalc = 100 * (deck0Eval + deck1Eval) + vpAdd : Double
-      } else {
-        cardCalc = ""
+        val cardCurrentEval = (cardCurrent: String, cardCalc) //get card, score pair
+        cardEvals += cardCurrentEval //add to list
       }
-
-      val cardCurrentEval = (cardCurrent: String, cardCalc) //get card, score pair
-      cardEvals += cardCurrentEval //add to list
 
     }
     //sanity check terminal
