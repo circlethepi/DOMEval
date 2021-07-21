@@ -274,7 +274,7 @@ object Reader {
    * takes no input, just reads the file
    *
    */
-  def Evaluate(): List[Evaluation] = {
+  def Evaluate(): List[GameEvaluation] = {
 
     val filename = get_inputfiles()
 
