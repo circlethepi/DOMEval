@@ -23,7 +23,7 @@ case class Cardset(cardsetfile : String) {
    *
    * @return card, std dev from big mu
    */
-  def get_outliers() : List[(Card, Double)] = {
+  def get_outlier_scores() : List[(Card, Double)] = {
     val sample = ListBuffer[Double]()
     for(c<-cards) {
       sample.addOne(c.get_distro()._1)

@@ -274,8 +274,7 @@ object Reader {
    * takes no input, just reads the file
    *
    */
-
-  def main(): Unit = {
+  def Evaluate(): List[Evaluation] = {
 
     val filename = get_inputfiles()
 
@@ -322,5 +321,7 @@ object Reader {
     }
 
     epNumsFile.close()
+
+    List()
   }
 }

@@ -12,6 +12,8 @@ object DistributionManager {
 
   val distrocols : Array[String] = Array("kingdomsize","cardvalue")
 
+  val std_dev_range = 2.58
+
   def initialize_distributions(configfile : String) : Boolean = {
     val lines = Source.fromFile(configfile).getLines()
     for(l <- lines) {
@@ -71,10 +73,10 @@ object DistributionManager {
   }
 
   def ASK() : List[Hypothesis] = {
-    val cardset = Cardset(get_baseset_filename()).get_outliers()
+    val cardset = Cardset(get_baseset_filename()).get_outlier_scores()
     val H = ListBuffer[Hypothesis]()
     for(c<-cardset) {
-      H.addOne(Hypothesis(c._1,c._2))
+      H.addOne(Hypothesis(c._1, c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
     }
 
     H.toList
