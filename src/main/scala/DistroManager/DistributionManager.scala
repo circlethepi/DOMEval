@@ -75,7 +75,10 @@ object DistributionManager {
   }
 
   def add_data(critiques : List[Critique]) : Unit = {
-
+    val filename = get_bigdata_filename()
+    for(c<-critiques) {
+      c
+    }
   }
 
   /**
@@ -94,8 +97,7 @@ object DistributionManager {
     val cardset = Cardset(get_baseset_filename()).get_outlier_scores()
     val H = ListBuffer[Hypothesis]()
     for(c<-cardset) {
-      val distro = c._1.get_distro()
-      H.addOne(Hypothesis(c._1, distro._1,distro._2, c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
+      H.addOne(Hypothesis(c._1, c._1.mu,c._1.sigma, c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
     }
 
     HypothesisSet(H.toList)
