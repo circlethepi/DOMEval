@@ -1,11 +1,19 @@
 package Critic
 
-import DistroManager.Hypothesis
+import DistroManager._
 import Evaluation.EpisodeEvaluation
+
+import scala.collection.mutable.ListBuffer
 
 case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) {
 
-//  val significanceLevel : Double =
+  val significanceLevel : Double = {
+    //% are the probabilities that the mean differs by this amount purely by chance
+    //1.65 //for 10%
+    //1.96 //for 5%
+    2.58 //for 1%
+    //
+  }
 
   val hypoDistros : List[(Card, Double, Double)] = {
     val hypoParamsBuff = new ListBuffer[(Card, Double, Double)]

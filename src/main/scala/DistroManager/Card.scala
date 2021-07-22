@@ -12,7 +12,7 @@ import scala.io.Source
  */
 case class Card(cardname : String) extends Distribution {
 
-  def parse_distrofile() : List[Double] = {
+  def parse_distrofile() : List[Double] = {                       //POPULATION DISTRIBUTION
     val file = DistributionManager.get_distro_filename(cardname)
     val lines = Source.fromFile(file).getLines()
 
@@ -24,7 +24,7 @@ case class Card(cardname : String) extends Distribution {
     sample
   }
 
-  def tell_distrofile(kingdomsize : Int, power : Double) : Unit = {
+  def tell_distrofile(kingdomsize : Int, power : Double) : Unit = {     //MANAGING POP
     val distrofile = DistributionManager.get_distro_filename(cardname)
 
     val bw = new BufferedWriter(new FileWriter(new File(distrofile), true))

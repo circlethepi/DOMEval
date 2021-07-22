@@ -248,11 +248,6 @@ object Critic {
   }
 
 
-  def annotate_hypothesis_set() : Unit = {
-  "a"
-  }
-
-
   /**
    *
    * @param arg is a starting episode number
