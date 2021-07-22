@@ -1,13 +1,13 @@
-Card, mu, sigma, flag
-Bureaucrat, 0.0, 0.0, false
-Festival, 0.0, 0.0, false
-Gardens, 0.0, 0.0, false
-Laboratory, 0.0, 0.0, false
-Market, 0.0, 0.0, false
-Moneylender, 0.0, 0.0, false
-Remodel, 0.0, 0.0, false
-Smithy, 0.0, 0.0, false
-Thief, 0.0, 0.0, false
-Village, 0.0, 0.0, false
-Witch, 0.0, 0.0, false
-Woodcutter, 0.0, 0.0, false
+Card,mu,sigma,flag
+Bureaucrat,0.0,0.0,false
+Festival,0.0,0.0,false
+Gardens,0.0,0.0,false
+Laboratory,0.0,0.0,false
+Market,0.0,0.0,false
+Moneylender,0.0,0.0,false
+Remodel,0.0,0.0,false
+Smithy,0.0,0.0,false
+Thief,0.0,0.0,false
+Village,0.0,0.0,false
+Witch,0.0,0.0,false
+Woodcutter,0.0,0.0,false

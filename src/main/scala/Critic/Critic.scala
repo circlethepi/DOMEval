@@ -8,8 +8,8 @@ import org.apache.commons._
 
 object Critic {
   val cards: List[String] = {
-    val cardses = Source.fromFile("cardList.txt").getLines.toList
-    Source.fromFile("cardList.txt").close()
+    val cardses = Source.fromFile("cardset.txt").getLines.toList
+    Source.fromFile("cardset.txt").close()
 
     cardses
   }
@@ -37,8 +37,6 @@ object Critic {
     //2.58 //for 1%
     //
   }
-
-
 
   /**
    * from a starting logNumber, collects all the evaluations of each card
@@ -211,7 +209,9 @@ object Critic {
 
           val numSDs = (muEp-muHyp) / sigHyp
 
-          distBuff += (cardname, numSDs)
+          val add = (cardname, numSDs)
+
+          distBuff += add
 
         }
       }
