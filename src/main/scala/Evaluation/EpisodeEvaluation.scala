@@ -6,7 +6,9 @@ import scala.collection.mutable.ListBuffer
 
 case class EpisodeEvaluation(kingdom : Kingdom, evaluations : List[GameEvaluation]) extends Distribution {
 
-  val bigDistribution: (Double, Double) = {
+  //big distribution of all evals for all cards in one place
+  //for a SINGLE EPISODE
+  val bigDistribution : (Double, Double) = {
 
     val valsBuff = new ListBuffer[Double]
 
