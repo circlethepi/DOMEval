@@ -1,5 +1,7 @@
 package DistroManager
 
+import Critic.Critique
+
 import java.io.{File, FileWriter}
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
@@ -27,7 +29,20 @@ object DistributionManager {
       }
     }
 
+    val filename = get_bigdata_filename()
+    val file = new File(filename)
+    //if file exists we need not do anything, and SHOULD not do anything
+    if(file.createNewFile()) {
+      val filewrite = new FileWriter(file)
+      filewrite write "kingdom,cardvalues,critiques\n" // <INT,DOUBLE,INT,INT>
+      filewrite.close()
+    }
+
     true
+  }
+
+  def get_bigdata_filename() : String = {
+    "alldata.csv"
   }
 
   def get_distro_filename(card : String) : String = {
@@ -42,7 +57,7 @@ object DistributionManager {
    *
    * @param datafile
    */
-  def add_data(datafile : String) : Unit = {
+  def add_data_from_file(datafile : String) : Unit = {
     val lines = Source.fromFile(datafile).getLines()
     lines.drop(1) //header
 
@@ -51,13 +66,16 @@ object DistributionManager {
       val splt = l.split(",")
       val card = Card(splt(0))
       val power = splt(1).toDouble
-
       buff.addOne((card,power))
     }
 
     for(b<-buff) {
       b._1.tell_distrofile(buff.size,b._2)
     }
+  }
+
+  def add_data(critiques : List[Critique]) : Unit = {
+
   }
 
   /**
@@ -68,18 +86,18 @@ object DistributionManager {
   def TELL(configfile : String) : Unit = {
     val files = Source.fromFile(configfile).getLines()
     for(f<-files) {
-      add_data(f)
+      add_data_from_file(f)
     }
   }
 
-  def ASK() : List[Hypothesis] = {
+  def ASK() : HypothesisSet = {
     val cardset = Cardset(get_baseset_filename()).get_outlier_scores()
     val H = ListBuffer[Hypothesis]()
     for(c<-cardset) {
       H.addOne(Hypothesis(c._1, c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
     }
 
-    H.toList
+    HypothesisSet(H.toList)
   }
 
 
