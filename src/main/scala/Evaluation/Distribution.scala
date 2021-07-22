@@ -16,6 +16,10 @@ trait Distribution {
     sample = sample.concat(List(item))
     sample
   }
+  def add_to_sample(items : List[Double]): List[Double] = {
+    sample = sample.concat(items)
+    sample
+  }
 
   def mean(values : List[Double]) : Double = {
     values.sum/values.length
