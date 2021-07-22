@@ -20,8 +20,7 @@ case class EpisodeEvaluation(kingdom : Kingdom, evaluations : List[GameEvaluatio
     (bigMu, bigSig)
   }
 
-
-  val cardDistributions: List[(Card, Double, Double)] = {
+  val cardDistributions : List[(Card, Double, Double)] = {
 
     //individual "little" card distributions
     def cardDistributions(): List[Card] = {

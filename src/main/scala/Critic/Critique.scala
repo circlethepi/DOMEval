@@ -3,8 +3,6 @@ package Critic
 import DistroManager._
 import Evaluation.EpisodeEvaluation
 
-import scala.collection.mutable.ListBuffer
-
 case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) {
 
   val significanceLevel : Double = {
@@ -30,7 +28,7 @@ case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) 
     val epParamsBuff = new ListBuffer[(Card, Double, Double)]
 
     for (card <- evaluation.cardDistributions) {
-      val buffAdd = (card.cardname, card.mu, card.sigma)
+      val buffAdd = (card._1, card._2, card._3)
       epParamsBuff += buffAdd
     }
 
