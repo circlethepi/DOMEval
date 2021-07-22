@@ -87,7 +87,7 @@ object DistributionManager {
         for(c <- gameeval.evals) {
           val filename_c = get_distro_filename(c._1.cardname)
           val fw_c = new FileWriter(new File(filename_c), true)
-          fw_c write c._2
+          fw_c.write(c._2.toString)
         }
       }
     }

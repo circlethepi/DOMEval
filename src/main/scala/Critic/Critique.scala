@@ -30,7 +30,7 @@ case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) 
     val epParamsBuff = new ListBuffer[(Card, Double, Double)]
 
     for (card <- evaluation.cardDistributions) {
-      val buffAdd = (card._1, card._2, card._3)
+      val buffAdd = (card, card.mu, card.sigma)
       epParamsBuff += buffAdd
     }
 

@@ -6,6 +6,7 @@ import java.io.{File, PrintWriter}
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.io.Source
 import scala.util.matching.Regex
+import Evaluation.EpisodeEvaluation
 
 /**
  * Author: Merrick Ohata
@@ -188,35 +189,35 @@ object Reader {
     val vpMultiplier1 = gameScore(1).toDouble / (gameScore(0) + gameScore(1))
 
     //making array of values
-    for (i <- 0 until cards.length) {
+    for (i <- cards.indices) {
       val cardCurrent = cards(i) : String
 
       //                              plays0num, deck0num, plays1num, deck1num
       val cardVals: ArrayBuffer[Int] = ArrayBuffer(0, 0, 0, 0) //setting up card calculation
       var cardCalc: Double = 0.0
 
-      for (i <- 0 until plays0.length) { //getting plays0num
+      for (i <- plays0.indices) { //getting plays0num
         if (plays0(i)._1 == cardCurrent) {
           cardVals(0) = plays0(i)._2
           //println(cardCurrent + " plays0: " + cardVals(0))
         }
       }
 
-      for (i <- 0 until deck0.length) { //getting deck0num
+      for (i <- deck0.indices) { //getting deck0num
         if (deck0(i)._1 == cardCurrent) {
           cardVals(1) = deck0(i)._2
           //println(cardCurrent + " deck0: " + cardVals(1))
         }
       }
 
-      for (i <- 0 until plays1.length) { //getting plays1num
+      for (i <- plays1.indices) { //getting plays1num
         if (plays1(i)._1 == cardCurrent) {
           cardVals(2) = plays1(i)._2
           // println(cardCurrent + " plays1: " + cardVals(2))
         }
       }
 
-      for (i <- 0 until deck1.length) { //getting deck1num
+      for (i <- deck1.indices) { //getting deck1num
         if (deck1(i)._1 == cardCurrent) {
           cardVals(3) = deck1(i)._2
           //println(cardCurrent + " deck1: " + cardVals(3))
@@ -253,7 +254,7 @@ object Reader {
 
 
       //* check here to see whether or not the card was in the pool*
-      if (gameCards.contains(cardCurrent) == true) {
+      if (gameCards.contains(cardCurrent)) {
         cardCalc = 100 * (deck0Eval + deck1Eval) + vpAdd : Double
         val cardCard = new Card(cardCurrent)
         val cardCurrentEval = (cardCard: Card, cardCalc : Double) //get card, score pair
@@ -263,7 +264,7 @@ object Reader {
     }
     //sanity check terminal
       println("\nLOG: " + lognum)
-        for (i <- 0 until cardEvals.length) {
+        for (i <- cardEvals.indices) {
           println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
         }
   }
@@ -283,64 +284,55 @@ object Reader {
 
       //getting list of starting numbers from text file of episode starts
 
-    val epEvalsBuff = new ListBuffer[EpisodeEvaluation]
+    val epEvalsBuff = ListBuffer[EpisodeEvaluation]()
 
-      val epNumsFile = io.Source.fromFile(filename)
-      for (startLog <- epNumsFile.getLines()) {
+    val epNumsFile = io.Source.fromFile(filename)
+    for (startLog <- epNumsFile.getLines()) {
 
-        val startLogString = startLog + "100"
-        val startingNum: Int = startLogString.toInt
-        val numGames: Int = 30 //inputs(1).toInt
+      val startLogString = startLog + "100"
+      val startingNum: Int = startLogString.toInt
+      val numGames: Int = 30 //inputs(1).toInt
 
-        val gameEvalsBuff = new ListBuffer[GameEvaluation]()
+      val gameEvalsBuff = new ListBuffer[GameEvaluation]()
 
-        for (i <- 0 until numGames) { //starting at a given number, go for a number of games
-          val logNumber = startingNum + i
-          //clear global variables
-          plays0.clear()
-          plays1.clear()
-          deck0.clear()
-          deck1.clear()
-          gameScore(0) = 0
-          gameScore(1) = 0
-          gameTurns = 0
-          cardEvals.clear()
+      for (i <- 0 until numGames) { //starting at a given number, go for a number of games
+        val logNumber = startingNum + i
+        //clear global variables
+        plays0.clear()
+        plays1.clear()
+        deck0.clear()
+        deck1.clear()
+        gameScore(0) = 0
+        gameScore(1) = 0
+        gameTurns = 0
+        cardEvals.clear()
+        parse_moveHistory(logNumber)
+        parse_log(logNumber)
+        calculate_values(logNumber)
+        //WRITE TO CSV FILE
+        //creating the file
+        val fileName = "cardEvaluations" + logNumber
+        val fileObject = new File("evaluations/" + fileName + ".csv")
+        fileObject.createNewFile() // Creating a file
+        val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
 
-          parse_moveHistory(logNumber)
-          parse_log(logNumber)
-          calculate_values(logNumber)
+        //writing the data
+        writer.write("CARD, EVALUE")
 
-          //WRITE TO CSV FILE
-          //creating the file
-          val fileName = "cardEvaluations" + logNumber
-          val fileObject = new File("evaluations/" + fileName + ".csv")
-          fileObject.createNewFile() // Creating a file
-          val writer = new PrintWriter(fileObject) // Passing reference of file to the printwriter
+        //making GameEvaluation
+        val gameEval = GameEvaluation(cardEvals.toList)
+        gameEvalsBuff.addOne(gameEval)
 
-          //writing the data
-          writer.write("CARD, EVALUE")
-
-          //making GameEvaluation
-
-          val gameEval = GameEvaluation(cardEvals.toList)
-          gameEvalsBuff.addOne(gameEval)
-
-          for (i <- 0 until cardEvals.length) {
-            writer.write("\n" + cardEvals(i)._1 + ", " + cardEvals(i)._2)
-          }
-
-          writer.close() // Closing printwriter
-
+        for (i <- cardEvals.indices) {
+          writer.write("\n" + cardEvals(i)._1 + ", " + cardEvals(i)._2)
         }
-
-        epEvalsBuff.addOne(EpisodeEvaluation(gameEvalsBuff.toList))
-
+        writer.close() // Closing printwriter
       }
 
-      epNumsFile.close()
+      epEvalsBuff.addOne(EpisodeEvaluation(gameEvalsBuff.head.get_kingdom(), gameEvalsBuff.toList))
+    }
 
-
-      epEvalsBuff.toList
-
+    epNumsFile.close()
+    epEvalsBuff.toList
   }
 }

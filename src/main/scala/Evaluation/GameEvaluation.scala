@@ -6,6 +6,14 @@ import scala.collection.mutable.ListBuffer
 
 case class GameEvaluation(val evals : List[(Card,Double)]) {
 
+  def get_kingdom() : Kingdom = {
+    val ret = ListBuffer[Card]()
+    for(e<-evals) {
+      ret.addOne(e._1)
+    }
+    new Kingdom(ret.toList)
+  }
+
   def collect_all_values() : List[Double] = {
     val valsBuff = new ListBuffer[Double]
 

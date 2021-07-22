@@ -4,7 +4,7 @@ import DistroManager.Card
 
 import scala.collection.mutable.ListBuffer
 
-class EpisodeEvaluation(kingdom : Kingdom, evaluations : List[GameEvaluation]) extends Distribution {
+case class EpisodeEvaluation(val kingdom : Kingdom, val evaluations : List[GameEvaluation]) extends Distribution {
 
   //big distribution of all evals for all cards in one place
   //for a SINGLE EPISODE
