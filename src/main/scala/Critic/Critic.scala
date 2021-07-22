@@ -1,6 +1,7 @@
 package Critic
 
 import DistroManager._
+import Evaluation.EpisodeEvaluation
 
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.io.Source
@@ -144,6 +145,12 @@ object Critic {
     }
 
     hypoListBuff.toList
+  }
+
+  def critique(evaluations : List[EpisodeEvaluation]) : List[Critique] = {
+
+
+    List()
   }
 
   /**

@@ -22,16 +22,25 @@ case class EpisodeEvaluation(kingdom : Kingdom, evaluations : List[GameEvaluatio
 
   val cardDistributions : List[(Card, Double, Double)] = {
 
-
-    for (i <- evaluations) {
-
+  //individual "little" card distributions
+  def cardDistributions() : List[Card] = {
+    for (c <- kingdom.cards) {
+      for(e <- evaluations) {
+        c.add_to_sample(e.get_val_of(c.cardname).get)
+      }
     }
 
-    List()
-
+    kingdom.cards //list of cards holding their episode distributions
   }
 
-
+  override def toString: String = {
+    var str = ""
+    for(c<-kingdom.cards) {
+      str += c.cardname+ " " + c.mu + " " + c.sigma + ","
+    }
+    str = str.substring(0,str.length-1)
+    str
+  }
 
 
 }

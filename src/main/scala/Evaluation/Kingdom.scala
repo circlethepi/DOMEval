@@ -2,7 +2,7 @@ package Evaluation
 
 import DistroManager.Card
 
-class Kingdom(cards : List[Card]) {
+class Kingdom(val cards : List[Card]) {
 
   override def toString: String = {
     var str = ""

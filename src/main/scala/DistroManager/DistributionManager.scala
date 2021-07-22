@@ -24,7 +24,7 @@ object DistributionManager {
       //if file exists we need not do anything, and SHOULD not do anything
       if(file.createNewFile()) {
         val filewrite = new FileWriter(file)
-        filewrite write "kingdomsize,cardvalue\n" // <INT,DOUBLE,INT,INT>
+        filewrite write "cardvalue\n" // <INT,DOUBLE,INT,INT>
         filewrite.close()
       }
     }
@@ -76,8 +76,20 @@ object DistributionManager {
 
   def add_data(critiques : List[Critique]) : Unit = {
     val filename = get_bigdata_filename()
+    val fw = new FileWriter(new File(filename),true)
     for(c<-critiques) {
-      c
+      val kingdom = c.evaluation.kingdom
+      val eval = c.evaluation
+      fw write kingdom.toString + "," + eval.toString
+
+      //each individual card distribution from each individual game eval
+      for(gameeval<-eval.evaluations) {
+        for(c <- gameeval.evals) {
+          val filename_c = get_distro_filename(c._1.cardname)
+          val fw_c = new FileWriter(new File(filename_c), true)
+          fw_c write c._2
+        }
+      }
     }
   }
 
@@ -86,11 +98,8 @@ object DistributionManager {
    *
    * @param configfile file with list of datafiles
    */
-  def TELL(configfile : String) : Unit = {
-    val files = Source.fromFile(configfile).getLines()
-    for(f<-files) {
-      add_data_from_file(f)
-    }
+  def TELL(critiques : List[Critique]) : Unit = {
+    add_data(critiques)
   }
 
   def ASK() : HypothesisSet = {
@@ -101,22 +110,6 @@ object DistributionManager {
     }
 
     HypothesisSet(H.toList)
-  }
-
-
-
-  /**
-   * @param args args(0) INIT TELL or ASK
-   *             INIT args(1) is configfile (list of elements for distributions)
-   *             TELL args(1) is datafile
-   *             ASK takes no arguments
-   */
-  def main(args:Array[String]) : Unit = {
-      args(0) match {
-        case "INIT" => initialize_distributions(args(1))
-        case "TELL" => TELL(args(1))
-        case "ASK" => ASK()
-      }
   }
 
 }

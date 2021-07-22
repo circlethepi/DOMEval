@@ -1,9 +1,13 @@
 package DistroManager
 
+import Evaluation.Distribution
+
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
-case class Cardset(cardsetfile : String) {
+case class Cardset(cardsetfile : String) extends Distribution {
+
+  //she keeps track of the BIG distribution of all card powers
 
   def cards : List[Card] = {
     val lines = Source.fromFile(cardsetfile).getLines()
@@ -26,7 +30,7 @@ case class Cardset(cardsetfile : String) {
   def get_outlier_scores() : List[(Card, Double)] = {
     val sample = ListBuffer[Double]()
     for(c<-cards) {
-      sample.addOne(c.get_distro()._1)
+      sample.addOne(c.mu)
     }
 
     val mu = mean(sample.toList)
@@ -35,28 +39,8 @@ case class Cardset(cardsetfile : String) {
     val buff = ListBuffer[(Card,Double)]()
     for(c<-cards) {
       //card, std devs away from mean
-      buff.addOne( (c,(c.get_distro()._1-mu)/sig) )
+      buff.addOne( (c,(c.mu-mu)/sig) )
     }
     buff.toList
   }
-
-  def mean(values : List[Double]) : Double = {
-    values.sum/values.length
-  }
-
-  def stdev(values : List[Double]) : Double = {
-    val mu : Double = mean(values)
-    val n : Int = values.length
-
-    val sumdiffsq : Double = {
-      var inside : Double = 0.0
-      for (i <- values) {
-        inside += math.pow((i - mu),2)
-      }
-      inside
-    }
-
-    math.sqrt(sumdiffsq/(n - 1))
-  }
-
 }
