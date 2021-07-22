@@ -4,7 +4,7 @@ import DistroManager.Card
 
 import scala.collection.mutable.ListBuffer
 
-case class EpisodeEvaluation(evaluations : List[GameEvaluation]) extends Distribution {
+case class EpisodeEvaluation(kingdom : Kingdom, evaluations : List[GameEvaluation]) extends Distribution {
 
   val bigDistribution : (Double, Double) = {
 
