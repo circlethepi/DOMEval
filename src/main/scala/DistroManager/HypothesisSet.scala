@@ -10,5 +10,4 @@ case class HypothesisSet(hypotheses : List[Hypothesis]) {
     str
   }
 
-
 }

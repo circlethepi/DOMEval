@@ -3,14 +3,6 @@ package Evaluation
 trait Distribution {
   var sample: List[Double] = List[Double]()
 
-  val mu : Double = {
-    mean(sample)
-  }
-
-  val sigma : Double = {
-    stdev(sample)
-  }
-
 
   def add_to_sample(item: Double): List[Double] = {
     sample = sample.concat(List(item))

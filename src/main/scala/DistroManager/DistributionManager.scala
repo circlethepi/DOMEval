@@ -12,6 +12,8 @@ import scala.io.Source
  */
 object DistributionManager {
 
+  val outputpath = "src/main/scala/DistroManager/Distributions/"
+
   val distrocols : Array[String] = Array("kingdomsize","cardvalue")
 
   val std_dev_range = 2.58
@@ -42,11 +44,11 @@ object DistributionManager {
   }
 
   def get_bigdata_filename() : String = {
-    "alldata.csv"
+    outputpath + "alldata.csv"
   }
 
   def get_distro_filename(card : String) : String = {
-    card + "_distro.csv"
+    outputpath + card + "_distro.csv"
   }
 
   def get_baseset_filename() : String = {
@@ -80,17 +82,19 @@ object DistributionManager {
     for(c<-critiques) {
       val kingdom = c.evaluation.kingdom
       val eval = c.evaluation
-      fw write kingdom.toString + "," + eval.toString
+      fw write kingdom.toString + "," + eval.toString + "\n"
 
       //each individual card distribution from each individual game eval
       for(gameeval<-eval.evaluations) {
         for(c <- gameeval.evals) {
           val filename_c = get_distro_filename(c._1.cardname)
           val fw_c = new FileWriter(new File(filename_c), true)
-          fw_c.write(c._2.toString)
+          fw_c write c._2.toString + "\n"
+          fw_c.close()
         }
       }
     }
+    fw.close()
   }
 
   /**
@@ -106,7 +110,8 @@ object DistributionManager {
     val cardset = Cardset(get_baseset_filename()).get_outlier_scores()
     val H = ListBuffer[Hypothesis]()
     for(c<-cardset) {
-      H.addOne(Hypothesis(c._1, c._1.mu,c._1.sigma, c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
+      c._1.parse_distrofile()
+      H.addOne(Hypothesis(c._1, c._1.mean(c._1.sample),c._1.stdev(c._1.sample), c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
     }
 
     HypothesisSet(H.toList)

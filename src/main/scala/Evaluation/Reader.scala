@@ -62,7 +62,7 @@ object Reader {
    * @param lognum number of file to read from
    * @return
    */
-  def parse_moveHistory(lognum: Int): Unit = {
+  def parse_moveHistory(lognum: Long): Unit = {
     val filename = "Data/moveHistory" + lognum + ".txt"
 
     //getting plays from move history file
@@ -118,7 +118,7 @@ object Reader {
   //Parses game log
   //outputs values for gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
   //***************************************************************************
-  def parse_log(lognum: Int): Unit = {
+  def parse_log(lognum: Long): Unit = {
     val filename = "Data/log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
 
@@ -184,7 +184,7 @@ object Reader {
   //uses calculated values and parsing to calculate the evaluation scores of each card
   //for each card: for each deck: %VP(plays/copies/turn)
   //************************************************************************
-  def calculate_values(lognum: Int): Unit = {
+  def calculate_values(lognum: Long): Unit = {
     val vpMultiplier0 = gameScore(0).toDouble / (gameScore(0) + gameScore(1))
     val vpMultiplier1 = gameScore(1).toDouble / (gameScore(0) + gameScore(1))
 
@@ -263,14 +263,14 @@ object Reader {
 
     }
     //sanity check terminal
-      println("\nLOG: " + lognum)
-        for (i <- cardEvals.indices) {
-          println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
-        }
+//      println("\nLOG: " + lognum)
+//        for (i <- cardEvals.indices) {
+//          println(cardEvals(i)._1 + ", " + cardEvals(i)._2)
+//        }
   }
 
   def get_inputfiles() : String = {
-    "episodeNumberList.txt"
+    "src/main/scala/episodeNumberList.txt"
   }
 
   /**
@@ -286,11 +286,12 @@ object Reader {
 
     val epEvalsBuff = ListBuffer[EpisodeEvaluation]()
 
-    val epNumsFile = io.Source.fromFile(filename)
-    for (startLog <- epNumsFile.getLines()) {
+    val lines = io.Source.fromFile(filename).getLines()
+    val dir = lines.next()
+    for (startLog <- lines) {
 
       val startLogString = startLog + "100"
-      val startingNum: Int = startLogString.toInt
+      val startingNum: Long = startLogString.toLong
       val numGames: Int = 30 //inputs(1).toInt
 
       val gameEvalsBuff = new ListBuffer[GameEvaluation]()
@@ -332,7 +333,6 @@ object Reader {
       epEvalsBuff.addOne(EpisodeEvaluation(gameEvalsBuff.head.get_kingdom(), gameEvalsBuff.toList))
     }
 
-    epNumsFile.close()
     epEvalsBuff.toList
   }
 }

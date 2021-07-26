@@ -30,7 +30,7 @@ case class Cardset(cardsetfile : String) extends Distribution {
   def get_outlier_scores() : List[(Card, Double)] = {
     val sample = ListBuffer[Double]()
     for(c<-cards) {
-      sample.addOne(c.mu)
+      sample.addOne(c.mean(c.sample))
     }
 
     val mu = mean(sample.toList)
@@ -39,7 +39,7 @@ case class Cardset(cardsetfile : String) extends Distribution {
     val buff = ListBuffer[(Card,Double)]()
     for(c<-cards) {
       //card, std devs away from mean
-      buff.addOne( (c,(c.mu-mu)/sig) )
+      buff.addOne( (c,(c.mean(c.sample)-mu)/sig) )
     }
     buff.toList
   }

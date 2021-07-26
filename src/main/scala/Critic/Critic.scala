@@ -28,17 +28,14 @@ object Critic {
    */
 
 
-  def critique(evaluation : EpisodeEvaluation, hypothesis : HypothesisSet) : List[Critique] = {
-    val critBuff = new ListBuffer[Critique]
+  def critique(evaluation : EpisodeEvaluation, hypothesis : HypothesisSet) : Critique = {
 
-    val critAdd = Critique(hypothesis, evaluation)
+      Critique(hypothesis, evaluation)
 
-    critBuff += critAdd
-
-
-    critBuff.toList
   }
 
   def main(arg : Array[String]) : Unit = {
-    println("hello")
+    println("hello world")
+  }
+
 }

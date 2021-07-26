@@ -18,7 +18,7 @@ case class Card(cardname : String) extends Distribution {
 
     for(l<-lines) { // <INT,DOUBLE,INT,INT>
       val args = l.split(",")
-      add_to_sample(args(1).toDouble)
+      add_to_sample(args(0).toDouble)
     }
 
     sample
