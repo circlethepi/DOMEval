@@ -25,17 +25,18 @@ object Reader {
   val cards: List[String] = {
     Source.fromFile("cardset.txt").getLines.toList
   }
+
   val gameCards : ListBuffer[String] = ListBuffer()
 
-  //info from move history - number of plays per card for each deck
-  val plays0: ArrayBuffer[(String, Int)] = ArrayBuffer()
-  val plays1: ArrayBuffer[(String, Int)] = ArrayBuffer()
+//  //info from move history - number of plays per card for each deck
+//  val plays0: ArrayBuffer[(String, Int)] = ArrayBuffer()
+//  val plays1: ArrayBuffer[(String, Int)] = ArrayBuffer()
 
-  //info from game log - number of copies of each card in each deck
-  val deck0: ArrayBuffer[(String, Int)] = ArrayBuffer()
-  val deck1: ArrayBuffer[(String, Int)] = ArrayBuffer()
+//  //info from game log - number of copies of each card in each deck
+//  val deck0: ArrayBuffer[(String, Int)] = ArrayBuffer()
+//  val deck1: ArrayBuffer[(String, Int)] = ArrayBuffer()
 
-  val gameScore: ArrayBuffer[Int] = ArrayBuffer(0, 0)
+  val gameScore: Array[Int] = Array(0, 0)
   var gameTurns: Int = 0
 
   //card evaluation holder
@@ -62,8 +63,12 @@ object Reader {
    * @param lognum number of file to read from
    * @return
    */
-  def parse_moveHistory(lognum: Long): Unit = {
+  def parse_moveHistory(lognum: Long): (List[(String,Int)],List[(String,Int)]) = {
     val filename = "Data/moveHistory" + lognum + ".txt"
+
+    //info from move history - number of plays per card for each deck
+    val plays0: ListBuffer[(String, Int)] = ListBuffer[(String, Int)]()
+    val plays1: ListBuffer[(String, Int)] = ListBuffer[(String, Int)]()
 
     //getting plays from move history file
     val mvHist = io.Source.fromFile(filename)
@@ -110,6 +115,7 @@ object Reader {
       plays1 += p1Freq(i) //array buffer of frequencies FOR PLAYER 1
     }
 
+    (plays0.toList,plays1.toList)
   }
 
 
@@ -118,9 +124,13 @@ object Reader {
   //Parses game log
   //outputs values for gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
   //***************************************************************************
-  def parse_log(lognum: Long): Unit = {
+  def parse_log(lognum: Long): (List[(String,Int)],List[(String,Int)]) = {
     val filename = "Data/log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
+
+    //info from game log - number of copies of each card in each deck
+    val deck0: ListBuffer[(String, Int)] = ListBuffer[(String, Int)]()
+    val deck1: ListBuffer[(String, Int)] = ListBuffer[(String, Int)]()
 
 
     //make into an array
@@ -176,6 +186,7 @@ object Reader {
         }
       }
     }
+    (deck0.toList,deck1.toList)
   }
 
 
@@ -184,13 +195,22 @@ object Reader {
   //uses calculated values and parsing to calculate the evaluation scores of each card
   //for each card: for each deck: %VP(plays/copies/turn)
   //************************************************************************
-  def calculate_values(lognum: Long): Unit = {
-    val vpMultiplier0 = gameScore(0).toDouble / (gameScore(0) + gameScore(1))
-    val vpMultiplier1 = gameScore(1).toDouble / (gameScore(0) + gameScore(1))
+  def calculate_values(plays0 :List[(String,Int)],
+                       plays1 : List[(String,Int)],
+                       deck0 : List[(String,Int)],
+                       deck1 : List[(String,Int)],
+                       gamescore0 : Int,
+                       gamescore1 : Int,
+                        lognum: Long): Unit = {
+    val vpMultiplier0 = gamescore0.toDouble / (gamescore0 + gamescore1)
+    val vpMultiplier1 = gamescore1.toDouble / (gamescore0 + gamescore1)
 
     //making array of values
-    for (i <- cards.indices) {
-      val cardCurrent = cards(i) : String
+    //todo FIX THIS.... COUNTS ALL CARDS AS IN THE KINGDOM WITH VALUE 0 EVEN WHEN THEY ARENT
+
+
+    for (i <- gameCards.indices) {
+      val cardCurrent = gameCards(i) : String
 
       //                              plays0num, deck0num, plays1num, deck1num
       val cardVals: ArrayBuffer[Int] = ArrayBuffer(0, 0, 0, 0) //setting up card calculation
@@ -299,17 +319,14 @@ object Reader {
       for (i <- 0 until numGames) { //starting at a given number, go for a number of games
         val logNumber = startingNum + i
         //clear global variables
-        plays0.clear()
-        plays1.clear()
-        deck0.clear()
-        deck1.clear()
+        gameCards.clear()
         gameScore(0) = 0
         gameScore(1) = 0
         gameTurns = 0
         cardEvals.clear()
-        parse_moveHistory(logNumber)
-        parse_log(logNumber)
-        calculate_values(logNumber)
+        val plays = parse_moveHistory(logNumber)
+        val decks = parse_log(logNumber)
+        calculate_values(plays._1,plays._2,decks._1,decks._2,gameScore(0),gameScore(1),logNumber)
         //WRITE TO CSV FILE
         //creating the file
         val fileName = "cardEvaluations" + logNumber

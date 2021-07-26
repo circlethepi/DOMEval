@@ -1,6 +1,7 @@
 package Planner
 
 import DistroManager.{Card, Hypothesis, HypothesisSet}
+import Evaluation.Kingdom
 
 import scala.collection.mutable.ListBuffer
 
@@ -12,14 +13,14 @@ object Planner {
   val MAX_EPISODES : Int = machines*episodespermachine
   val MIN_KINGDOM_SIZE = 2
 
-  def Plan(hypotheses : HypothesisSet): List[List[Card]] = {
+  def Plan(hypotheses : HypothesisSet): List[Kingdom] = {
 
     //organize from least powerful to most powerful cards
     //episode with lower (...,4,5,6,...) eval cards
     //episode with uppper (...,4,5,6,...) eval cards
 
     val sorted = hypotheses.hypotheses.sortBy(_.mu)
-    val ret = ListBuffer[List[Card]]()
+    val ret = ListBuffer[Kingdom]()
 
     var currkingdom = MIN_KINGDOM_SIZE
     for(i <- 0 until MAX_EPISODES/2) {
@@ -31,8 +32,8 @@ object Planner {
         highkingdom.addOne(sorted.reverse(s).card)
       }
 
-      ret.addOne(lowkingdom.toList)
-      ret.addOne(highkingdom.toList)
+      ret.addOne(new Kingdom(lowkingdom.toList))
+      ret.addOne(new Kingdom(highkingdom.toList))
       if(sorted.size > currkingdom) {
         currkingdom += 1
       }
@@ -40,5 +41,6 @@ object Planner {
 
     ret.toList
   }
+
 
 }

@@ -1,6 +1,6 @@
 import Critic.{Critic, Critique}
 import DistroManager.{Card, DistributionManager, Hypothesis, HypothesisSet}
-import Evaluation.Reader
+import Evaluation.{Kingdom, Reader}
 
 import java.io.FileWriter
 import scala.collection.mutable.ListBuffer
@@ -8,7 +8,13 @@ import scala.io.Source
 
 object LoopController {
 
+  /**
+   *
+   * @param args (0) is current loop cnt
+   */
   def main(args : Array[String]) : Unit = {
+
+    val cnt = args(0).toInt
 
     //evaluation
     val evaluations = Reader.Evaluate()
@@ -31,10 +37,12 @@ object LoopController {
     //ask
     val hypothesisset = DistributionManager.ASK()
 
-    hypothesis_out(hypothesisset, 1)
+    hypothesis_out(hypothesisset, cnt)
 
     //plan
-    println(Planner.Planner.Plan(hypothesisset))
+    val plans = Planner.Planner.Plan(hypothesisset)
+
+    planner_out(plans,cnt)
   }
 
   def hypothesis_in(file : String) : HypothesisSet = {
@@ -67,4 +75,14 @@ object LoopController {
     fw.close()
   }
 
+  def planner_out(kingdoms : List[Kingdom], cnt : Int) : Unit = {
+    val file = "planner_" + cnt + ".csv"
+    val fw = new FileWriter(file)
+
+    for(k <- kingdoms) {
+      fw write k.toString + "\n"
+    }
+
+    fw.close()
+  }
 }
