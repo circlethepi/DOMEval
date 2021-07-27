@@ -1,0 +1,88 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS FESTIVAl SMITHY VILLAGE MARKET BUREAUCRAT REMODEL THIEF 
+Game Started: Mon Jul 19 18:30:31 2021
+----------
+----Player0-Ended-turn1------------------ Secs: 0.000008
+Player1-Bought Bureaucrat Secs: 114.200679
+----Player1-Ended-turn1------------------ Secs: 0.000228
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn2------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 110.717008
+----Player1-Ended-turn2------------------ Secs: 0.000233
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn3------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 97.643352
+----Player1-Ended-turn3------------------ Secs: 0.000311
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn4------------------ Secs: 0.000006
+Player1-Played Bureaucrat Secs: 88.005217
+Player1-Bought Silver Secs: 79.738092
+----Player1-Ended-turn4------------------ Secs: 0.000318
+Player0-Bought Silver Secs: 0.000014
+----Player0-Ended-turn5------------------ Secs: 0.000006
+Player1-Bought Silver Secs: 61.171200
+----Player1-Ended-turn5------------------ Secs: 0.000205
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn6------------------ Secs: 0.000008
+Player1-Bought Gold Secs: 55.410329
+----Player1-Ended-turn6------------------ Secs: 0.000295
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn7------------------ Secs: 0.000011
+Player1-Bought Smithy Secs: 46.253831
+----Player1-Ended-turn7------------------ Secs: 0.000300
+Player0-Bought Silver Secs: 0.000017
+----Player0-Ended-turn8------------------ Secs: 0.000009
+Player1-Bought Gold Secs: 36.807476
+----Player1-Ended-turn8------------------ Secs: 0.000316
+Player0-Bought Gold Secs: 0.000016
+----Player0-Ended-turn9------------------ Secs: 0.000008
+Player1-Played Smithy Secs: 33.715256
+Player1-Bought Gold Secs: 33.080875
+----Player1-Ended-turn9------------------ Secs: 0.000329
+Player0-Bought Gold Secs: 0.000014
+----Player0-Ended-turn10------------------ Secs: 0.000009
+Player1-Bought Gold Secs: 29.536131
+----Player1-Ended-turn10------------------ Secs: 0.000299
+Player0-Bought Gold Secs: 0.000016
+----Player0-Ended-turn11------------------ Secs: 0.000009
+Player1-Played Smithy Secs: 23.552232
+Player1-Bought Duchy Secs: 24.986235
+----Player1-Ended-turn11------------------ Secs: 0.000238
+Player0-Bought Gold Secs: 0.000018
+----Player0-Ended-turn12------------------ Secs: 0.000009
+Player1-Bought Gold Secs: 25.024086
+----Player1-Ended-turn12------------------ Secs: 0.000303
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn13------------------ Secs: 0.000011
+Player1-Bought Province Secs: 22.236176
+----Player1-Ended-turn13------------------ Secs: 0.000239
+Player0-Bought Gold Secs: 0.000018
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Province Secs: 19.062991
+----Player1-Ended-turn14------------------ Secs: 0.000292
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn15------------------ Secs: 0.000011
+Player1-Played Bureaucrat Secs: 15.217928
+Player1-Bought Duchy Secs: 16.478319
+----Player1-Ended-turn15------------------ Secs: 0.000281
+Player0-Bought Province Secs: 0.000018
+----Player0-Ended-turn16------------------ Secs: 0.000012
+Player1-Bought Smithy Secs: 11.809768
+----Player1-Ended-turn16------------------ Secs: 0.000255
+Player0-Bought Province Secs: 0.000019
+----Player0-Ended-turn17------------------ Secs: 0.000012
+Player1-Played Smithy Secs: 9.800079
+Player1-Bought Province Secs: 9.321784
+----Player1-Ended-turn17------------------ Secs: 0.000288
+Player0-Bought Province Secs: 0.000016
+----Player0-Ended-turn18------------------ Secs: 0.000013
+Player1-Played Bureaucrat Secs: 5.808133
+Player1-Bought Gardens Secs: 5.475679
+----Player1-Ended-turn18------------------ Secs: 0.000296
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn19------------------ Secs: 0.000014
+Player1-Bought Province Secs: 1.886932
+----Player1-Ended-turn19------------------ Secs: 0.000298
+Player 0 VP: 27
+Player 1 VP: 36
+Game Ended: Mon Jul 19 18:47:07 2021

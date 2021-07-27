@@ -1,0 +1,85 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET LABORATORY THIEF 
+Game Started: Thu Jul 15 00:56:39 2021
+----------
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn1------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 101.861388
+----Player1-Ended-turn1------------------ Secs: 0.000220
+Player0-Bought Silver Secs: 0.000007
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 85.474360
+----Player1-Ended-turn2------------------ Secs: 0.000290
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn3------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 66.661444
+----Player1-Ended-turn3------------------ Secs: 0.000300
+Player0-Bought Silver Secs: 0.000013
+----Player0-Ended-turn4------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 52.506017
+----Player1-Ended-turn4------------------ Secs: 0.000236
+Player0-Bought Gold Secs: 0.000010
+----Player0-Ended-turn5------------------ Secs: 0.000006
+Player1-Bought Smithy Secs: 43.683887
+----Player1-Ended-turn5------------------ Secs: 0.000190
+Player0-Bought Silver Secs: 0.000014
+----Player0-Ended-turn6------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 40.086488
+----Player1-Ended-turn6------------------ Secs: 0.000219
+Player0-Bought Silver Secs: 0.000028
+----Player0-Ended-turn7------------------ Secs: 0.000007
+Player1-Bought Duchy Secs: 36.078844
+----Player1-Ended-turn7------------------ Secs: 0.000290
+Player0-Bought Gold Secs: 0.000013
+----Player0-Ended-turn8------------------ Secs: 0.000008
+Player1-Played Smithy Secs: 35.781584
+Player1-Bought Province Secs: 36.508545
+----Player1-Ended-turn8------------------ Secs: 0.000265
+Player0-Bought Silver Secs: 0.000016
+----Player0-Ended-turn9------------------ Secs: 0.000008
+Player1-Bought Smithy Secs: 26.773721
+----Player1-Ended-turn9------------------ Secs: 0.000342
+Player0-Bought Gold Secs: 0.000012
+----Player0-Ended-turn10------------------ Secs: 0.000008
+Player1-Bought Silver Secs: 25.977739
+----Player1-Ended-turn10------------------ Secs: 0.000346
+Player0-Bought Gold Secs: 0.000021
+----Player0-Ended-turn11------------------ Secs: 0.000008
+Player1-Played Smithy Secs: 22.018406
+Player1-Bought Province Secs: 23.921664
+----Player1-Ended-turn11------------------ Secs: 0.000237
+Player0-Bought Gold Secs: 0.000018
+----Player0-Ended-turn12------------------ Secs: 0.000011
+Player1-Played Smithy Secs: 21.926021
+Player1-Bought Province Secs: 20.427529
+----Player1-Ended-turn12------------------ Secs: 0.000251
+Player0-Bought Silver Secs: 0.000018
+----Player0-Ended-turn13------------------ Secs: 0.000010
+Player1-Played Smithy Secs: 14.412660
+Player1-Bought Province Secs: 14.380340
+----Player1-Ended-turn13------------------ Secs: 0.000388
+Player0-Bought Gold Secs: 0.000028
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Silver Secs: 13.042024
+----Player1-Ended-turn14------------------ Secs: 0.000339
+Player0-Bought Gold Secs: 0.000021
+----Player0-Ended-turn15------------------ Secs: 0.000012
+Player1-Bought Gardens Secs: 11.664104
+----Player1-Ended-turn15------------------ Secs: 0.000306
+Player0-Bought Province Secs: 0.000021
+----Player0-Ended-turn16------------------ Secs: 0.000012
+Player1-Bought Duchy Secs: 9.697083
+----Player1-Ended-turn16------------------ Secs: 0.000304
+Player0-Bought Province Secs: 0.000030
+----Player0-Ended-turn17------------------ Secs: 0.000021
+Player1-Bought Estate Secs: 6.339156
+----Player1-Ended-turn17------------------ Secs: 0.000346
+Player0-Bought Province Secs: 0.000025
+----Player0-Ended-turn18------------------ Secs: 0.000022
+Player1-Bought Duchy Secs: 3.146402
+----Player1-Ended-turn18------------------ Secs: 0.000322
+Player0-Bought Province Secs: 0.000030
+----Player0-Ended-turn19------------------ Secs: 0.000023
+Player 0 VP: 27
+Player 1 VP: 39
+Game Ended: Thu Jul 15 01:08:50 2021

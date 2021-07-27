@@ -1,0 +1,115 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY WITCH BUREAUCRAT REMODEL THIEF 
+Game Started: Fri Jul 16 16:03:18 2021
+----------
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn1------------------ Secs: 0.000004
+Player1-Bought Bureaucrat Secs: 95.235445
+----Player1-Ended-turn1------------------ Secs: 0.000312
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn2------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 87.171502
+----Player1-Ended-turn2------------------ Secs: 0.000275
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn3------------------ Secs: 0.000006
+Player1-Bought Silver Secs: 81.913177
+----Player1-Ended-turn3------------------ Secs: 0.000300
+Player0-Bought Silver Secs: 0.000013
+----Player0-Ended-turn4------------------ Secs: 0.000007
+Player1-Bought Witch Secs: 72.715462
+----Player1-Ended-turn4------------------ Secs: 0.000274
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn5------------------ Secs: 0.000007
+Player1-Played Witch Secs: 71.390545
+Player1-Bought Gold Secs: 73.239341
+----Player1-Ended-turn5------------------ Secs: 0.000299
+Player0-Bought Gold Secs: 0.000011
+----Player0-Ended-turn6------------------ Secs: 0.000007
+Player1-Bought Witch Secs: 58.027233
+----Player1-Ended-turn6------------------ Secs: 0.000293
+Player0-Bought Silver Secs: 0.000014
+----Player0-Ended-turn7------------------ Secs: 0.000008
+Player1-Played Bureaucrat Secs: 53.742763
+Player1-Bought Silver Secs: 51.015359
+----Player1-Ended-turn7------------------ Secs: 0.000255
+Player0-Bought Gold Secs: 0.000017
+----Player0-Ended-turn8------------------ Secs: 0.000009
+Player1-Played Witch Secs: 47.148357
+Player1-Bought Gold Secs: 50.093159
+----Player1-Ended-turn8------------------ Secs: 0.000280
+Player0-Bought Gold Secs: 0.000016
+----Player0-Ended-turn9------------------ Secs: 0.000009
+Player1-Bought Silver Secs: 39.855735
+----Player1-Ended-turn9------------------ Secs: 0.000191
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn10------------------ Secs: 0.000010
+Player1-Played Witch Secs: 33.144353
+Player1-Bought Gold Secs: 37.502514
+----Player1-Ended-turn10------------------ Secs: 0.000275
+Player0-Bought Gold Secs: 0.000017
+----Player0-Ended-turn11------------------ Secs: 0.000010
+Player1-Played Witch Secs: 33.638302
+Player1-Bought Province Secs: 34.614794
+----Player1-Ended-turn11------------------ Secs: 0.000267
+Player0-Bought Silver Secs: 0.000018
+----Player0-Ended-turn12------------------ Secs: 0.000011
+Player1-Bought Silver Secs: 28.698611
+----Player1-Ended-turn12------------------ Secs: 0.000272
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn13------------------ Secs: 0.000011
+Player1-Bought Gold Secs: 27.094362
+----Player1-Ended-turn13------------------ Secs: 0.000343
+Player0-Bought Silver Secs: 0.000027
+----Player0-Ended-turn14------------------ Secs: 0.000013
+Player1-Played Witch Secs: 23.960371
+Player1-Bought Gold Secs: 24.425080
+----Player1-Ended-turn14------------------ Secs: 0.000299
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn15------------------ Secs: 0.000013
+Player1-Bought Province Secs: 25.626682
+----Player1-Ended-turn15------------------ Secs: 0.000349
+Player0-Bought Gardens Secs: 0.000045
+----Player0-Ended-turn16------------------ Secs: 0.000015
+Player1-Played Witch Secs: 21.070394
+Player1-Bought Province Secs: 18.970434
+----Player1-Ended-turn16------------------ Secs: 0.000318
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn17------------------ Secs: 0.000014
+Player1-Bought Duchy Secs: 15.315787
+----Player1-Ended-turn17------------------ Secs: 0.000208
+Player0-Bought Gardens Secs: 0.000017
+----Player0-Ended-turn18------------------ Secs: 0.000015
+Player1-Played Witch Secs: 15.732862
+Player1-Bought Province Secs: 15.392590
+----Player1-Ended-turn18------------------ Secs: 0.000255
+Player0-Bought Province Secs: 0.000020
+----Player0-Ended-turn19------------------ Secs: 0.000015
+Player1-Bought Gardens Secs: 11.520784
+----Player1-Ended-turn19------------------ Secs: 0.000296
+Player0-Bought Gardens Secs: 0.000022
+----Player0-Ended-turn20------------------ Secs: 0.000018
+Player1-Bought Gardens Secs: 12.159752
+----Player1-Ended-turn20------------------ Secs: 0.000453
+Player0-Bought Gardens Secs: 0.000024
+----Player0-Ended-turn21------------------ Secs: 0.000018
+Player1-Bought Estate Secs: 7.013062
+----Player1-Ended-turn21------------------ Secs: 0.000303
+Player0-Bought Province Secs: 0.000024
+----Player0-Ended-turn22------------------ Secs: 0.000017
+Player1-Bought Gardens Secs: 5.974114
+----Player1-Ended-turn22------------------ Secs: 0.000262
+Player0-Bought Estate Secs: 0.000022
+----Player0-Ended-turn23------------------ Secs: 0.000017
+Player1-Bought Gardens Secs: 6.917779
+----Player1-Ended-turn23------------------ Secs: 0.000299
+Player0-Bought Duchy Secs: 0.000025
+----Player0-Ended-turn24------------------ Secs: 0.000019
+Player1-Bought Estate Secs: 4.527892
+----Player1-Ended-turn24------------------ Secs: 0.000324
+Player0-Bought Estate Secs: 0.000023
+----Player0-Ended-turn25------------------ Secs: 0.000020
+Player1-Bought Province Secs: 3.421630
+----Player1-Ended-turn25------------------ Secs: 0.000281
+Player 0 VP: 35
+Player 1 VP: 50
+Game Ended: Fri Jul 16 16:23:31 2021

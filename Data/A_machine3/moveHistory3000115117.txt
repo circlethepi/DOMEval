@@ -1,0 +1,87 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER GARDENS FESTIVAl SMITHY VILLAGE MARKET LABORATORY BUREAUCRAT THIEF 
+Game Started: Tue Jul 20 16:50:25 2021
+----------
+Player0-Bought Silver Secs: 113.712014
+----Player0-Ended-turn1------------------ Secs: 0.000214
+Player1-Bought Silver Secs: 0.000008
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Bureaucrat Secs: 97.572906
+----Player0-Ended-turn2------------------ Secs: 0.000201
+Player1-Bought Silver Secs: 0.000008
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Played Bureaucrat Secs: 78.079391
+Player0-Bought Silver Secs: 71.342331
+----Player0-Ended-turn3------------------ Secs: 0.000306
+Player1-Bought Gold Secs: 0.000009
+----Player1-Ended-turn3------------------ Secs: 0.000008
+Player0-Bought Gold Secs: 64.316889
+----Player0-Ended-turn4------------------ Secs: 0.000308
+Player1-Bought Silver Secs: 0.000014
+----Player1-Ended-turn4------------------ Secs: 0.000006
+Player0-Bought Smithy Secs: 48.830645
+----Player0-Ended-turn5------------------ Secs: 0.000370
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn5------------------ Secs: 0.000007
+Player0-Bought Gold Secs: 49.156845
+----Player0-Ended-turn6------------------ Secs: 0.000271
+Player1-Bought Silver Secs: 0.000013
+----Player1-Ended-turn6------------------ Secs: 0.000008
+Player0-Played Bureaucrat Secs: 38.226877
+Player0-Bought Gardens Secs: 36.645451
+----Player0-Ended-turn7------------------ Secs: 0.000386
+Player1-Bought Gold Secs: 0.000033
+----Player1-Ended-turn7------------------ Secs: 0.000013
+Player0-Bought Gold Secs: 35.460406
+----Player0-Ended-turn8------------------ Secs: 0.000393
+Player1-Bought Gold Secs: 0.000025
+----Player1-Ended-turn8------------------ Secs: 0.000008
+Player0-Played Bureaucrat Secs: 29.745792
+----Player0-Ended-turn9------------------ Secs: 27.863810
+Player1-Bought Gold Secs: 0.000020
+----Player1-Ended-turn9------------------ Secs: 0.000008
+Player0-Bought Province Secs: 27.182240
+----Player0-Ended-turn10------------------ Secs: 0.000382
+Player1-Bought Gold Secs: 0.000024
+----Player1-Ended-turn10------------------ Secs: 0.000009
+Player0-Bought Province Secs: 23.865161
+----Player0-Ended-turn11------------------ Secs: 0.000424
+Player1-Bought Gold Secs: 0.000036
+----Player1-Ended-turn11------------------ Secs: 0.000015
+Player0-Played Smithy Secs: 20.368453
+Player0-Bought Province Secs: 20.885030
+----Player0-Ended-turn12------------------ Secs: 0.000283
+Player1-Bought Gold Secs: 0.000036
+----Player1-Ended-turn12------------------ Secs: 0.000011
+Player0-Bought Silver Secs: 17.393568
+----Player0-Ended-turn13------------------ Secs: 0.000235
+Player1-Bought Gold Secs: 0.000018
+----Player1-Ended-turn13------------------ Secs: 0.000010
+Player0-Bought Gold Secs: 18.664574
+----Player0-Ended-turn14------------------ Secs: 0.000252
+Player1-Bought Silver Secs: 0.000030
+----Player1-Ended-turn14------------------ Secs: 0.000021
+Player0-Bought Gardens Secs: 14.763516
+----Player0-Ended-turn15------------------ Secs: 0.000343
+Player1-Bought Gold Secs: 0.000028
+----Player1-Ended-turn15------------------ Secs: 0.000013
+Player0-Played Smithy Secs: 16.567451
+Player0-Bought Province Secs: 16.112736
+----Player0-Ended-turn16------------------ Secs: 0.000288
+Player1-Bought Gardens Secs: 0.000026
+----Player1-Ended-turn16------------------ Secs: 0.000012
+Player0-Bought Gardens Secs: 11.583523
+----Player0-Ended-turn17------------------ Secs: 0.000277
+Player1-Bought Province Secs: 0.000021
+----Player1-Ended-turn17------------------ Secs: 0.000013
+Player0-Bought Gardens Secs: 9.260934
+----Player0-Ended-turn18------------------ Secs: 0.000242
+Player1-Bought Province Secs: 0.000038
+----Player1-Ended-turn18------------------ Secs: 0.000013
+Player0-Bought Province Secs: 7.633153
+----Player0-Ended-turn19------------------ Secs: 0.000274
+Player1-Bought Province Secs: 0.000038
+----Player1-Ended-turn19------------------ Secs: 0.000014
+Player 0 VP: 45
+Player 1 VP: 23
+Game Ended: Tue Jul 20 17:05:38 2021

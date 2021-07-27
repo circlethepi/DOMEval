@@ -1,0 +1,87 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET WITCH BUREAUCRAT 
+Game Started: Mon Jul 19 16:31:43 2021
+----------
+Player0-Bought Silver Secs: 91.669732
+----Player0-Ended-turn1------------------ Secs: 0.000263
+Player1-Bought Silver Secs: 0.000007
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Bureaucrat Secs: 90.304015
+----Player0-Ended-turn2------------------ Secs: 0.000285
+Player1-Bought Silver Secs: 0.000010
+----Player1-Ended-turn2------------------ Secs: 0.000007
+Player0-Played Bureaucrat Secs: 77.390913
+----Player0-Ended-turn3------------------ Secs: 70.002195
+Player1-Bought Silver Secs: 0.000011
+----Player1-Ended-turn3------------------ Secs: 0.000004
+Player0-Bought Witch Secs: 64.792276
+----Player0-Ended-turn4------------------ Secs: 0.001027
+Player1-Bought Silver Secs: 0.000010
+----Player1-Ended-turn4------------------ Secs: 0.000005
+Player0-Played Witch Secs: 70.933231
+Player0-Bought Gold Secs: 72.757850
+----Player0-Ended-turn5------------------ Secs: 0.000300
+Player1-Bought Gold Secs: 0.000016
+----Player1-Ended-turn5------------------ Secs: 0.000007
+Player0-Bought Silver Secs: 51.854429
+----Player0-Ended-turn6------------------ Secs: 0.000263
+Player1-Bought Gold Secs: 0.000017
+----Player1-Ended-turn6------------------ Secs: 0.000007
+Player0-Played Bureaucrat Secs: 44.585939
+Player0-Bought Silver Secs: 45.529277
+----Player0-Ended-turn7------------------ Secs: 0.000246
+----Player1-Ended-turn7------------------ Secs: 0.000016
+Player0-Bought Gold Secs: 41.506138
+----Player0-Ended-turn8------------------ Secs: 0.000211
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn8------------------ Secs: 0.000012
+Player0-Played Witch Secs: 34.969257
+Player0-Bought Province Secs: 37.669967
+----Player0-Ended-turn9------------------ Secs: 0.000246
+Player1-Bought Gold Secs: 0.000015
+----Player1-Ended-turn9------------------ Secs: 0.000008
+Player0-Played Witch Secs: 32.101567
+Player0-Bought Province Secs: 30.577007
+----Player0-Ended-turn10------------------ Secs: 0.000310
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn10------------------ Secs: 0.000010
+Player0-Bought Gardens Secs: 27.101010
+----Player0-Ended-turn11------------------ Secs: 0.000210
+Player1-Bought Gold Secs: 0.000016
+----Player1-Ended-turn11------------------ Secs: 0.000010
+Player0-Bought Gold Secs: 28.976002
+----Player0-Ended-turn12------------------ Secs: 0.000235
+Player1-Bought Gold Secs: 0.000018
+----Player1-Ended-turn12------------------ Secs: 0.000010
+Player0-Played Witch Secs: 26.719266
+Player0-Bought Province Secs: 25.127006
+----Player0-Ended-turn13------------------ Secs: 0.000285
+Player1-Bought Silver Secs: 0.000020
+----Player1-Ended-turn13------------------ Secs: 0.000010
+Player0-Bought Silver Secs: 19.494053
+----Player0-Ended-turn14------------------ Secs: 0.000264
+Player1-Bought Gold Secs: 0.000021
+----Player1-Ended-turn14------------------ Secs: 0.000041
+Player0-Bought Gardens Secs: 20.583433
+----Player0-Ended-turn15------------------ Secs: 0.001337
+Player1-Bought Silver Secs: 0.000042
+----Player1-Ended-turn15------------------ Secs: 0.000020
+Player0-Bought Province Secs: 16.899484
+----Player0-Ended-turn16------------------ Secs: 0.000258
+Player1-Bought Province Secs: 0.000020
+----Player1-Ended-turn16------------------ Secs: 0.000014
+Player0-Bought Gardens Secs: 10.488749
+----Player0-Ended-turn17------------------ Secs: 0.000329
+Player1-Bought Province Secs: 0.000022
+----Player1-Ended-turn17------------------ Secs: 0.000014
+Player0-Bought Province Secs: 11.118341
+----Player0-Ended-turn18------------------ Secs: 0.000338
+Player1-Bought Gardens Secs: 0.000034
+----Player1-Ended-turn18------------------ Secs: 0.000014
+Player0-Bought Gardens Secs: 3.493250
+----Player0-Ended-turn19------------------ Secs: 0.000346
+Player1-Bought Province Secs: 0.000027
+----Player1-Ended-turn19------------------ Secs: 0.000016
+Player 0 VP: 45
+Player 1 VP: 20
+Game Ended: Mon Jul 19 16:49:28 2021

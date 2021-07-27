@@ -1,0 +1,87 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET LABORATORY WITCH BUREAUCRAT REMODEL THIEF 
+Game Started: Tue Jul 27 06:08:02 2021
+----------
+Player0-Bought Silver Secs: 140.283630
+----Player0-Ended-turn1------------------ Secs: 0.000308
+Player1-Bought Silver Secs: 0.000011
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Bureaucrat Secs: 109.091893
+----Player0-Ended-turn2------------------ Secs: 0.000315
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Bought Silver Secs: 79.895824
+----Player0-Ended-turn3------------------ Secs: 0.000316
+----Player1-Ended-turn3------------------ Secs: 0.000012
+Player0-Played Bureaucrat Secs: 65.292480
+Player0-Bought Silver Secs: 69.359530
+----Player0-Ended-turn4------------------ Secs: 0.000321
+Player1-Bought Gold Secs: 0.000013
+----Player1-Ended-turn4------------------ Secs: 0.000006
+Player0-Bought Witch Secs: 58.788614
+----Player0-Ended-turn5------------------ Secs: 0.000338
+Player1-Bought Silver Secs: 0.000011
+----Player1-Ended-turn5------------------ Secs: 0.000010
+Player0-Played Bureaucrat Secs: 51.897225
+Player0-Bought Silver Secs: 52.866460
+----Player0-Ended-turn6------------------ Secs: 0.000368
+Player1-Bought Gold Secs: 0.000018
+----Player1-Ended-turn6------------------ Secs: 0.000007
+Player0-Bought Witch Secs: 50.360000
+----Player0-Ended-turn7------------------ Secs: 0.000358
+Player1-Bought Silver Secs: 0.000020
+----Player1-Ended-turn7------------------ Secs: 0.000007
+Player0-Bought Silver Secs: 46.021497
+----Player0-Ended-turn8------------------ Secs: 0.000370
+Player1-Bought Gold Secs: 0.000020
+----Player1-Ended-turn8------------------ Secs: 0.000009
+Player0-Played Witch Secs: 40.312597
+Player0-Bought Gold Secs: 41.305702
+----Player0-Ended-turn9------------------ Secs: 0.000323
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn9------------------ Secs: 0.000008
+Player0-Bought Gold Secs: 36.309980
+----Player0-Ended-turn10------------------ Secs: 0.000404
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn10------------------ Secs: 0.000009
+Player0-Bought Gold Secs: 28.660791
+----Player0-Ended-turn11------------------ Secs: 0.000410
+----Player1-Ended-turn11------------------ Secs: 0.000025
+Player0-Played Witch Secs: 24.629095
+Player0-Bought Gold Secs: 28.010684
+----Player0-Ended-turn12------------------ Secs: 0.000320
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn12------------------ Secs: 0.000009
+Player0-Bought Province Secs: 24.219918
+----Player0-Ended-turn13------------------ Secs: 0.000311
+Player1-Bought Gold Secs: 0.000020
+----Player1-Ended-turn13------------------ Secs: 0.000010
+Player0-Played Witch Secs: 21.434242
+Player0-Bought Gardens Secs: 23.331561
+----Player0-Ended-turn14------------------ Secs: 0.000421
+Player1-Bought Silver Secs: 0.000029
+----Player1-Ended-turn14------------------ Secs: 0.000028
+Player0-Bought Province Secs: 20.515324
+----Player0-Ended-turn15------------------ Secs: 0.000386
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn15------------------ Secs: 0.000011
+Player0-Bought Gold Secs: 16.839416
+----Player0-Ended-turn16------------------ Secs: 0.000438
+Player1-Bought Province Secs: 0.000028
+----Player1-Ended-turn16------------------ Secs: 0.000012
+Player0-Bought Province Secs: 13.957997
+----Player0-Ended-turn17------------------ Secs: 0.000253
+Player1-Bought Province Secs: 0.000018
+----Player1-Ended-turn17------------------ Secs: 0.000012
+Player0-Played Witch Secs: 8.550456
+Player0-Bought Province Secs: 8.299162
+----Player0-Ended-turn18------------------ Secs: 0.000350
+Player1-Bought Province Secs: 0.000027
+----Player1-Ended-turn18------------------ Secs: 0.000014
+Player0-Bought Gardens Secs: 2.803572
+----Player0-Ended-turn19------------------ Secs: 0.000253
+Player1-Bought Province Secs: 0.000020
+----Player1-Ended-turn19------------------ Secs: 0.000014
+Player 0 VP: 33
+Player 1 VP: 23
+Game Ended: Tue Jul 27 06:26:04 2021

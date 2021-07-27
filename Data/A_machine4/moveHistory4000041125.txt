@@ -1,0 +1,88 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER FESTIVAl MONEYLENDER SMITHY VILLAGE LABORATORY WITCH REMODEL THIEF 
+Game Started: Wed Jul 14 18:02:44 2021
+----------
+Player0-Bought Silver Secs: 102.307625
+----Player0-Ended-turn1------------------ Secs: 0.000296
+Player1-Bought Silver Secs: 0.000007
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Silver Secs: 92.890531
+----Player0-Ended-turn2------------------ Secs: 0.000323
+Player1-Bought Silver Secs: 0.000028
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Bought Silver Secs: 74.045437
+----Player0-Ended-turn3------------------ Secs: 0.001236
+Player1-Bought Silver Secs: 0.000013
+----Player1-Ended-turn3------------------ Secs: 0.000005
+Player0-Bought Silver Secs: 58.426073
+----Player0-Ended-turn4------------------ Secs: 0.000347
+Player1-Bought Gold Secs: 0.000010
+----Player1-Ended-turn4------------------ Secs: 0.000006
+Player0-Bought Silver Secs: 52.276005
+----Player0-Ended-turn5------------------ Secs: 0.000300
+----Player1-Ended-turn5------------------ Secs: 0.000012
+Player0-Bought Witch Secs: 46.504849
+----Player0-Ended-turn6------------------ Secs: 0.000322
+Player1-Bought Gold Secs: 0.000013
+----Player1-Ended-turn6------------------ Secs: 0.000006
+Player0-Bought Silver Secs: 44.089003
+----Player0-Ended-turn7------------------ Secs: 0.001123
+Player1-Bought Gold Secs: 0.000014
+----Player1-Ended-turn7------------------ Secs: 0.000009
+Player0-Bought Witch Secs: 40.863058
+----Player0-Ended-turn8------------------ Secs: 0.000270
+Player1-Bought Silver Secs: 0.000013
+----Player1-Ended-turn8------------------ Secs: 0.000007
+Player0-Played Witch Secs: 34.513117
+Player0-Bought Gold Secs: 37.416355
+----Player0-Ended-turn9------------------ Secs: 0.000272
+Player1-Bought Gold Secs: 0.000015
+----Player1-Ended-turn9------------------ Secs: 0.000008
+Player0-Played Witch Secs: 31.641952
+Player0-Bought Gold Secs: 32.524511
+----Player0-Ended-turn10------------------ Secs: 0.000341
+Player1-Bought Gold Secs: 0.000016
+----Player1-Ended-turn10------------------ Secs: 0.000009
+Player0-Bought Witch Secs: 30.105891
+----Player0-Ended-turn11------------------ Secs: 0.000354
+Player1-Bought Silver Secs: 0.000019
+----Player1-Ended-turn11------------------ Secs: 0.000010
+Player0-Played Witch Secs: 28.790522
+Player0-Bought Province Secs: 28.505880
+----Player0-Ended-turn12------------------ Secs: 0.000278
+Player1-Bought Gold Secs: 0.000017
+----Player1-Ended-turn12------------------ Secs: 0.000009
+Player0-Bought Province Secs: 25.007267
+----Player0-Ended-turn13------------------ Secs: 0.000429
+Player1-Bought Gold Secs: 0.000034
+----Player1-Ended-turn13------------------ Secs: 0.000018
+Player0-Bought Gold Secs: 23.603645
+----Player0-Ended-turn14------------------ Secs: 0.000420
+Player1-Bought Gold Secs: 0.000026
+----Player1-Ended-turn14------------------ Secs: 0.000017
+Player0-Played Witch Secs: 22.274940
+Player0-Bought Province Secs: 21.891601
+----Player0-Ended-turn15------------------ Secs: 0.001098
+Player1-Bought Silver Secs: 0.000019
+----Player1-Ended-turn15------------------ Secs: 0.000013
+Player0-Bought Gold Secs: 16.949286
+----Player0-Ended-turn16------------------ Secs: 0.000355
+Player1-Bought Province Secs: 0.000022
+----Player1-Ended-turn16------------------ Secs: 0.000012
+Player0-Played Witch Secs: 13.519400
+Player0-Bought Estate Secs: 12.887773
+----Player0-Ended-turn17------------------ Secs: 0.000269
+Player1-Bought Duchy Secs: 0.000020
+----Player1-Ended-turn17------------------ Secs: 0.000012
+Player0-Bought Province Secs: 11.554334
+----Player0-Ended-turn18------------------ Secs: 0.000348
+Player1-Bought Province Secs: 0.000033
+----Player1-Ended-turn18------------------ Secs: 0.000014
+Player0-Played Witch Secs: 7.388446
+Player0-Bought Province Secs: 7.858566
+----Player0-Ended-turn19------------------ Secs: 0.000406
+Player1-Bought Province Secs: 0.000029
+----Player1-Ended-turn19------------------ Secs: 0.000014
+Player 0 VP: 34
+Player 1 VP: 18
+Game Ended: Wed Jul 14 18:18:01 2021

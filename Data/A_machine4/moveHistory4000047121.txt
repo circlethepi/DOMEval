@@ -1,0 +1,87 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET LABORATORY REMODEL THIEF 
+Game Started: Wed Jul 14 15:44:01 2021
+----------
+----Player0-Ended-turn1------------------ Secs: 0.000009
+Player1-Bought Silver Secs: 119.240412
+----Player1-Ended-turn1------------------ Secs: 0.000300
+Player0-Bought Silver Secs: 0.000007
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 102.126412
+----Player1-Ended-turn2------------------ Secs: 0.000306
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn3------------------ Secs: 0.000005
+Player1-Bought Gold Secs: 88.778703
+----Player1-Ended-turn3------------------ Secs: 0.000244
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn4------------------ Secs: 0.000006
+Player1-Bought Smithy Secs: 59.864451
+----Player1-Ended-turn4------------------ Secs: 0.000257
+Player0-Bought Gold Secs: 0.000009
+----Player0-Ended-turn5------------------ Secs: 0.000006
+Player1-Bought Gold Secs: 53.653993
+----Player1-Ended-turn5------------------ Secs: 0.000280
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn6------------------ Secs: 0.000006
+Player1-Played Smithy Secs: 41.492628
+Player1-Bought Gold Secs: 40.713011
+----Player1-Ended-turn6------------------ Secs: 0.000231
+Player0-Bought Silver Secs: 0.000030
+----Player0-Ended-turn7------------------ Secs: 0.000007
+Player1-Bought Province Secs: 34.126145
+----Player1-Ended-turn7------------------ Secs: 0.000292
+Player0-Bought Gold Secs: 0.000015
+----Player0-Ended-turn8------------------ Secs: 0.000008
+Player1-Played Smithy Secs: 32.491761
+Player1-Bought Province Secs: 30.148263
+----Player1-Ended-turn8------------------ Secs: 0.001945
+Player0-Bought Silver Secs: 0.000019
+----Player0-Ended-turn9------------------ Secs: 0.000008
+Player1-Bought Duchy Secs: 24.535366
+----Player1-Ended-turn9------------------ Secs: 0.000366
+Player0-Bought Gold Secs: 0.000023
+----Player0-Ended-turn10------------------ Secs: 0.000014
+Player1-Bought Gold Secs: 25.671925
+----Player1-Ended-turn10------------------ Secs: 0.000344
+Player0-Bought Silver Secs: 0.000017
+----Player0-Ended-turn11------------------ Secs: 0.000026
+Player1-Bought Gold Secs: 20.374492
+----Player1-Ended-turn11------------------ Secs: 0.000271
+Player0-Bought Gold Secs: 0.000016
+----Player0-Ended-turn12------------------ Secs: 0.000010
+Player1-Played Smithy Secs: 17.678580
+Player1-Bought Province Secs: 18.139534
+----Player1-Ended-turn12------------------ Secs: 0.000295
+Player0-Bought Gold Secs: 0.000034
+----Player0-Ended-turn13------------------ Secs: 0.000010
+Player1-Bought Province Secs: 16.338439
+----Player1-Ended-turn13------------------ Secs: 0.000319
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Duchy Secs: 11.767483
+----Player1-Ended-turn14------------------ Secs: 0.000402
+Player0-Bought Gold Secs: 0.000027
+----Player0-Ended-turn15------------------ Secs: 0.000014
+Player1-Bought Duchy Secs: 13.058100
+----Player1-Ended-turn15------------------ Secs: 0.000323
+Player0-Bought Duchy Secs: 0.000022
+----Player0-Ended-turn16------------------ Secs: 0.000013
+Player1-Bought Duchy Secs: 12.695517
+----Player1-Ended-turn16------------------ Secs: 0.000324
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn17------------------ Secs: 0.000012
+Player1-Bought Estate Secs: 10.213402
+----Player1-Ended-turn17------------------ Secs: 0.000270
+Player0-Bought Province Secs: 0.000018
+----Player0-Ended-turn18------------------ Secs: 0.000013
+Player1-Bought Duchy Secs: 6.880429
+----Player1-Ended-turn18------------------ Secs: 0.000285
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn19------------------ Secs: 0.000013
+Player1-Bought Duchy Secs: 3.219987
+----Player1-Ended-turn19------------------ Secs: 0.000311
+Player0-Bought Province Secs: 0.000039
+----Player0-Ended-turn20------------------ Secs: 0.000015
+Player 0 VP: 30
+Player 1 VP: 46
+Game Ended: Wed Jul 14 15:57:23 2021

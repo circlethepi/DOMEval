@@ -1,0 +1,88 @@
+FLATUCBMOD vs. BIGMONEYAI
+GARDENS MONEYLENDER SMITHY VILLAGE MARKET LABORATORY BUREAUCRAT REMODEL THIEF 
+Game Started: Thu Jul 15 03:28:56 2021
+----------
+Player0-Bought Silver Secs: 104.918699
+----Player0-Ended-turn1------------------ Secs: 0.000215
+Player1-Bought Silver Secs: 0.000007
+----Player1-Ended-turn1------------------ Secs: 0.000003
+Player0-Bought Bureaucrat Secs: 92.284678
+----Player0-Ended-turn2------------------ Secs: 0.000378
+Player1-Bought Silver Secs: 0.000010
+----Player1-Ended-turn2------------------ Secs: 0.000004
+Player0-Bought Silver Secs: 90.164328
+----Player0-Ended-turn3------------------ Secs: 0.000277
+Player1-Bought Silver Secs: 0.000012
+----Player1-Ended-turn3------------------ Secs: 0.000006
+Player0-Bought Silver Secs: 74.936521
+----Player0-Ended-turn4------------------ Secs: 0.000249
+Player1-Bought Silver Secs: 0.000014
+----Player1-Ended-turn4------------------ Secs: 0.000007
+Player0-Bought Gold Secs: 65.356875
+----Player0-Ended-turn5------------------ Secs: 0.000361
+Player1-Bought Silver Secs: 0.000014
+----Player1-Ended-turn5------------------ Secs: 0.000011
+Player0-Played Bureaucrat Secs: 54.447618
+Player0-Bought Silver Secs: 58.232814
+----Player0-Ended-turn6------------------ Secs: 0.000375
+Player1-Bought Silver Secs: 0.000019
+----Player1-Ended-turn6------------------ Secs: 0.000007
+Player0-Bought Smithy Secs: 46.250601
+----Player0-Ended-turn7------------------ Secs: 0.000313
+Player1-Bought Silver Secs: 0.000031
+----Player1-Ended-turn7------------------ Secs: 0.000007
+Player0-Played Smithy Secs: 38.879000
+Player0-Bought Gold Secs: 39.781936
+----Player0-Ended-turn8------------------ Secs: 0.000301
+Player1-Bought Gold Secs: 0.000014
+----Player1-Ended-turn8------------------ Secs: 0.000007
+Player0-Played Bureaucrat Secs: 36.546065
+Player0-Bought Gardens Secs: 35.493287
+----Player0-Ended-turn9------------------ Secs: 0.000355
+Player1-Bought Silver Secs: 0.000022
+----Player1-Ended-turn9------------------ Secs: 0.000008
+Player0-Bought Province Secs: 33.207196
+----Player0-Ended-turn10------------------ Secs: 0.000281
+Player1-Bought Gold Secs: 0.000016
+----Player1-Ended-turn10------------------ Secs: 0.000009
+----Player0-Ended-turn11------------------ Secs: 26.203709
+Player1-Bought Gold Secs: 0.000025
+----Player1-Ended-turn11------------------ Secs: 0.000011
+Player0-Bought Gold Secs: 24.900124
+----Player0-Ended-turn12------------------ Secs: 0.000267
+Player1-Bought Silver Secs: 0.000018
+----Player1-Ended-turn12------------------ Secs: 0.000009
+Player0-Played Bureaucrat Secs: 21.327342
+Player0-Bought Province Secs: 20.626582
+----Player0-Ended-turn13------------------ Secs: 0.000299
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn13------------------ Secs: 0.000013
+Player0-Played Smithy Secs: 18.923015
+Player0-Bought Province Secs: 18.371216
+----Player0-Ended-turn14------------------ Secs: 0.000440
+Player1-Bought Gold Secs: 0.000022
+----Player1-Ended-turn14------------------ Secs: 0.000011
+Player0-Bought Province Secs: 15.695571
+----Player0-Ended-turn15------------------ Secs: 0.000305
+Player1-Bought Gold Secs: 0.000022
+----Player1-Ended-turn15------------------ Secs: 0.000012
+Player0-Bought Gardens Secs: 13.928471
+----Player0-Ended-turn16------------------ Secs: 0.000284
+Player1-Bought Gardens Secs: 0.000021
+----Player1-Ended-turn16------------------ Secs: 0.000011
+Player0-Bought Estate Secs: 10.235841
+----Player0-Ended-turn17------------------ Secs: 0.000359
+Player1-Bought Province Secs: 0.000025
+----Player1-Ended-turn17------------------ Secs: 0.000013
+Player0-Played Smithy Secs: 9.293228
+Player0-Bought Province Secs: 8.825650
+----Player0-Ended-turn18------------------ Secs: 0.000350
+Player1-Bought Province Secs: 0.000026
+----Player1-Ended-turn18------------------ Secs: 0.000013
+Player0-Bought Gardens Secs: 3.188451
+----Player0-Ended-turn19------------------ Secs: 0.000268
+Player1-Bought Province Secs: 0.000024
+----Player1-Ended-turn19------------------ Secs: 0.000014
+Player 0 VP: 43
+Player 1 VP: 23
+Game Ended: Thu Jul 15 03:45:16 2021

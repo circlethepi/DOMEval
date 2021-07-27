@@ -1,0 +1,130 @@
+FLATUCBMOD vs. BIGMONEYAI
+GARDENS MONEYLENDER SMITHY VILLAGE LABORATORY WITCH BUREAUCRAT REMODEL THIEF 
+Game Started: Fri Jul 16 16:51:27 2021
+----------
+Player0-Bought Silver Secs: 79.534890
+----Player0-Ended-turn1------------------ Secs: 0.000243
+Player1-Bought Silver Secs: 0.000007
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Bureaucrat Secs: 86.370842
+----Player0-Ended-turn2------------------ Secs: 0.000263
+----Player1-Ended-turn2------------------ Secs: 0.000008
+Player0-Bought Witch Secs: 85.472956
+----Player0-Ended-turn3------------------ Secs: 0.000281
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn3------------------ Secs: 0.000005
+Player0-Played Bureaucrat Secs: 82.098059
+----Player0-Ended-turn4------------------ Secs: 82.115252
+Player1-Bought Silver Secs: 0.000015
+----Player1-Ended-turn4------------------ Secs: 0.000007
+Player0-Bought Silver Secs: 74.387863
+----Player0-Ended-turn5------------------ Secs: 0.000313
+Player1-Bought Silver Secs: 0.000010
+----Player1-Ended-turn5------------------ Secs: 0.000007
+Player0-Bought Witch Secs: 59.871342
+----Player0-Ended-turn6------------------ Secs: 0.000309
+Player1-Bought Gold Secs: 0.000013
+----Player1-Ended-turn6------------------ Secs: 0.000006
+Player0-Played Witch Secs: 64.474433
+Player0-Bought Silver Secs: 63.073742
+----Player0-Ended-turn7------------------ Secs: 0.000253
+Player1-Bought Gold Secs: 0.000014
+----Player1-Ended-turn7------------------ Secs: 0.000008
+Player0-Played Bureaucrat Secs: 60.428276
+Player0-Bought Silver Secs: 61.986596
+----Player0-Ended-turn8------------------ Secs: 0.000368
+Player1-Bought Silver Secs: 0.000016
+----Player1-Ended-turn8------------------ Secs: 0.000008
+Player0-Played Witch Secs: 48.240705
+Player0-Bought Gold Secs: 54.834446
+----Player0-Ended-turn9------------------ Secs: 0.000379
+Player1-Bought Silver Secs: 0.000017
+----Player1-Ended-turn9------------------ Secs: 0.000010
+Player0-Bought Silver Secs: 46.187511
+----Player0-Ended-turn10------------------ Secs: 0.000284
+Player1-Bought Silver Secs: 0.000035
+----Player1-Ended-turn10------------------ Secs: 0.000009
+Player0-Played Bureaucrat Secs: 39.309736
+Player0-Bought Witch Secs: 38.577480
+----Player0-Ended-turn11------------------ Secs: 0.000350
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn11------------------ Secs: 0.000010
+Player0-Bought Province Secs: 34.791356
+----Player0-Ended-turn12------------------ Secs: 0.000337
+Player1-Bought Silver Secs: 0.000026
+----Player1-Ended-turn12------------------ Secs: 0.000010
+Player0-Played Witch Secs: 30.272391
+Player0-Bought Gardens Secs: 32.462628
+----Player0-Ended-turn13------------------ Secs: 0.000295
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn13------------------ Secs: 0.000011
+Player0-Bought Province Secs: 34.086705
+----Player0-Ended-turn14------------------ Secs: 0.000313
+Player1-Bought Silver Secs: 0.000018
+----Player1-Ended-turn14------------------ Secs: 0.000011
+Player0-Played Witch Secs: 25.049565
+Player0-Bought Gardens Secs: 24.389124
+----Player0-Ended-turn15------------------ Secs: 0.000309
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn15------------------ Secs: 0.000012
+Player0-Played Witch Secs: 27.170087
+Player0-Bought Gardens Secs: 25.321175
+----Player0-Ended-turn16------------------ Secs: 0.000349
+Player1-Bought Province Secs: 0.000023
+----Player1-Ended-turn16------------------ Secs: 0.000014
+Player0-Bought Gardens Secs: 26.297653
+----Player0-Ended-turn17------------------ Secs: 0.000285
+Player1-Bought Province Secs: 0.000022
+----Player1-Ended-turn17------------------ Secs: 0.000014
+Player0-Bought Gardens Secs: 27.520418
+----Player0-Ended-turn18------------------ Secs: 0.000315
+Player1-Bought Gardens Secs: 0.000020
+----Player1-Ended-turn18------------------ Secs: 0.000014
+Player0-Bought Gardens Secs: 24.618683
+----Player0-Ended-turn19------------------ Secs: 0.000378
+Player1-Bought Estate Secs: 0.000021
+----Player1-Ended-turn19------------------ Secs: 0.000015
+Player0-Played Witch Secs: 22.362103
+Player0-Bought Gardens Secs: 22.957793
+----Player0-Ended-turn20------------------ Secs: 0.000390
+Player1-Bought Duchy Secs: 0.000023
+----Player1-Ended-turn20------------------ Secs: 0.000015
+Player0-Bought Duchy Secs: 20.147156
+----Player0-Ended-turn21------------------ Secs: 0.000291
+Player1-Bought Duchy Secs: 0.000023
+----Player1-Ended-turn21------------------ Secs: 0.000016
+Player0-Played Witch Secs: 22.604247
+Player0-Bought Estate Secs: 18.046970
+----Player0-Ended-turn22------------------ Secs: 0.000328
+Player1-Bought Province Secs: 0.000021
+----Player1-Ended-turn22------------------ Secs: 0.000016
+Player0-Bought Duchy Secs: 15.545849
+----Player0-Ended-turn23------------------ Secs: 0.000273
+Player1-Bought Province Secs: 0.000026
+----Player1-Ended-turn23------------------ Secs: 0.000017
+Player0-Played Witch Secs: 15.352915
+Player0-Bought Estate Secs: 14.568841
+----Player0-Ended-turn24------------------ Secs: 0.000394
+Player1-Bought Estate Secs: 0.000028
+----Player1-Ended-turn24------------------ Secs: 0.000018
+Player0-Bought Estate Secs: 12.523225
+----Player0-Ended-turn25------------------ Secs: 0.000368
+Player1-Bought Province Secs: 0.000027
+----Player1-Ended-turn25------------------ Secs: 0.000019
+Player0-Bought Estate Secs: 10.893695
+----Player0-Ended-turn26------------------ Secs: 0.000444
+Player1-Bought Duchy Secs: 0.000028
+----Player1-Ended-turn26------------------ Secs: 0.000018
+Player0-Bought Copper Secs: 6.029459
+----Player0-Ended-turn27------------------ Secs: 0.000259
+Player1-Bought Estate Secs: 0.000028
+----Player1-Ended-turn27------------------ Secs: 0.000019
+Player0-Bought Duchy Secs: 6.179222
+----Player0-Ended-turn28------------------ Secs: 0.000392
+Player1-Bought Duchy Secs: 0.000038
+----Player1-Ended-turn28------------------ Secs: 0.000037
+Player0-Bought Duchy Secs: 5.301091
+----Player0-Ended-turn29------------------ Secs: 0.000263
+Player 0 VP: 59
+Player 1 VP: 44
+Game Ended: Fri Jul 16 17:17:26 2021

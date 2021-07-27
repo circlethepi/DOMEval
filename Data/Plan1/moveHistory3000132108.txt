@@ -1,0 +1,126 @@
+FLATUCBMOD vs. BIGMONEYAI
+VILLAGE MARKET REMODEL THIEF 
+Game Started: Tue Jul 27 03:42:45 2021
+----------
+Player0-Bought Silver Secs: 239.817613
+----Player0-Ended-turn1------------------ Secs: 0.000301
+Player1-Bought Silver Secs: 0.000008
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Silver Secs: 218.469466
+----Player0-Ended-turn2------------------ Secs: 0.000278
+Player1-Bought Silver Secs: 0.000012
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Bought Thief Secs: 165.539190
+----Player0-Ended-turn3------------------ Secs: 0.000231
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn3------------------ Secs: 0.000005
+Player0-Bought Thief Secs: 102.305446
+----Player0-Ended-turn4------------------ Secs: 0.000400
+Player1-Bought Gold Secs: 0.000031
+----Player1-Ended-turn4------------------ Secs: 0.000010
+Player0-Bought Thief Secs: 91.944948
+----Player0-Ended-turn5------------------ Secs: 0.000276
+Player1-Bought Gold Secs: 0.000011
+----Player1-Ended-turn5------------------ Secs: 0.000010
+Player0-Bought Thief Secs: 96.040773
+----Player0-Ended-turn6------------------ Secs: 0.000393
+Player1-Bought Gold Secs: 0.000028
+----Player1-Ended-turn6------------------ Secs: 0.000011
+----Player0-Ended-turn7------------------ Secs: 70.264166
+Player1-Bought Gold Secs: 0.000022
+----Player1-Ended-turn7------------------ Secs: 0.000009
+Player0-Bought Thief Secs: 60.125988
+----Player0-Ended-turn8------------------ Secs: 0.001327
+Player1-Bought Gold Secs: 0.000032
+----Player1-Ended-turn8------------------ Secs: 0.000013
+Player0-Bought Village Secs: 64.000244
+----Player0-Ended-turn9------------------ Secs: 0.000394
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn9------------------ Secs: 0.000008
+Player0-Bought Silver Secs: 53.608022
+----Player0-Ended-turn10------------------ Secs: 0.000342
+Player1-Bought Gold Secs: 0.000021
+----Player1-Ended-turn10------------------ Secs: 0.000008
+Player0-Played Village Secs: 0.000580
+Player0-Bought Silver Secs: 45.679414
+----Player0-Ended-turn11------------------ Secs: 0.001157
+Player1-Bought Gold Secs: 0.000058
+----Player1-Ended-turn11------------------ Secs: 0.000009
+Player0-Bought Silver Secs: 44.683549
+----Player0-Ended-turn12------------------ Secs: 0.000346
+Player1-Bought Silver Secs: 0.000021
+----Player1-Ended-turn12------------------ Secs: 0.000010
+----Player0-Ended-turn13------------------ Secs: 30.048253
+Player1-Bought Gold Secs: 0.000018
+----Player1-Ended-turn13------------------ Secs: 0.000009
+Player0-Bought Silver Secs: 27.441730
+----Player0-Ended-turn14------------------ Secs: 0.000250
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn14------------------ Secs: 0.000011
+Player0-Played Village Secs: 0.000240
+Player0-Bought Duchy Secs: 27.988394
+----Player0-Ended-turn15------------------ Secs: 0.000272
+Player1-Bought Gold Secs: 0.000022
+----Player1-Ended-turn15------------------ Secs: 0.000010
+Player0-Bought Gold Secs: 28.241278
+----Player0-Ended-turn16------------------ Secs: 0.000494
+Player1-Bought Province Secs: 0.000039
+----Player1-Ended-turn16------------------ Secs: 0.000034
+Player0-Bought Duchy Secs: 22.299162
+----Player0-Ended-turn17------------------ Secs: 0.000516
+Player1-Bought Duchy Secs: 0.000038
+----Player1-Ended-turn17------------------ Secs: 0.000022
+Player0-Played Village Secs: 0.000304
+Player0-Bought Duchy Secs: 22.104725
+----Player0-Ended-turn18------------------ Secs: 0.000298
+Player1-Bought Province Secs: 0.000022
+----Player1-Ended-turn18------------------ Secs: 0.000013
+Player0-Bought Silver Secs: 22.869139
+----Player0-Ended-turn19------------------ Secs: 0.000305
+Player1-Bought Province Secs: 0.000032
+----Player1-Ended-turn19------------------ Secs: 0.000023
+Player0-Bought Silver Secs: 19.656830
+----Player0-Ended-turn20------------------ Secs: 0.000382
+Player1-Bought Province Secs: 0.000027
+----Player1-Ended-turn20------------------ Secs: 0.000015
+Player0-Bought Estate Secs: 14.674428
+----Player0-Ended-turn21------------------ Secs: 0.000256
+Player1-Bought Duchy Secs: 0.000021
+----Player1-Ended-turn21------------------ Secs: 0.000013
+Player0-Bought Estate Secs: 14.784610
+----Player0-Ended-turn22------------------ Secs: 0.000305
+Player1-Bought Province Secs: 0.000023
+----Player1-Ended-turn22------------------ Secs: 0.000014
+Player0-Bought Province Secs: 15.629808
+----Player0-Ended-turn23------------------ Secs: 0.000312
+Player1-Bought Duchy Secs: 0.000072
+----Player1-Ended-turn23------------------ Secs: 0.000026
+Player0-Played Village Secs: 0.000399
+Player0-Bought Estate Secs: 10.494897
+----Player0-Ended-turn24------------------ Secs: 0.000351
+Player1-Bought Duchy Secs: 0.000058
+----Player1-Ended-turn24------------------ Secs: 0.000029
+Player0-Bought Duchy Secs: 10.804831
+----Player0-Ended-turn25------------------ Secs: 0.000356
+Player1-Bought Estate Secs: 0.000026
+----Player1-Ended-turn25------------------ Secs: 0.000016
+Player0-Played Village Secs: 0.000277
+Player0-Bought Estate Secs: 10.972382
+----Player0-Ended-turn26------------------ Secs: 0.000360
+Player1-Bought Estate Secs: 0.000025
+----Player1-Ended-turn26------------------ Secs: 0.000016
+Player0-Bought Estate Secs: 9.471129
+----Player0-Ended-turn27------------------ Secs: 0.000442
+Player1-Bought Province Secs: 0.000037
+----Player1-Ended-turn27------------------ Secs: 0.000051
+Player0-Bought Copper Secs: 7.212904
+----Player0-Ended-turn28------------------ Secs: 0.000357
+Player1-Bought Estate Secs: 0.000035
+----Player1-Ended-turn28------------------ Secs: 0.000018
+Player0-Bought Village Secs: 2.963503
+----Player0-Ended-turn29------------------ Secs: 0.000418
+Player1-Bought Province Secs: 0.000036
+----Player1-Ended-turn29------------------ Secs: 0.000019
+Player 0 VP: 26
+Player 1 VP: 60
+Game Ended: Tue Jul 27 04:09:08 2021

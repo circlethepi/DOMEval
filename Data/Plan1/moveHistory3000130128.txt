@@ -1,0 +1,88 @@
+BIGMONEYAI vs. FLATUCBMOD
+VILLAGE MARKET 
+Game Started: Tue Jul 27 05:20:47 2021
+----------
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn1------------------ Secs: 0.000003
+Player1-Bought Silver Secs: 65.568957
+----Player1-Ended-turn1------------------ Secs: 0.000292
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn2------------------ Secs: 0.000006
+Player1-Bought Silver Secs: 51.156252
+----Player1-Ended-turn2------------------ Secs: 0.000276
+Player0-Bought Gold Secs: 0.000008
+----Player0-Ended-turn3------------------ Secs: 0.000006
+Player1-Bought Gold Secs: 46.793043
+----Player1-Ended-turn3------------------ Secs: 0.000285
+----Player0-Ended-turn4------------------ Secs: 0.000011
+Player1-Bought Silver Secs: 37.099540
+----Player1-Ended-turn4------------------ Secs: 0.000334
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn5------------------ Secs: 0.000006
+Player1-Bought Gold Secs: 30.491421
+----Player1-Ended-turn5------------------ Secs: 0.000324
+Player0-Bought Gold Secs: 0.000014
+----Player0-Ended-turn6------------------ Secs: 0.000008
+Player1-Bought Gold Secs: 25.741202
+----Player1-Ended-turn6------------------ Secs: 0.000286
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn7------------------ Secs: 0.000008
+Player1-Bought Gold Secs: 21.197173
+----Player1-Ended-turn7------------------ Secs: 0.000315
+Player0-Bought Gold Secs: 0.000045
+----Player0-Ended-turn8------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 18.691840
+----Player1-Ended-turn8------------------ Secs: 0.000347
+Player0-Bought Gold Secs: 0.000039
+----Player0-Ended-turn9------------------ Secs: 0.000014
+Player1-Bought Province Secs: 16.568106
+----Player1-Ended-turn9------------------ Secs: 0.000323
+Player0-Bought Gold Secs: 0.000022
+----Player0-Ended-turn10------------------ Secs: 0.000016
+Player1-Bought Duchy Secs: 15.389710
+----Player1-Ended-turn10------------------ Secs: 0.000372
+Player0-Bought Silver Secs: 0.000032
+----Player0-Ended-turn11------------------ Secs: 0.000017
+Player1-Bought Gold Secs: 13.974468
+----Player1-Ended-turn11------------------ Secs: 0.000349
+Player0-Bought Gold Secs: 0.000040
+----Player0-Ended-turn12------------------ Secs: 0.000021
+Player1-Bought Province Secs: 13.291562
+----Player1-Ended-turn12------------------ Secs: 0.000314
+Player0-Bought Gold Secs: 0.000033
+----Player0-Ended-turn13------------------ Secs: 0.000020
+Player1-Bought Duchy Secs: 10.965522
+----Player1-Ended-turn13------------------ Secs: 0.000291
+Player0-Bought Gold Secs: 0.000022
+----Player0-Ended-turn14------------------ Secs: 0.000013
+Player1-Bought Province Secs: 10.634634
+----Player1-Ended-turn14------------------ Secs: 0.001131
+Player0-Bought Gold Secs: 0.000021
+----Player0-Ended-turn15------------------ Secs: 0.000014
+Player1-Bought Province Secs: 9.663160
+----Player1-Ended-turn15------------------ Secs: 0.000302
+Player0-Bought Province Secs: 0.000021
+----Player0-Ended-turn16------------------ Secs: 0.000015
+Player1-Bought Duchy Secs: 7.306621
+----Player1-Ended-turn16------------------ Secs: 0.000325
+Player0-Bought Duchy Secs: 0.000027
+----Player0-Ended-turn17------------------ Secs: 0.000018
+Player1-Bought Estate Secs: 6.321355
+----Player1-Ended-turn17------------------ Secs: 0.000343
+Player0-Bought Estate Secs: 0.000023
+----Player0-Ended-turn18------------------ Secs: 0.000017
+Player1-Bought Duchy Secs: 5.292652
+----Player1-Ended-turn18------------------ Secs: 0.000276
+Player0-Bought Province Secs: 0.000058
+----Player0-Ended-turn19------------------ Secs: 0.000033
+Player1-Bought Duchy Secs: 3.900001
+----Player1-Ended-turn19------------------ Secs: 0.000388
+Player0-Bought Province Secs: 0.000032
+----Player0-Ended-turn20------------------ Secs: 0.000018
+Player1-Bought Duchy Secs: 2.445903
+----Player1-Ended-turn20------------------ Secs: 0.000307
+Player0-Bought Province Secs: 0.000057
+----Player0-Ended-turn21------------------ Secs: 0.000019
+Player 0 VP: 31
+Player 1 VP: 46
+Game Ended: Tue Jul 27 05:28:00 2021

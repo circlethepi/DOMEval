@@ -1,0 +1,87 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY VILLAGE MARKET WITCH THIEF 
+Game Started: Wed Jul 14 15:29:11 2021
+----------
+----Player0-Ended-turn1------------------ Secs: 0.000008
+Player1-Bought Silver Secs: 102.013939
+----Player1-Ended-turn1------------------ Secs: 0.000397
+Player0-Bought Silver Secs: 0.000011
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 93.692635
+----Player1-Ended-turn2------------------ Secs: 0.000412
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn3------------------ Secs: 0.000006
+Player1-Bought Witch Secs: 81.389021
+----Player1-Ended-turn3------------------ Secs: 0.000350
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn4------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 82.226988
+----Player1-Ended-turn4------------------ Secs: 0.000276
+Player0-Bought Silver Secs: 0.000019
+----Player0-Ended-turn5------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 74.341675
+----Player1-Ended-turn5------------------ Secs: 0.000317
+Player0-Bought Silver Secs: 0.000011
+----Player0-Ended-turn6------------------ Secs: 0.000008
+Player1-Bought Silver Secs: 58.539149
+----Player1-Ended-turn6------------------ Secs: 0.000218
+Player0-Bought Gold Secs: 0.000013
+----Player0-Ended-turn7------------------ Secs: 0.000008
+Player1-Played Witch Secs: 44.271261
+Player1-Bought Gold Secs: 47.145284
+----Player1-Ended-turn7------------------ Secs: 0.000356
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn8------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 42.327386
+----Player1-Ended-turn8------------------ Secs: 0.000287
+Player0-Bought Silver Secs: 0.000028
+----Player0-Ended-turn9------------------ Secs: 0.000014
+Player1-Bought Gardens Secs: 37.217475
+----Player1-Ended-turn9------------------ Secs: 0.000471
+Player0-Bought Gold Secs: 0.000025
+----Player0-Ended-turn10------------------ Secs: 0.000016
+Player1-Bought Province Secs: 36.481674
+----Player1-Ended-turn10------------------ Secs: 0.000283
+Player0-Bought Silver Secs: 0.000033
+----Player0-Ended-turn11------------------ Secs: 0.000017
+Player1-Bought Gold Secs: 29.999581
+----Player1-Ended-turn11------------------ Secs: 0.000255
+Player0-Bought Gold Secs: 0.000027
+----Player0-Ended-turn12------------------ Secs: 0.000018
+Player1-Played Witch Secs: 25.655842
+Player1-Bought Province Secs: 29.073250
+----Player1-Ended-turn12------------------ Secs: 0.000381
+Player0-Bought Gold Secs: 0.000028
+----Player0-Ended-turn13------------------ Secs: 0.000020
+Player1-Bought Silver Secs: 19.642857
+----Player1-Ended-turn13------------------ Secs: 0.000318
+Player0-Bought Gold Secs: 0.000029
+----Player0-Ended-turn14------------------ Secs: 0.000020
+Player1-Bought Gold Secs: 21.434571
+----Player1-Ended-turn14------------------ Secs: 0.000314
+Player0-Bought Gold Secs: 0.000032
+----Player0-Ended-turn15------------------ Secs: 0.000022
+Player1-Bought Gardens Secs: 16.975908
+----Player1-Ended-turn15------------------ Secs: 0.000316
+Player0-Bought Province Secs: 0.000029
+----Player0-Ended-turn16------------------ Secs: 0.000023
+Player1-Bought Province Secs: 15.662789
+----Player1-Ended-turn16------------------ Secs: 0.000356
+Player0-Bought Province Secs: 0.000036
+----Player0-Ended-turn17------------------ Secs: 0.000023
+Player1-Played Witch Secs: 14.496138
+Player1-Bought Duchy Secs: 11.390013
+----Player1-Ended-turn17------------------ Secs: 0.000256
+Player0-Bought Gardens Secs: 0.000018
+----Player0-Ended-turn18------------------ Secs: 0.000015
+Player1-Bought Province Secs: 12.812440
+----Player1-Ended-turn18------------------ Secs: 0.000324
+Player0-Bought Gardens Secs: 0.000036
+----Player0-Ended-turn19------------------ Secs: 0.000026
+Player1-Bought Province Secs: 7.902598
+----Player1-Ended-turn19------------------ Secs: 0.000386
+Player0-Bought Province Secs: 0.000043
+----Player0-Ended-turn20------------------ Secs: 0.000028
+Player 0 VP: 24
+Player 1 VP: 40
+Game Ended: Wed Jul 14 15:44:34 2021

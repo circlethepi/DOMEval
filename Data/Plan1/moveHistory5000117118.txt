@@ -1,0 +1,88 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER GARDENS FESTIVAl MONEYLENDER SMITHY LABORATORY WITCH BUREAUCRAT REMODEL THIEF 
+Game Started: Tue Jul 27 07:20:19 2021
+----------
+Player0-Bought Bureaucrat Secs: 119.205380
+----Player0-Ended-turn1------------------ Secs: 0.000299
+Player1-Bought Silver Secs: 0.000019
+----Player1-Ended-turn1------------------ Secs: 0.000006
+Player0-Bought Silver Secs: 102.278860
+----Player0-Ended-turn2------------------ Secs: 0.000281
+Player1-Bought Silver Secs: 0.000011
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Bought Witch Secs: 95.145498
+----Player0-Ended-turn3------------------ Secs: 0.000251
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn3------------------ Secs: 0.000005
+Player0-Bought Silver Secs: 78.620131
+----Player0-Ended-turn4------------------ Secs: 0.000194
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn4------------------ Secs: 0.000005
+Player0-Played Witch Secs: 59.634081
+Player0-Bought Silver Secs: 73.831321
+----Player0-Ended-turn5------------------ Secs: 0.000277
+Player1-Bought Gold Secs: 0.000015
+----Player1-Ended-turn5------------------ Secs: 0.000007
+Player0-Played Bureaucrat Secs: 58.656299
+Player0-Bought Gold Secs: 61.541740
+----Player0-Ended-turn6------------------ Secs: 0.000355
+Player1-Bought Silver Secs: 0.000038
+----Player1-Ended-turn6------------------ Secs: 0.000035
+Player0-Bought Witch Secs: 51.395817
+----Player0-Ended-turn7------------------ Secs: 0.000348
+Player1-Bought Silver Secs: 0.000015
+----Player1-Ended-turn7------------------ Secs: 0.000007
+Player0-Played Witch Secs: 46.492797
+Player0-Bought Gold Secs: 41.537771
+----Player0-Ended-turn8------------------ Secs: 0.000265
+Player1-Bought Gold Secs: 0.000014
+----Player1-Ended-turn8------------------ Secs: 0.000008
+Player0-Bought Gold Secs: 39.257937
+----Player0-Ended-turn9------------------ Secs: 0.000293
+Player1-Bought Silver Secs: 0.000031
+----Player1-Ended-turn9------------------ Secs: 0.000009
+Player0-Played Bureaucrat Secs: 31.291974
+Player0-Bought Gold Secs: 34.047681
+----Player0-Ended-turn10------------------ Secs: 0.000434
+Player1-Bought Gold Secs: 0.000023
+----Player1-Ended-turn10------------------ Secs: 0.000009
+Player0-Played Witch Secs: 27.026204
+Player0-Bought Province Secs: 26.846595
+----Player0-Ended-turn11------------------ Secs: 0.000281
+Player1-Bought Gold Secs: 0.000018
+----Player1-Ended-turn11------------------ Secs: 0.000009
+Player0-Played Witch Secs: 24.898265
+Player0-Bought Province Secs: 25.508166
+----Player0-Ended-turn12------------------ Secs: 0.000308
+Player1-Bought Gold Secs: 0.000017
+----Player1-Ended-turn12------------------ Secs: 0.000010
+Player0-Bought Gardens Secs: 20.319807
+----Player0-Ended-turn13------------------ Secs: 0.000303
+Player1-Bought Gold Secs: 0.000017
+----Player1-Ended-turn13------------------ Secs: 0.000011
+Player0-Played Witch Secs: 20.645317
+Player0-Bought Province Secs: 21.939629
+----Player0-Ended-turn14------------------ Secs: 0.000345
+----Player1-Ended-turn14------------------ Secs: 0.000024
+Player0-Bought Gardens Secs: 16.814950
+----Player0-Ended-turn15------------------ Secs: 0.000334
+Player1-Bought Silver Secs: 0.000026
+----Player1-Ended-turn15------------------ Secs: 0.000012
+Player0-Bought Province Secs: 17.936103
+----Player0-Ended-turn16------------------ Secs: 0.000361
+Player1-Bought Province Secs: 0.000031
+----Player1-Ended-turn16------------------ Secs: 0.000022
+Player0-Bought Gardens Secs: 13.048566
+----Player0-Ended-turn17------------------ Secs: 0.000411
+Player1-Bought Gardens Secs: 0.000028
+----Player1-Ended-turn17------------------ Secs: 0.000012
+Player0-Played Witch Secs: 12.558179
+Player0-Bought Province Secs: 12.670941
+----Player0-Ended-turn18------------------ Secs: 0.000289
+Player1-Bought Province Secs: 0.000020
+----Player1-Ended-turn18------------------ Secs: 0.000014
+Player0-Bought Province Secs: 7.839256
+----Player0-Ended-turn19------------------ Secs: 0.000346
+Player 0 VP: 48
+Player 1 VP: 12
+Game Ended: Tue Jul 27 07:39:39 2021

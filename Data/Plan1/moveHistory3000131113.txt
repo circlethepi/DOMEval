@@ -1,0 +1,88 @@
+BIGMONEYAI vs. FLATUCBMOD
+VILLAGE MARKET THIEF 
+Game Started: Tue Jul 27 03:47:13 2021
+----------
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn1------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 112.046914
+----Player1-Ended-turn1------------------ Secs: 0.000385
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 81.123041
+----Player1-Ended-turn2------------------ Secs: 0.000288
+Player0-Bought Gold Secs: 0.000008
+----Player0-Ended-turn3------------------ Secs: 0.000004
+----Player1-Ended-turn3------------------ Secs: 62.059261
+Player0-Bought Silver Secs: 0.000029
+----Player0-Ended-turn4------------------ Secs: 0.000006
+Player1-Bought Gold Secs: 68.716436
+----Player1-Ended-turn4------------------ Secs: 0.000282
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn5------------------ Secs: 0.000008
+Player1-Bought Silver Secs: 43.098219
+----Player1-Ended-turn5------------------ Secs: 0.000314
+Player0-Bought Gold Secs: 0.000014
+----Player0-Ended-turn6------------------ Secs: 0.000007
+Player1-Bought Gold Secs: 39.693361
+----Player1-Ended-turn6------------------ Secs: 0.000297
+Player0-Bought Silver Secs: 0.000015
+----Player0-Ended-turn7------------------ Secs: 0.000024
+Player1-Bought Gold Secs: 29.381621
+----Player1-Ended-turn7------------------ Secs: 0.000251
+Player0-Bought Gold Secs: 0.000013
+----Player0-Ended-turn8------------------ Secs: 0.000007
+Player1-Bought Province Secs: 24.090157
+----Player1-Ended-turn8------------------ Secs: 0.000351
+Player0-Bought Gold Secs: 0.000022
+----Player0-Ended-turn9------------------ Secs: 0.000009
+Player1-Bought Duchy Secs: 19.499380
+----Player1-Ended-turn9------------------ Secs: 0.000307
+Player0-Bought Gold Secs: 0.000014
+----Player0-Ended-turn10------------------ Secs: 0.000009
+Player1-Bought Silver Secs: 20.123642
+----Player1-Ended-turn10------------------ Secs: 0.000306
+Player0-Bought Gold Secs: 0.000034
+----Player0-Ended-turn11------------------ Secs: 0.000009
+Player1-Bought Gold Secs: 19.145047
+----Player1-Ended-turn11------------------ Secs: 0.000368
+Player0-Bought Silver Secs: 0.000022
+----Player0-Ended-turn12------------------ Secs: 0.000014
+Player1-Bought Province Secs: 16.767497
+----Player1-Ended-turn12------------------ Secs: 0.000327
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn13------------------ Secs: 0.000010
+Player1-Bought Province Secs: 15.983942
+----Player1-Ended-turn13------------------ Secs: 0.000377
+Player0-Bought Gold Secs: 0.000026
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Estate Secs: 12.638402
+----Player1-Ended-turn14------------------ Secs: 0.000320
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn15------------------ Secs: 0.000010
+Player1-Bought Duchy Secs: 11.501748
+----Player1-Ended-turn15------------------ Secs: 0.000357
+Player0-Bought Duchy Secs: 0.000024
+----Player0-Ended-turn16------------------ Secs: 0.000011
+Player1-Bought Province Secs: 13.595918
+----Player1-Ended-turn16------------------ Secs: 0.000417
+Player0-Bought Estate Secs: 0.000022
+----Player0-Ended-turn17------------------ Secs: 0.000011
+Player1-Bought Estate Secs: 9.794043
+----Player1-Ended-turn17------------------ Secs: 0.000399
+Player0-Bought Province Secs: 0.000015
+----Player0-Ended-turn18------------------ Secs: 0.000012
+Player1-Bought Duchy Secs: 9.130984
+----Player1-Ended-turn18------------------ Secs: 0.000338
+Player0-Bought Duchy Secs: 0.000025
+----Player0-Ended-turn19------------------ Secs: 0.000012
+Player1-Bought Province Secs: 8.409592
+----Player1-Ended-turn19------------------ Secs: 0.000296
+Player0-Bought Province Secs: 0.000024
+----Player0-Ended-turn20------------------ Secs: 0.000012
+Player1-Bought Estate Secs: 2.861523
+----Player1-Ended-turn20------------------ Secs: 0.000257
+Player0-Bought Province Secs: 0.000021
+----Player0-Ended-turn21------------------ Secs: 0.000013
+Player 0 VP: 28
+Player 1 VP: 45
+Game Ended: Tue Jul 27 03:57:52 2021

@@ -1,0 +1,88 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS MONEYLENDER VILLAGE MARKET LABORATORY WITCH BUREAUCRAT THIEF 
+Game Started: Thu Jul 15 20:55:35 2021
+----------
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn1------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 94.582302
+----Player1-Ended-turn1------------------ Secs: 0.000328
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Bureaucrat Secs: 84.713985
+----Player1-Ended-turn2------------------ Secs: 0.000268
+Player0-Bought Silver Secs: 0.000008
+----Player0-Ended-turn3------------------ Secs: 0.000004
+Player1-Played Bureaucrat Secs: 79.863775
+Player1-Bought Silver Secs: 74.290893
+----Player1-Ended-turn3------------------ Secs: 0.000250
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn4------------------ Secs: 0.000007
+Player1-Bought Witch Secs: 61.656302
+----Player1-Ended-turn4------------------ Secs: 0.000314
+----Player0-Ended-turn5------------------ Secs: 0.000016
+Player1-Bought Silver Secs: 61.554950
+----Player1-Ended-turn5------------------ Secs: 0.000294
+Player0-Bought Gold Secs: 0.000011
+----Player0-Ended-turn6------------------ Secs: 0.000007
+Player1-Bought Silver Secs: 58.922523
+----Player1-Ended-turn6------------------ Secs: 0.000218
+Player0-Bought Gold Secs: 0.000012
+----Player0-Ended-turn7------------------ Secs: 0.000006
+Player1-Bought Witch Secs: 53.767961
+----Player1-Ended-turn7------------------ Secs: 0.000331
+Player0-Bought Silver Secs: 0.000018
+----Player0-Ended-turn8------------------ Secs: 0.000007
+Player1-Played Bureaucrat Secs: 51.456527
+Player1-Bought Gold Secs: 49.415181
+----Player1-Ended-turn8------------------ Secs: 0.000293
+Player0-Bought Silver Secs: 0.000014
+----Player0-Ended-turn9------------------ Secs: 0.000009
+Player1-Bought Province Secs: 40.818497
+----Player1-Ended-turn9------------------ Secs: 0.000323
+Player0-Bought Gold Secs: 0.000015
+----Player0-Ended-turn10------------------ Secs: 0.000008
+Player1-Bought Silver Secs: 30.612266
+----Player1-Ended-turn10------------------ Secs: 0.000275
+Player0-Bought Gold Secs: 0.000017
+----Player0-Ended-turn11------------------ Secs: 0.000009
+Player1-Played Witch Secs: 27.093786
+Player1-Bought Gold Secs: 27.306457
+----Player1-Ended-turn11------------------ Secs: 0.001125
+Player0-Bought Gold Secs: 0.000021
+----Player0-Ended-turn12------------------ Secs: 0.000010
+Player1-Bought Silver Secs: 24.696713
+----Player1-Ended-turn12------------------ Secs: 0.000248
+Player0-Bought Gold Secs: 0.000017
+----Player0-Ended-turn13------------------ Secs: 0.000009
+Player1-Bought Province Secs: 23.285462
+----Player1-Ended-turn13------------------ Secs: 0.000311
+Player0-Bought Silver Secs: 0.000018
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Played Witch Secs: 19.947242
+Player1-Bought Gardens Secs: 18.801431
+----Player1-Ended-turn14------------------ Secs: 0.000312
+Player0-Bought Gold Secs: 0.000022
+----Player0-Ended-turn15------------------ Secs: 0.000011
+Player1-Bought Silver Secs: 16.891940
+----Player1-Ended-turn15------------------ Secs: 0.000314
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn16------------------ Secs: 0.000011
+Player1-Bought Province Secs: 16.448749
+----Player1-Ended-turn16------------------ Secs: 0.000376
+Player0-Bought Province Secs: 0.000023
+----Player0-Ended-turn17------------------ Secs: 0.000012
+Player1-Bought Province Secs: 12.236194
+----Player1-Ended-turn17------------------ Secs: 0.000270
+Player0-Bought Gardens Secs: 0.000015
+----Player0-Ended-turn18------------------ Secs: 0.000012
+Player1-Bought Province Secs: 9.666357
+----Player1-Ended-turn18------------------ Secs: 0.000360
+Player0-Bought Gardens Secs: 0.000031
+----Player0-Ended-turn19------------------ Secs: 0.000021
+Player1-Bought Gardens Secs: 3.194641
+----Player1-Ended-turn19------------------ Secs: 0.000269
+Player0-Bought Province Secs: 0.000040
+----Player0-Ended-turn20------------------ Secs: 0.000014
+Player 0 VP: 25
+Player 1 VP: 39
+Game Ended: Thu Jul 15 21:11:35 2021

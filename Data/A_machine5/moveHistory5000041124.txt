@@ -1,0 +1,94 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER GARDENS FESTIVAl SMITHY VILLAGE MARKET WITCH REMODEL THIEF 
+Game Started: Wed Jul 14 18:32:48 2021
+----------
+Player0-Bought Witch Secs: 95.083966
+----Player0-Ended-turn1------------------ Secs: 0.000322
+Player1-Bought Silver Secs: 0.000011
+----Player1-Ended-turn1------------------ Secs: 0.000006
+Player0-Bought Copper Secs: 74.028704
+----Player0-Ended-turn2------------------ Secs: 0.000237
+Player1-Bought Silver Secs: 0.000007
+----Player1-Ended-turn2------------------ Secs: 0.000005
+Player0-Played Witch Secs: 82.639715
+Player0-Bought Silver Secs: 79.853696
+----Player0-Ended-turn3------------------ Secs: 0.000310
+Player1-Bought Silver Secs: 0.000014
+----Player1-Ended-turn3------------------ Secs: 0.000007
+Player0-Bought Silver Secs: 77.682208
+----Player0-Ended-turn4------------------ Secs: 0.000328
+Player1-Bought Gold Secs: 0.000010
+----Player1-Ended-turn4------------------ Secs: 0.000007
+Player0-Bought Silver Secs: 77.983178
+----Player0-Ended-turn5------------------ Secs: 0.000337
+Player1-Bought Silver Secs: 0.000036
+----Player1-Ended-turn5------------------ Secs: 0.000006
+Player0-Played Witch Secs: 65.120349
+Player0-Bought Witch Secs: 65.134835
+----Player0-Ended-turn6------------------ Secs: 0.000231
+Player1-Bought Gold Secs: 0.000012
+----Player1-Ended-turn6------------------ Secs: 0.000006
+Player0-Played Witch Secs: 67.800376
+Player0-Bought Gold Secs: 71.425356
+----Player0-Ended-turn7------------------ Secs: 0.000282
+Player1-Bought Silver Secs: 0.000016
+----Player1-Ended-turn7------------------ Secs: 0.000007
+Player0-Played Witch Secs: 58.128374
+Player0-Bought Silver Secs: 58.313315
+----Player0-Ended-turn8------------------ Secs: 0.000339
+Player1-Bought Silver Secs: 0.000017
+----Player1-Ended-turn8------------------ Secs: 0.000008
+Player0-Bought Gold Secs: 54.574254
+----Player0-Ended-turn9------------------ Secs: 0.000362
+Player1-Bought Gold Secs: 0.000025
+----Player1-Ended-turn9------------------ Secs: 0.000014
+Player0-Played Witch Secs: 47.049847
+Player0-Bought Silver Secs: 46.867448
+----Player0-Ended-turn10------------------ Secs: 0.000460
+Player1-Bought Silver Secs: 0.000026
+----Player1-Ended-turn10------------------ Secs: 0.000010
+Player0-Bought Gold Secs: 40.427465
+----Player0-Ended-turn11------------------ Secs: 0.000274
+Player1-Bought Silver Secs: 0.000017
+----Player1-Ended-turn11------------------ Secs: 0.000010
+Player0-Bought Gardens Secs: 32.942566
+----Player0-Ended-turn12------------------ Secs: 0.000326
+Player1-Bought Silver Secs: 0.000019
+----Player1-Ended-turn12------------------ Secs: 0.000010
+Player0-Played Witch Secs: 34.574703
+Player0-Bought Gold Secs: 35.376896
+----Player0-Ended-turn13------------------ Secs: 0.000403
+Player1-Bought Gold Secs: 0.000025
+----Player1-Ended-turn13------------------ Secs: 0.000011
+Player0-Bought Province Secs: 33.517651
+----Player0-Ended-turn14------------------ Secs: 0.001646
+Player1-Bought Gold Secs: 0.000039
+----Player1-Ended-turn14------------------ Secs: 0.000019
+Player0-Played Witch Secs: 27.536364
+Player0-Bought Province Secs: 27.523573
+----Player0-Ended-turn15------------------ Secs: 0.000265
+Player1-Bought Gold Secs: 0.000022
+----Player1-Ended-turn15------------------ Secs: 0.000012
+Player0-Bought Gardens Secs: 23.364642
+----Player0-Ended-turn16------------------ Secs: 0.000400
+Player1-Bought Gardens Secs: 0.000019
+----Player1-Ended-turn16------------------ Secs: 0.000012
+Player0-Bought Province Secs: 23.684238
+----Player0-Ended-turn17------------------ Secs: 0.000309
+Player1-Bought Estate Secs: 0.000052
+----Player1-Ended-turn17------------------ Secs: 0.000013
+Player0-Played Witch Secs: 18.872601
+Player0-Bought Province Secs: 19.245527
+----Player0-Ended-turn18------------------ Secs: 0.000347
+Player1-Bought Province Secs: 0.000022
+----Player1-Ended-turn18------------------ Secs: 0.000012
+Player0-Played Witch Secs: 12.104298
+Player0-Bought Province Secs: 12.319355
+----Player0-Ended-turn19------------------ Secs: 0.000268
+Player1-Bought Province Secs: 0.000019
+----Player1-Ended-turn19------------------ Secs: 0.000013
+Player0-Bought Province Secs: 7.030653
+----Player0-Ended-turn20------------------ Secs: 0.000389
+Player 0 VP: 45
+Player 1 VP: 10
+Game Ended: Wed Jul 14 18:55:59 2021

@@ -1,0 +1,88 @@
+FLATUCBMOD vs. BIGMONEYAI
+WOODCUTTER MONEYLENDER SMITHY VILLAGE MARKET WITCH BUREAUCRAT REMODEL THIEF 
+Game Started: Wed Jul 14 23:30:33 2021
+----------
+Player0-Bought Copper Secs: 96.296930
+----Player0-Ended-turn1------------------ Secs: 0.000323
+Player1-Bought Silver Secs: 0.000009
+----Player1-Ended-turn1------------------ Secs: 0.000004
+Player0-Bought Witch Secs: 94.005624
+----Player0-Ended-turn2------------------ Secs: 0.000256
+Player1-Bought Silver Secs: 0.000012
+----Player1-Ended-turn2------------------ Secs: 0.000004
+Player0-Played Witch Secs: 89.045704
+Player0-Bought Silver Secs: 81.632978
+----Player0-Ended-turn3------------------ Secs: 0.000217
+Player1-Bought Silver Secs: 0.000010
+----Player1-Ended-turn3------------------ Secs: 0.000006
+Player0-Bought Silver Secs: 83.450140
+----Player0-Ended-turn4------------------ Secs: 0.000312
+Player1-Bought Gold Secs: 0.000011
+----Player1-Ended-turn4------------------ Secs: 0.000012
+Player0-Played Witch Secs: 71.389382
+Player0-Bought Gold Secs: 75.720290
+----Player0-Ended-turn5------------------ Secs: 0.000367
+Player1-Bought Gold Secs: 0.000015
+----Player1-Ended-turn5------------------ Secs: 0.000008
+Player0-Bought Silver Secs: 59.899586
+----Player0-Ended-turn6------------------ Secs: 0.000391
+----Player1-Ended-turn6------------------ Secs: 0.000020
+Player0-Bought Gold Secs: 54.568251
+----Player0-Ended-turn7------------------ Secs: 0.000297
+Player1-Bought Gold Secs: 0.000015
+----Player1-Ended-turn7------------------ Secs: 0.000019
+Player0-Bought Silver Secs: 43.945375
+----Player0-Ended-turn8------------------ Secs: 0.001098
+Player1-Bought Gold Secs: 0.000019
+----Player1-Ended-turn8------------------ Secs: 0.000009
+Player0-Played Witch Secs: 42.184631
+Player0-Bought Gold Secs: 42.017841
+----Player0-Ended-turn9------------------ Secs: 0.000340
+Player1-Bought Silver Secs: 0.000022
+----Player1-Ended-turn9------------------ Secs: 0.000009
+Player0-Bought Gold Secs: 33.033800
+----Player0-Ended-turn10------------------ Secs: 0.000307
+Player1-Bought Gold Secs: 0.000024
+----Player1-Ended-turn10------------------ Secs: 0.000010
+Player0-Bought Gold Secs: 29.967895
+----Player0-Ended-turn11------------------ Secs: 0.000266
+Player1-Bought Gold Secs: 0.000017
+----Player1-Ended-turn11------------------ Secs: 0.000010
+Player0-Bought Witch Secs: 25.699968
+----Player0-Ended-turn12------------------ Secs: 0.000324
+Player1-Bought Gold Secs: 0.000021
+----Player1-Ended-turn12------------------ Secs: 0.000011
+Player0-Played Witch Secs: 23.262112
+Player0-Bought Province Secs: 24.768720
+----Player0-Ended-turn13------------------ Secs: 0.000300
+Player1-Bought Gold Secs: 0.000022
+----Player1-Ended-turn13------------------ Secs: 0.000012
+Player0-Bought Province Secs: 22.815373
+----Player0-Ended-turn14------------------ Secs: 0.000369
+Player1-Bought Gold Secs: 0.000031
+----Player1-Ended-turn14------------------ Secs: 0.000021
+Player0-Bought Province Secs: 19.775169
+----Player0-Ended-turn15------------------ Secs: 0.000322
+Player1-Bought Gold Secs: 0.000021
+----Player1-Ended-turn15------------------ Secs: 0.000011
+Player0-Played Witch Secs: 15.486315
+Player0-Bought Province Secs: 15.534650
+----Player0-Ended-turn16------------------ Secs: 0.000346
+Player1-Bought Estate Secs: 0.000022
+----Player1-Ended-turn16------------------ Secs: 0.000030
+Player0-Bought Duchy Secs: 10.221046
+----Player0-Ended-turn17------------------ Secs: 0.000250
+Player1-Bought Province Secs: 0.000020
+----Player1-Ended-turn17------------------ Secs: 0.000012
+Player0-Played Witch Secs: 8.178704
+Player0-Bought Province Secs: 8.675329
+----Player0-Ended-turn18------------------ Secs: 0.000357
+Player1-Bought Province Secs: 0.000023
+----Player1-Ended-turn18------------------ Secs: 0.000014
+Player0-Bought Duchy Secs: 3.214859
+----Player0-Ended-turn19------------------ Secs: 0.000345
+Player1-Bought Province Secs: 0.000028
+----Player1-Ended-turn19------------------ Secs: 0.000014
+Player 0 VP: 39
+Player 1 VP: 16
+Game Ended: Wed Jul 14 23:48:47 2021

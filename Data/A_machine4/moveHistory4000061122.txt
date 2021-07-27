@@ -1,0 +1,97 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER GARDENS MONEYLENDER SMITHY VILLAGE MARKET LABORATORY BUREAUCRAT REMODEL 
+Game Started: Thu Jul 15 02:54:36 2021
+----------
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn1------------------ Secs: 0.000004
+Player1-Bought Bureaucrat Secs: 110.725403
+----Player1-Ended-turn1------------------ Secs: 0.000303
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 94.804737
+----Player1-Ended-turn2------------------ Secs: 0.000279
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn3------------------ Secs: 0.000005
+Player1-Played Bureaucrat Secs: 71.946574
+Player1-Bought Silver Secs: 64.962737
+----Player1-Ended-turn3------------------ Secs: 0.000220
+Player0-Bought Gold Secs: 0.000009
+----Player0-Ended-turn4------------------ Secs: 0.000007
+Player1-Bought Silver Secs: 60.991698
+----Player1-Ended-turn4------------------ Secs: 0.000238
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn5------------------ Secs: 0.000007
+Player1-Bought Silver Secs: 53.056628
+----Player1-Ended-turn5------------------ Secs: 0.000370
+Player0-Bought Gold Secs: 0.000015
+----Player0-Ended-turn6------------------ Secs: 0.000007
+Player1-Bought Gold Secs: 44.195072
+----Player1-Ended-turn6------------------ Secs: 0.000285
+Player0-Bought Silver Secs: 0.000020
+----Player0-Ended-turn7------------------ Secs: 0.000011
+Player1-Bought Silver Secs: 35.871839
+----Player1-Ended-turn7------------------ Secs: 0.000263
+Player0-Bought Gold Secs: 0.000031
+----Player0-Ended-turn8------------------ Secs: 0.000007
+Player1-Played Bureaucrat Secs: 34.203605
+Player1-Bought Gold Secs: 33.624351
+----Player1-Ended-turn8------------------ Secs: 0.000218
+Player0-Bought Gold Secs: 0.000016
+----Player0-Ended-turn9------------------ Secs: 0.000008
+Player1-Bought Gold Secs: 28.569680
+----Player1-Ended-turn9------------------ Secs: 0.000253
+Player0-Bought Gold Secs: 0.000015
+----Player0-Ended-turn10------------------ Secs: 0.000009
+Player1-Bought Gardens Secs: 26.384933
+----Player1-Ended-turn10------------------ Secs: 0.000288
+Player0-Bought Gold Secs: 0.000026
+----Player0-Ended-turn11------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 25.928361
+----Player1-Ended-turn11------------------ Secs: 0.000317
+Player0-Bought Silver Secs: 0.000022
+----Player0-Ended-turn12------------------ Secs: 0.000010
+Player1-Played Bureaucrat Secs: 21.484244
+Player1-Bought Silver Secs: 20.844767
+----Player1-Ended-turn12------------------ Secs: 0.000421
+Player0-Bought Gold Secs: 0.000025
+----Player0-Ended-turn13------------------ Secs: 0.000011
+Player1-Bought Gold Secs: 22.031910
+----Player1-Ended-turn13------------------ Secs: 0.000282
+Player0-Bought Gold Secs: 0.000038
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Province Secs: 20.782472
+----Player1-Ended-turn14------------------ Secs: 0.000325
+Player0-Bought Gold Secs: 0.000024
+----Player0-Ended-turn15------------------ Secs: 0.000012
+Player1-Bought Gardens Secs: 18.680350
+----Player1-Ended-turn15------------------ Secs: 0.000300
+Player0-Bought Gardens Secs: 0.000029
+----Player0-Ended-turn16------------------ Secs: 0.000013
+Player1-Bought Gardens Secs: 18.798209
+----Player1-Ended-turn16------------------ Secs: 0.000363
+Player0-Bought Gardens Secs: 0.000027
+----Player0-Ended-turn17------------------ Secs: 0.000013
+Player1-Bought Gardens Secs: 17.012736
+----Player1-Ended-turn17------------------ Secs: 0.000347
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn18------------------ Secs: 0.000013
+Player1-Played Bureaucrat Secs: 14.249026
+Player1-Bought Province Secs: 14.219723
+----Player1-Ended-turn18------------------ Secs: 0.000351
+Player0-Bought Province Secs: 0.000028
+----Player0-Ended-turn19------------------ Secs: 0.000030
+Player1-Bought Gold Secs: 9.691938
+----Player1-Ended-turn19------------------ Secs: 0.000381
+Player0-Bought Province Secs: 0.000027
+----Player0-Ended-turn20------------------ Secs: 0.000019
+Player1-Bought Province Secs: 8.085727
+----Player1-Ended-turn20------------------ Secs: 0.000413
+Player0-Bought Province Secs: 0.000029
+----Player0-Ended-turn21------------------ Secs: 0.000014
+Player1-Bought Gardens Secs: 3.168065
+----Player1-Ended-turn21------------------ Secs: 0.000382
+Player0-Bought Province Secs: 0.000047
+----Player0-Ended-turn22------------------ Secs: 0.000016
+Player 0 VP: 39
+Player 1 VP: 36
+Game Ended: Thu Jul 15 03:09:32 2021

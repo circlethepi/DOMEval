@@ -1,0 +1,88 @@
+BIGMONEYAI vs. FLATUCBMOD
+WOODCUTTER FESTIVAl SMITHY VILLAGE MARKET LABORATORY WITCH REMODEL THIEF 
+Game Started: Wed Jul 14 14:51:32 2021
+----------
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn1------------------ Secs: 0.000023
+Player1-Bought Silver Secs: 103.574153
+----Player1-Ended-turn1------------------ Secs: 0.000352
+Player0-Bought Silver Secs: 0.000011
+----Player0-Ended-turn2------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 88.951103
+----Player1-Ended-turn2------------------ Secs: 0.000398
+Player0-Bought Silver Secs: 0.000016
+----Player0-Ended-turn3------------------ Secs: 0.000019
+Player1-Bought Witch Secs: 85.303603
+----Player1-Ended-turn3------------------ Secs: 0.000219
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn4------------------ Secs: 0.000006
+Player1-Bought Silver Secs: 70.437380
+----Player1-Ended-turn4------------------ Secs: 0.000268
+Player0-Bought Gold Secs: 0.000013
+----Player0-Ended-turn5------------------ Secs: 0.000010
+Player1-Played Witch Secs: 63.777672
+Player1-Bought Gold Secs: 67.349006
+----Player1-Ended-turn5------------------ Secs: 0.000298
+Player0-Bought Silver Secs: 0.000014
+----Player0-Ended-turn6------------------ Secs: 0.000012
+Player1-Bought Gold Secs: 49.013644
+----Player1-Ended-turn6------------------ Secs: 0.000278
+Player0-Bought Gold Secs: 0.000013
+----Player0-Ended-turn7------------------ Secs: 0.000007
+Player1-Bought Province Secs: 41.634674
+----Player1-Ended-turn7------------------ Secs: 0.000347
+Player0-Bought Silver Secs: 0.000031
+----Player0-Ended-turn8------------------ Secs: 0.000007
+Player1-Played Witch Secs: 34.454190
+Player1-Bought Gold Secs: 36.065600
+----Player1-Ended-turn8------------------ Secs: 0.000330
+Player0-Bought Gold Secs: 0.000046
+----Player0-Ended-turn9------------------ Secs: 0.000009
+Player1-Bought Gold Secs: 30.283800
+----Player1-Ended-turn9------------------ Secs: 0.000301
+Player0-Bought Silver Secs: 0.000015
+----Player0-Ended-turn10------------------ Secs: 0.000009
+Player1-Bought Province Secs: 25.728628
+----Player1-Ended-turn10------------------ Secs: 0.000369
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn11------------------ Secs: 0.000010
+Player1-Played Witch Secs: 20.831998
+Player1-Bought Gold Secs: 22.586790
+----Player1-Ended-turn11------------------ Secs: 0.000297
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn12------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 19.585322
+----Player1-Ended-turn12------------------ Secs: 0.000242
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn13------------------ Secs: 0.000012
+Player1-Played Witch Secs: 17.314312
+Player1-Bought Province Secs: 18.448424
+----Player1-Ended-turn13------------------ Secs: 0.000395
+Player0-Bought Gold Secs: 0.000020
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Gold Secs: 16.947929
+----Player1-Ended-turn14------------------ Secs: 0.000300
+Player0-Bought Gold Secs: 0.000022
+----Player0-Ended-turn15------------------ Secs: 0.000012
+Player1-Bought Duchy Secs: 14.521589
+----Player1-Ended-turn15------------------ Secs: 0.000251
+Player0-Bought Duchy Secs: 0.000022
+----Player0-Ended-turn16------------------ Secs: 0.000022
+Player1-Bought Province Secs: 15.772785
+----Player1-Ended-turn16------------------ Secs: 0.000301
+Player0-Bought Duchy Secs: 0.000021
+----Player0-Ended-turn17------------------ Secs: 0.000012
+Player1-Played Witch Secs: 10.592469
+Player1-Bought Province Secs: 12.821613
+----Player1-Ended-turn17------------------ Secs: 0.001132
+Player0-Bought Province Secs: 0.000019
+----Player0-Ended-turn18------------------ Secs: 0.000013
+Player1-Bought Duchy Secs: 6.646066
+----Player1-Ended-turn18------------------ Secs: 0.000282
+Player0-Bought Province Secs: 0.000022
+----Player0-Ended-turn19------------------ Secs: 0.000014
+Player1-Bought Province Secs: 7.285509
+----Player1-Ended-turn19------------------ Secs: 0.000328
+Player 0 VP: 16
+Player 1 VP: 45
+Game Ended: Wed Jul 14 15:06:31 2021

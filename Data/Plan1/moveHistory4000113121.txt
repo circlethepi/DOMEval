@@ -1,0 +1,91 @@
+BIGMONEYAI vs. FLATUCBMOD
+FESTIVAl SMITHY WITCH BUREAUCRAT 
+Game Started: Tue Jul 27 05:57:25 2021
+----------
+Player0-Bought Silver Secs: 0.000015
+----Player0-Ended-turn1------------------ Secs: 0.000004
+Player1-Bought Silver Secs: 62.106449
+----Player1-Ended-turn1------------------ Secs: 0.000278
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn2------------------ Secs: 0.000005
+Player1-Bought Silver Secs: 63.590238
+----Player1-Ended-turn2------------------ Secs: 0.000274
+Player0-Bought Silver Secs: 0.000009
+----Player0-Ended-turn3------------------ Secs: 0.000005
+Player1-Bought Witch Secs: 53.431305
+----Player1-Ended-turn3------------------ Secs: 0.000388
+Player0-Bought Silver Secs: 0.000010
+----Player0-Ended-turn4------------------ Secs: 0.000007
+Player1-Bought Gold Secs: 54.745515
+----Player1-Ended-turn4------------------ Secs: 0.000254
+Player0-Bought Silver Secs: 0.000011
+----Player0-Ended-turn5------------------ Secs: 0.000006
+Player1-Bought Witch Secs: 42.833460
+----Player1-Ended-turn5------------------ Secs: 0.000266
+Player0-Bought Gold Secs: 0.000009
+----Player0-Ended-turn6------------------ Secs: 0.000007
+Player1-Played Witch Secs: 39.951813
+Player1-Bought Silver Secs: 42.189905
+----Player1-Ended-turn6------------------ Secs: 0.000283
+----Player0-Ended-turn7------------------ Secs: 0.000016
+Player1-Bought Gold Secs: 39.141254
+----Player1-Ended-turn7------------------ Secs: 0.000335
+Player0-Bought Gold Secs: 0.000017
+----Player0-Ended-turn8------------------ Secs: 0.000008
+Player1-Bought Witch Secs: 31.960264
+----Player1-Ended-turn8------------------ Secs: 0.000250
+Player0-Bought Gold Secs: 0.000014
+----Player0-Ended-turn9------------------ Secs: 0.000008
+Player1-Played Witch Secs: 30.451949
+Player1-Bought Silver Secs: 30.992125
+----Player1-Ended-turn9------------------ Secs: 0.000223
+Player0-Bought Silver Secs: 0.000012
+----Player0-Ended-turn10------------------ Secs: 0.000009
+Player1-Played Witch Secs: 28.759094
+Player1-Bought Province Secs: 28.585517
+----Player1-Ended-turn10------------------ Secs: 0.000249
+Player0-Bought Gold Secs: 0.000016
+----Player0-Ended-turn11------------------ Secs: 0.000010
+Player1-Bought Gold Secs: 26.035994
+----Player1-Ended-turn11------------------ Secs: 0.000274
+Player0-Bought Gold Secs: 0.000023
+----Player0-Ended-turn12------------------ Secs: 0.000009
+Player1-Played Witch Secs: 23.641652
+Player1-Bought Gold Secs: 25.172029
+----Player1-Ended-turn12------------------ Secs: 0.000386
+Player0-Bought Gold Secs: 0.000041
+----Player0-Ended-turn13------------------ Secs: 0.000020
+Player1-Played Witch Secs: 20.883694
+Player1-Bought Gold Secs: 21.008900
+----Player1-Ended-turn13------------------ Secs: 0.000994
+Player0-Bought Gold Secs: 0.000019
+----Player0-Ended-turn14------------------ Secs: 0.000011
+Player1-Bought Province Secs: 18.750360
+----Player1-Ended-turn14------------------ Secs: 0.000388
+Player0-Bought Gold Secs: 0.000028
+----Player0-Ended-turn15------------------ Secs: 0.000020
+Player1-Bought Province Secs: 15.154901
+----Player1-Ended-turn15------------------ Secs: 0.001156
+Player0-Bought Province Secs: 0.000028
+----Player0-Ended-turn16------------------ Secs: 0.000020
+Player1-Played Witch Secs: 12.259839
+Player1-Bought Duchy Secs: 11.305150
+----Player1-Ended-turn16------------------ Secs: 0.000321
+Player0-Bought Estate Secs: 0.000029
+----Player0-Ended-turn17------------------ Secs: 0.000021
+Player1-Played Witch Secs: 11.971160
+Player1-Bought Province Secs: 11.081605
+----Player1-Ended-turn17------------------ Secs: 0.001110
+Player0-Bought Province Secs: 0.000016
+----Player0-Ended-turn18------------------ Secs: 0.000013
+Player1-Bought Province Secs: 8.989791
+----Player1-Ended-turn18------------------ Secs: 0.000291
+Player0-Bought Duchy Secs: 0.000020
+----Player0-Ended-turn19------------------ Secs: 0.000014
+Player1-Bought Duchy Secs: 3.020298
+----Player1-Ended-turn19------------------ Secs: 0.000308
+Player0-Bought Province Secs: 0.000018
+----Player0-Ended-turn20------------------ Secs: 0.000013
+Player 0 VP: 18
+Player 1 VP: 39
+Game Ended: Tue Jul 27 06:10:22 2021
