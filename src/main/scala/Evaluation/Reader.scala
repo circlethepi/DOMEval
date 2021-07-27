@@ -63,8 +63,8 @@ object Reader {
    * @param lognum number of file to read from
    * @return
    */
-  def parse_moveHistory(lognum: Long): (List[(String,Int)],List[(String,Int)]) = {
-    val filename = "Data/moveHistory" + lognum + ".txt"
+  def parse_moveHistory(dir : String, lognum: Long): (List[(String,Int)],List[(String,Int)]) = {
+    val filename = dir + "moveHistory" + lognum + ".txt"
 
     //info from move history - number of plays per card for each deck
     val plays0: ListBuffer[(String, Int)] = ListBuffer[(String, Int)]()
@@ -124,8 +124,8 @@ object Reader {
   //Parses game log
   //outputs values for gameScore, gameTurns, and alphabetically sorted decklists of actions, deck0 deck1
   //***************************************************************************
-  def parse_log(lognum: Long): (List[(String,Int)],List[(String,Int)]) = {
-    val filename = "Data/log" + lognum + ".csv"
+  def parse_log(dir : String, lognum: Long): (List[(String,Int)],List[(String,Int)]) = {
+    val filename = dir + "log" + lognum + ".csv"
     val gamelog = Source.fromFile(filename)
 
     //info from game log - number of copies of each card in each deck
@@ -324,8 +324,8 @@ object Reader {
         gameScore(1) = 0
         gameTurns = 0
         cardEvals.clear()
-        val plays = parse_moveHistory(logNumber)
-        val decks = parse_log(logNumber)
+        val plays = parse_moveHistory(dir,logNumber)
+        val decks = parse_log(dir,logNumber)
         calculate_values(plays._1,plays._2,decks._1,decks._2,gameScore(0),gameScore(1),logNumber)
         //WRITE TO CSV FILE
         //creating the file
