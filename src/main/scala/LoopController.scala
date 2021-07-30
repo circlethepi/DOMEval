@@ -11,38 +11,51 @@ object LoopController {
   /**
    *
    * @param args (0) is current loop cnt
+   *             args(1) is just ask boolean 0, data will be added, 1, no data will be added, but ask and plan will happen
    */
   def main(args : Array[String]) : Unit = {
+    val int = args(0).toInt
+    val str = args(1)
+    if(int == 1) {
+      //ask
+      val hypothesisset = DistributionManager.ASK()
 
-    val cnt = args(0).toInt
+      hypothesis_out(hypothesisset, str)
 
-    //evaluation
-    val evaluations = Reader.Evaluate()
+      //plan
+      val plans = Planner.Planner.Plan(hypothesisset)
 
-    //aquire hypothesis
-    val prev_hypothesis = hypothesis_in("hypothesisList.csv")
+      planner_out(plans,str)
+    } else {
 
-    //critique
-    val critiques : List[Critique] =  {
-      val buff = ListBuffer[Critique]()
-      for(e<-evaluations) {
-        buff.addOne(Critic.critique(e, prev_hypothesis))
+      //evaluation
+      val evaluations = Reader.Evaluate()
+
+      //aquire hypothesis
+      val prev_hypothesis = hypothesis_in("hypothesisList.csv")
+
+      //critique
+      val critiques: List[Critique] = {
+        val buff = ListBuffer[Critique]()
+        for (e <- evaluations) {
+          buff.addOne(Critic.critique(e, prev_hypothesis))
+        }
+        buff.toList
       }
-      buff.toList
+
+      //tell
+      DistributionManager.TELL(critiques)
+
+      //ask
+      val hypothesisset = DistributionManager.ASK()
+
+      hypothesis_out(hypothesisset, str)
+
+      //plan
+      val plans = Planner.Planner.Plan(hypothesisset)
+
+      planner_out(plans, str)
     }
-
-    //tell
-    DistributionManager.TELL(critiques)
-
-    //ask
-    val hypothesisset = DistributionManager.ASK()
-
-    hypothesis_out(hypothesisset, cnt)
-
-    //plan
-    val plans = Planner.Planner.Plan(hypothesisset)
-
-    planner_out(plans,cnt)
   }
 
   def hypothesis_in(file : String) : HypothesisSet = {
@@ -66,8 +79,8 @@ object LoopController {
     HypothesisSet(hypos.toList)
   }
 
-  def hypothesis_out(hypothesis : HypothesisSet, cnt : Int) : Unit = {
-    val file = "hypothesis_" + cnt + ".csv"
+  def hypothesis_out(hypothesis : HypothesisSet, str : String) : Unit = {
+    val file = "hypothesis_" + str + ".csv"
     val fw = new FileWriter(file)
 
     fw write hypothesis.toString
@@ -75,8 +88,8 @@ object LoopController {
     fw.close()
   }
 
-  def planner_out(kingdoms : List[Kingdom], cnt : Int) : Unit = {
-    val file = "planner_" + cnt + ".csv"
+  def planner_out(kingdoms : List[Kingdom], str : String) : Unit = {
+    val file = "planner_" + str + ".csv"
     val fw = new FileWriter(file)
 
     for(k <- kingdoms) {

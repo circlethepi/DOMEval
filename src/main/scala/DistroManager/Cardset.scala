@@ -9,7 +9,7 @@ case class Cardset(cardsetfile : String) extends Distribution {
 
   //she keeps track of the BIG distribution of all card powers
 
-  def cards : List[Card] = {
+  val cards : List[Card] = {
     val lines = Source.fromFile(cardsetfile).getLines()
     val buff = ListBuffer[Card]()
     for(l<-lines) {
@@ -23,24 +23,57 @@ case class Cardset(cardsetfile : String) extends Distribution {
     cards(ind).tell_distrofile(kingdomsize,power)
   }
 
+  def parse_cards() : Unit = {
+    for(c<-cards) {
+      c.parse_distrofile()
+    }
+  }
+
   /**
    *
    * @return card, std dev from big mu
    */
   def get_outlier_scores() : List[(Card, Double)] = {
-    val sample = ListBuffer[Double]()
-    for(c<-cards) {
-      sample.addOne(c.mean(c.sample))
-    }
-
-    val mu = mean(sample.toList)
-    val sig = stdev(sample.toList)
-
+    //fetch from alldata.csv all the mus
     val buff = ListBuffer[(Card,Double)]()
     for(c<-cards) {
       //card, std devs away from mean
-      buff.addOne( (c,(c.mean(c.sample)-mu)/sig) )
+      buff.addOne( (c, get_outlier_score(List(c))) )
     }
     buff.toList
   }
+
+  /**
+   *
+   * @return card, std dev from big mu
+   */
+  def get_outlier_score(kards : List[Card]) : Double = {
+    //fetch from alldata.csv all the mus
+    for(c<-cards) {
+      var bool = false
+      for(k <-kards) {
+        if (c.cardname.compare(k.cardname) == 0) {
+          bool = true
+        }
+      }
+      if(!bool) {
+        add_to_sample(c.sample)
+      }
+    }
+
+    val delta_mu = mean(sample)
+    val delta_sig = stdev(sample)
+
+    val kappa_sample = ListBuffer[Double]()
+    for(k<-kards) {
+      kappa_sample.addAll(k.sample)
+    }
+
+    val kappa_mu = mean(kappa_sample.toList)
+    val kappa_sig = stdev(kappa_sample.toList)
+
+    //T TEST eventually lmaoo
+    (kappa_mu-delta_mu)/delta_sig
+  }
+
 }
