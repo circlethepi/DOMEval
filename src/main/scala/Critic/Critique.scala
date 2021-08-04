@@ -10,8 +10,8 @@ case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) 
   val significanceLevel : Double = {
     //% are the probabilities that the mean differs from the hypothesis by this #SDs purely by chance
     //1.65 //for 10%
-    //1.96 //for 5%
-    2.58 //for 1%
+    1.96 //for 5%
+    //2.58 //for 1%
     //
   }
 

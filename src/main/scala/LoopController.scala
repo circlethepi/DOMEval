@@ -1,5 +1,6 @@
 import Critic.{Critic, Critique}
-import DistroManager.{Card, DistributionManager, Hypothesis, HypothesisSet}
+import DistroManager.DistributionManager.std_dev_range
+import DistroManager.{Card, CardInteraction, DistributionManager, Hypothesis, HypothesisSet}
 import Evaluation.{Kingdom, Reader}
 
 import java.io.FileWriter
@@ -18,12 +19,15 @@ object LoopController {
     val str = args(1)
     if(int == 1) {
       //ask
-      val hypothesisset = DistributionManager.ASK()
+      val ask_out = DistributionManager.ASK()
+      val hypotesisset = ask_out._1
+      val interactions = ask_out._2
 
-      hypothesis_out(hypothesisset, str)
+      hypothesis_out(hypotesisset, str)
+      interaction_out(interactions,str)
 
       //plan
-      val plans = Planner.Planner.Plan(hypothesisset)
+      val plans = Planner.Planner.Plan(hypotesisset)
 
       planner_out(plans,str)
     } else {
@@ -47,12 +51,15 @@ object LoopController {
       DistributionManager.TELL(critiques)
 
       //ask
-      val hypothesisset = DistributionManager.ASK()
+      val ask_out = DistributionManager.ASK()
+      val hypotesisset = ask_out._1
+      val interactions = ask_out._2
 
-      hypothesis_out(hypothesisset, str)
+      hypothesis_out(hypotesisset, str)
+      interaction_out(interactions,str)
 
       //plan
-      val plans = Planner.Planner.Plan(hypothesisset)
+      val plans = Planner.Planner.Plan(hypotesisset)
 
       planner_out(plans, str)
     }
@@ -79,11 +86,23 @@ object LoopController {
     HypothesisSet(hypos.toList)
   }
 
-  def hypothesis_out(hypothesis : HypothesisSet, str : String) : Unit = {
+  def hypothesis_out(hypothesis : HypothesisSet,str : String) : Unit = {
     val file = "hypothesis_" + str + ".csv"
     val fw = new FileWriter(file)
 
-    fw write hypothesis.toString
+    fw write hypothesis.toString + "\n"
+
+    fw.close()
+  }
+
+  def interaction_out(interactions : List[(CardInteraction, Double)],str : String) : Unit = {
+    val file = "interactions_" + str + ".csv"
+    val fw = new FileWriter(file)
+    fw write "cards, mu_a, mu_b, z-score_a, z-score_b, mu avergae, interaction definition, z-score_ab, flagged\n"
+
+    for(i<-interactions) {
+      fw write i._1.toString + "," + i._2 + "," + (i._2 < -std_dev_range || i._2 > std_dev_range) + "\n"
+    }
 
     fw.close()
   }

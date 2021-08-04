@@ -19,9 +19,9 @@ object Planner {
 
   def Plan(hypotheses : HypothesisSet): List[Kingdom] = {
 
-    val mu_sorted = hypotheses.hypotheses.sortBy(_.mu)
+    val mu_sorted = hypotheses.hypotheses.sortBy(_.mu).filterNot(_.card.cardname.indexOf("All") == 0)
 
-    val sig_sorted = hypotheses.hypotheses.sortBy(_.sig)
+    val sig_sorted = hypotheses.hypotheses.sortBy(_.sig).filterNot(_.card.cardname.indexOf("All") == 0)
 
     val foo = plan_from_list(mu_sorted)
     val bar = plan_from_list(sig_sorted)

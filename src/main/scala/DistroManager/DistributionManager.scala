@@ -1,6 +1,7 @@
 package DistroManager
 
 import Critic.Critique
+import Evaluation.Kingdom
 
 import java.io.{File, FileWriter}
 import scala.collection.mutable.ListBuffer
@@ -95,6 +96,31 @@ object DistributionManager {
     fw.close()
   }
 
+  def parse_alldata() : List[EpisodeData] = {
+
+    val file = DistributionManager.get_bigdata_filename()
+    val lines = Source.fromFile(file).getLines()
+
+    val episodebuff = ListBuffer[EpisodeData]()
+    for(l<-lines) {
+      val split = l.split(",")
+      val cards = split(0).split(" ")
+      val data = split(1).split(" ")
+
+
+      var i = 0
+      val databuff = ListBuffer[(String, (Double,Double))]()
+      while(data.length > i+2) {
+        databuff.addOne((data(i), (data(i+1).toDouble,data(i+2).toDouble)))
+        i += 3
+      }
+
+      episodebuff.addOne(EpisodeData(cards.toList,databuff.toList))
+    }
+
+    episodebuff.toList
+  }
+
   /**
    * adds data from all files listed in config file to relevant distributions
    *
@@ -104,16 +130,22 @@ object DistributionManager {
     add_data(critiques)
   }
 
-  def ASK() : HypothesisSet = {
+  def ASK() : (HypothesisSet,List[(CardInteraction, Double)]) = {
     val cardset = Cardset(get_baseset_filename())
     cardset.parse_cards()
     val outliers = cardset.get_outlier_scores()
     val H = ListBuffer[Hypothesis]()
     for(c<-outliers) {
-      println(c._1 + "," + c._2)
+      //println(c._1 + "," + c._2)
       H.addOne(Hypothesis(c._1, c._1.mean(c._1.sample),c._1.stdev(c._1.sample), c._2 < std_dev_range*(-1) || c._2 > std_dev_range))
     }
-    HypothesisSet(H.toList)
+    val bigdistro = cardset.big_distribution()
+    val bigdistro_nooutliers = cardset.big_distribution_minus_outliers()
+    H.addOne(Hypothesis(Card("All"), bigdistro._1,bigdistro._2, false))
+    H.addOne(Hypothesis(Card("All minus outliers"), bigdistro_nooutliers._1,bigdistro_nooutliers._2, false))
+    val interactions = cardset.find_synergies()
+
+    (HypothesisSet(H.toList),interactions)
   }
 
 }
