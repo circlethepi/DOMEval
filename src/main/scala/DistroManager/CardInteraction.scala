@@ -32,25 +32,27 @@ case class CardInteraction(val card_a : Card, val card_b : Card, data : Set[Epis
 
     if (is_an_interaction) {
 
-      if (a_z_score < -ztest_threshold && b_z_score < -ztest_threshold) {
-        "negative-negative"
-      } else if (a_z_score < -ztest_threshold && b_z_score > ztest_threshold) {
-        "negative-positive"
-      } else if (a_z_score > ztest_threshold && b_z_score < -ztest_threshold) {
-        "positive-negative"
-      } else if (a_z_score > ztest_threshold && b_z_score > ztest_threshold) {
-        "positive-positive"
-      } else if (a_z_score < -ztest_threshold) {
-        "negative-neutral"
-      } else if (b_z_score < -ztest_threshold) {
-        "neutral-negative"
-      } else if (a_z_score > ztest_threshold) {
-        "positive-neutral"
-      } else if (b_z_score > ztest_threshold) {
-        "neutral-positive"
-      } else {
-        "neutral-neutral" //aka no interaction
-      }//should never hit
+      val a_str : String = {
+        if (a_z_score < -ztest_threshold) {
+          "negative"
+        } else if (a_z_score > ztest_threshold) {
+          "positive"
+        } else {
+          "neutral" //aka no interaction
+        }
+      }
+
+      val b_str : String = {
+        if (b_z_score < -ztest_threshold) {
+          "negative"
+        } else if (b_z_score > ztest_threshold) {
+          "positive"
+        } else {
+          "neutral" //aka no interaction
+        }
+      }
+
+      a_str + "-" + b_str
 
     } else {
       "no interaction" //aka no interaction

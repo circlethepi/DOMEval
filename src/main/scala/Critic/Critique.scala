@@ -38,7 +38,7 @@ case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) 
   }
 
 
-  def get_differences() : List[(Card, Double)] = {
+  val card_z_scores : List[(Card, Double)] = {
 
     val distBuff = ListBuffer[(Card, Double)]()
 
@@ -81,6 +81,26 @@ case class Critique(hypotheses : HypothesisSet, evaluation : EpisodeEvaluation) 
       }
     }
     flagBuff.toList
+  }
+
+  def z_score_of(card: String) : Double = {
+    for(c<-card_z_scores) {
+      if(c._1.cardname.compare(card) == 0) {
+        return c._2
+      }
+    }
+    -1.0
+  }
+
+  override def toString: String = {
+
+    var str = ""
+
+    for(c <- card_z_scores) {
+      str += c._1.cardname + " " + c._2 + ":"
+    }
+
+    str
   }
 
 }

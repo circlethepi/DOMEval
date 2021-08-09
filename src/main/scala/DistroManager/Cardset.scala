@@ -55,10 +55,11 @@ case class Cardset(cardsetfile : String) extends Distribution {
 
     val buff = ListBuffer[(CardInteraction, Double)]()
 
-    for(a <- cards) {
-      for(b <- cards) {
-        if(a.cardname.compare(b.cardname) != 0) {
-          val foo = CardInteraction(a, b, data.toSet)
+    for(a <- cards.indices) {
+      for(b <- a+1 until cards.length) {
+        //println(cards(a) + "," + cards(b))
+        if(cards(a).cardname.compare(cards(b).cardname) != 0) {
+          val foo = CardInteraction(cards(a), cards(b), data.toSet)
 
           if(foo.is_an_interaction) {
             val outlier_score = get_outlier_score(List(foo.card_a, foo.card_b), foo.combined_power_mu)

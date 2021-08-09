@@ -11,8 +11,9 @@ object LoopController {
 
   /**
    *
-   * @param args (0) is current loop cnt
+   * @param args (1) is ASK ONLY bool (askoonly == 1 , parse_data != 1)
    *             args(1) is just ask boolean 0, data will be added, 1, no data will be added, but ask and plan will happen
+   *             args(2) is previous hypothesis
    */
   def main(args : Array[String]) : Unit = {
     val int = args(0).toInt
@@ -36,7 +37,7 @@ object LoopController {
       val evaluations = Reader.Evaluate()
 
       //aquire hypothesis
-      val prev_hypothesis = hypothesis_in("hypothesisList.csv")
+      val prev_hypothesis = hypothesis_in(args(2))
 
       //critique
       val critiques: List[Critique] = {

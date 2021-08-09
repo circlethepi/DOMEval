@@ -19,8 +19,8 @@ object DistributionManager {
 
   val std_dev_range = 2.00
 
-  def initialize_distributions(configfile : String) : Boolean = {
-    val lines = Source.fromFile(configfile).getLines()
+  def initialize_distributions() : Boolean = {
+    val lines = Source.fromFile(get_baseset_filename()).getLines()
     for(l <- lines) {
       val filename = get_distro_filename(l)
       val file = new File(filename)
@@ -83,13 +83,13 @@ object DistributionManager {
     for(c<-critiques) {
       val kingdom = c.evaluation.kingdom
       val eval = c.evaluation
-      fw write kingdom.toString + "," + eval.toString + "\n"
+      fw write kingdom.toString + "," + eval.toString + "," + c.toString + "\n"
 
       //each individual card distribution from each individual game eval
-      for(c <- eval.cardDistributions) {
-        val filename_c = get_distro_filename(c.cardname)
+      for(card <- eval.cardDistributions) {
+        val filename_c = get_distro_filename(card.cardname)
         val fw_c = new FileWriter(new File(filename_c), true)
-        fw_c write + c.mean(c.sample) + "," + c.stdev(c.sample) + "\n"
+        fw_c write + card.mean(card.sample) + "," + card.stdev(card.sample) + "," + c.z_score_of(card.cardname) +"\n"
         fw_c.close()
       }
     }
@@ -105,14 +105,13 @@ object DistributionManager {
     for(l<-lines) {
       val split = l.split(",")
       val cards = split(0).split(" ")
-      val data = split(1).split(" ")
+      val data = split(1).split(":")
 
 
-      var i = 0
       val databuff = ListBuffer[(String, (Double,Double))]()
-      while(data.length > i+2) {
-        databuff.addOne((data(i), (data(i+1).toDouble,data(i+2).toDouble)))
-        i += 3
+      for(d<-data) {
+        val foo = d.split(" ")
+        databuff.addOne((foo(0), (foo(1).toDouble,foo(2).toDouble)))
       }
 
       episodebuff.addOne(EpisodeData(cards.toList,databuff.toList))

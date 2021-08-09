@@ -30,7 +30,7 @@ case class EpisodeEvaluation(val kingdom : Kingdom, val evaluations : List[GameE
   override def toString : String = {
     var str = ""
     for (c <- kingdom.cards) {
-      str += c.cardname + " " + c.mean(c.sample) + " " + c.stdev(c.sample)  + " "
+      str += c.cardname + " " + c.mean(c.sample) + " " + c.stdev(c.sample)  + ":"
     }
     str = str.substring(0, str.length - 1)
     str
